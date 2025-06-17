@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Website Landing</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero position-relative py-5 bg-dark text-white overflow-hidden">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="display-4 fw-bold">
+                        Professional Website<br>
+                        <span class="text-purple">Design & Development</span><br>
+                        That Grows Your Business
+                    </h1>
+                    <p class="mt-4 fs-5">
+                        Aun Digital is an award-winning web development agency with over five years of experience and
+                        850+ custom websites delivered globally.
+                    </p>
+                    <div class="mt-4 d-flex gap-3 flex-wrap">
+                        <a href="#" class="btn btn-secondary px-4 py-2 rounded-3">Schedule a call →</a>
+                        <a href="#" class="btn btn-primary text-white px-4 py-2 rounded-3">Get in touch</a>
+                    </div>
+                    <div class="d-flex flex-wrap mt-5ertificate-section">
+                        <div class="certificate text-center p-3 bg-light rounded" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <img src="assets/images/certificate/cert_1.svg" height="50" alt="Award">
+                            <p class="fw-bold mb-1">TechBehemoths</p>
+                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        </div>
+                        <!-- Repeated certificates optimized with dynamic loop in production -->
+                        <div class="certificate text-center p-3 bg-light rounded" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <img src="assets/images/certificate/cert_2.svg" height="50" alt="Award 2">
+                            <p class="fw-bold mb-1">TechBehemoths</p>
+                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        </div>
+                        <div class="certificate text-center p-3 bg-light rounded" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <img src="assets/images/certificate/cert_3.svg" height="50" alt="Award 3">
+                            <p class="fw-bold mb-1">TechBehemoths</p>
+                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        </div>
+                        <div class="certificate text-center p-3 bg-light rounded" data-aos="fade-up"
+                            data-aos-delay="400">
+                            <img src="assets/images/certificate/cert_4.svg" height="50" alt="Award 4">
+                            <p class="fw-bold mb-1">TechBehemoths</p>
+                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        </div>
+                        <div class="certificate text-center p-3 bg-light rounded" data-aos="fade-up"
+                            data-aos-delay="500">
+                            <img src="assets/images/certificate/cert_5.svg" height="50" alt="Award 5">
+                            <p class="fw-bold mb-1">TechBehemoths</p>
+                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="bg-white p-4 p-md-5 rounded-3 shadow">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter full name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter email">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Subject</label>
+                                    <select class="form-select">
+                                        <option selected>Select one</option>
+                                        <option value="1">Web Development</option>
+                                        <option value="2">App Development</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="5"
+                                        placeholder="How can we help you?"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn w-100 text-white btn-lg"
+                                        style="background-color: #451769;">Submit enquiry</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section py-5">
+        <div class="container">
+            <div class="position-relative" data-aos="zoom-in" data-aos-duration="800">
+                <video id="companyVideo" class="w-100 rounded shadow" poster="assets/images/bg/video_bg.svg">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div
+                    class="video-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                    <button onclick="playVideo()" class="btn btn-primary text-white px-4 py-2 rounded-3">▶ Play
+                        video</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="trusted-partners py-5">
+        <div class="container text-center">
+            <div class="mb-4" data-aos="fade-up">
+                <span class="badge bg-purple rounded-pill px-3 py-2">Clientele</span>
+                <h2 class="mt-3 fw-bold">Our Trusted Partners</h2>
+            </div>
+            <div class="row g-4 justify-content-center partner-logos">
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/brands/brand_1.svg" alt="Honda" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/brands/brand_2.svg" alt="Dunlop" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/brands/brand_3.svg" alt="Wurth" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/brands/brand_4.svg" alt="Chic" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/images/brands/brand_5.svg" alt="Americana" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/images/brands/brand_6.svg" alt="FreeRoom" class="img-fluid">
+                </div>
+                <!-- Additional logos omitted for brevity, can be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Designs Section -->
+    <section class="custom-designs py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="fw-bold mb-4">Custom Designs, Real Results – Your Web Journey Starts Here</h2>
+                    <p>
+                        Aun Digital is a creative-led web development agency driven by innovation and purpose. We
+                        specialize in building fast, scalable, and visually striking websites tailored to your brand
+                        identity and business goals.
+                    </p>
+                    <div class="feature-grid row g-3 mt-4">
+                        <div class="col-6 feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <img src="assets/icons/leads.svg" alt="Leads Icon" class="mb-2">
+                            <p class="text-muted small">No leads or low conversion rate</p>
+                        </div>
+                        <div class="col-6 feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <img src="assets/icons/design.svg" alt="Design Icon" class="mb-2">
+                            <p class="text-muted small">Poor designs that doesn't reflect your brand</p>
+                        </div>
+                        <!-- Additional features omitted for brevity -->
+                    </div>
+                    <div class="stats-grid row mt-4 g-3">
+                        <div class="col-4 stats-item text-center" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="fw-bold">850+</h3>
+                            <p>Successful Websites</p>
+                        </div>
+                        <div class="col-4 stats-item text-center" data-aos="fade-up" data-aos-delay="400">
+                            <h3 class="fw-bold">05</h3>
+                            <p>Awards Won</p>
+                        </div>
+                        <div class="col-4 stats-item text-center" data-aos="fade-up" data-aos-delay="500">
+                            <h3 class="fw-bold">100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                    <img src="assets/images/common/reuslt_Ad.svg" alt="Aun Digital Billboard"
+                        class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Display Section -->
+    <section class="innovation-display py-5">
+        <div class="container text-center">
+            <div class="mb-4" data-aos="fade-up">
+                <span class="badge bg-purple rounded-pill px-3 py-2">Clientele</span>
+                <h2 class="mt-3 fw-bold">Innovation On Display</h2>
+            </div>
+            <div class="swiper innovationSwiper" data-aos="fade-up" data-aos-duration="800">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/display/inn_1.svg" alt="Image 1" class="img-fluid rounded shadow-sm">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/display/inn_2.svg" alt="Image 2" class="img-fluid rounded shadow-sm">
+                    </div>
+                    <!-- Additional slides omitted for brevity -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination mt-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5">
+        <div class="container text-center">
+            <span class="badge text-muted text-uppercase mb-2">Our Services</span>
+            <h2 class="display-5 fw-bold mb-5" data-aos="fade-up">Services That Drive Success</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card p-4 h-100 border rounded-3 shadow-sm">
+                        <span class="service-number text-primary fs-4 fw-bold">01</span>
+                        <h4 class="fw-bold mt-3">Custom Website Design</h4>
+                        <p class="text-muted">Tailored designs that reflect your brand and engage users effectively.</p>
+                        <img src="assets/images/services/custom-web.svg" alt="Custom Website Design"
+                            class="img-fluid mt-3">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card p-4 h-100 border rounded-3 shadow-sm">
+                        <span class="service-number text-primary fs-4 fw-bold">02</span>
+                        <h4 class="fw-bold mt-3">eCommerce Development</h4>
+                        <p class="text-muted">Robust online stores with seamless user experiences and secure payments.
+                        </p>
+                        <img src="assets/images/services/ecom_web.svg" alt="E-commerce Development"
+                            class="img-fluid mt-3">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card p-4 h-100 border rounded-3 shadow-sm">
+                        <span class="service-number text-primary fs-4 fw-bold">03</span>
+                        <h4 class="fw-bold mt-3">Wordpress & CMS Solutions</h4>
+                        <p class="text-muted">Flexible and scalable content management for easy updates and growth.</p>
+                        <img src="assets/images/services/cms_web.svg" alt="WordPress & CMS Solutions"
+                            class="img-fluid mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="websites-drive-results-section py-5 bg-dark text-white">
+        <div class="container text-center">
+            <span class="text-uppercase fw-bold mb-2 d-block" data-aos="fade-up">Case Studies</span>
+            <h1 class="display-4 fw-bold mb-4" data-aos="fade-up" data-aos-delay="100">Building Websites That Drive
+                Results</h1>
+            <p class="lead col-lg-8 mx-auto mb-4" data-aos="fade-up" data-aos-delay="200">
+                Explore our portfolio to see how we transform ideas into impactful digital experiences.
+            </p>
+            <a href="#" class="btn btn-outline-light px-5 py-3 rounded-pill mb-5" data-aos="fade-up"
+                data-aos-delay="300">View Case Studies</a>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+                <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2 active">Real Estate</a>
+                <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Technology</a>
+                <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Education</a>
+                <!-- Additional filters omitted for brevity -->
+            </div>
+            <div class="swiper portfolio-swiper" data-aos="fade-up" data-aos-duration="800">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide portfolio-item">
+                        <div class="item-header d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-primary">Real Estate</span>
+                            <h5 class="mb-0">Free Room</h5>
+                        </div>
+                        <img src="assets/images/projects/freeroom.svg" alt="Real Estate Website"
+                            class="img-fluid rounded shadow">
+                    </div>
+                    <!-- Additional slides omitted for brevity -->
+                </div>
+                <div class="swiper-button-prev swiper-button-prev-custom"></div>
+                <div class="swiper-button-next swiper-button-next-custom"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Project Section -->
+    <section class="start-project-section py-5">
+        <div class="container">
+            <div class="row g-0 bg-light rounded-3 shadow">
+                <div class="col-lg-6 p-4 p-md-5" data-aos="fade-right">
+                    <span class="badge bg-primary rounded-pill mb-3">Your dream projects</span>
+                    <h2 class="fw-bold mb-3">Start Your Project</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="d-flex align-items-center flex-wrap gap-3">
+                        <a href="#" class="btn btn-primary px-4 py-2 rounded-3">Get a free quote</a>
+                        <div class="social-proof d-flex align-items-center gap-2">
+                            <div class="profile-avatars d-flex">
+                                <img src="https://via.placeholder.com/40x40?text=P1" alt="Profile 1"
+                                    class="rounded-circle">
+                                <img src="https://via.placeholder.com/40x40?text=P2" alt="Profile 2"
+                                    class="rounded-circle">
+                                <img src="https://via.placeholder.com/40x40?text=P3" alt="Profile 3"
+                                    class="rounded-circle">
+                            </div>
+                            <span>550+ people loved working with Aun Digital</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="assets/images/common/bussnies.svg" alt="Start Project" class="img-fluid rounded-end">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="inspire-confidence py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5" data-aos="fade-up">Words That Inspire Confidence</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="rating fs-2 fw-bold text-primary">4.6</div>
+                            <div class="text-muted">Google Reviews</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm position-relative">
+                        <img src="https://via.placeholder.com/400x300?text=Eva+Walsh" alt="Eva Walsh"
+                            class="card-img-top">
+                        <div
+                            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-play-circle play-button fs-3 text-white"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5>Eva Walsh</h5>
+                            <p class="text-muted">CEO - PACITOMA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold">Voices That Matter</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>"Aun Digital exceeded our expectations, delivering our website in less than 30 days."</p>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://via.placeholder.com/60x60?text=SK" alt="Saahil Kewlani"
+                                    class="rounded-circle">
+                                <div>
+                                    <h5>Saahil Kewlani</h5>
+                                    <p class="text-muted">COO, Goarch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional testimonials omitted for brevity -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-primary rounded-pill px-3 py-2">FAQs</span>
+                <h2 class="fw-bold mt-3">Frequently Asked Questions</h2>
+            </div>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item border-0 rounded-3 mb-3" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            What is Aun Digital, and why is it a popular choice in UAE?
+                            <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Aun Digital is a leading web design and development company in UAE, known for innovative
+                            solutions and user-centric websites.
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional FAQs omitted for brevity -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        function playVideo() {
+            const video = document.getElementById("companyVideo");
+            video.controls = true;
+            video.play();
+            document.querySelector(".video-overlay").style.display = "none";
+        }
+
+        new Swiper('.portfolio-swiper', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next-custom',
+                prevEl: '.swiper-button-prev-custom',
+            },
+            breakpoints: {
+                320: { slidesPerView: 1, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                992: { slidesPerView: 3, spaceBetween: 30 }
+            }
+        });
+
+        new Swiper('.innovationSwiper', {
+            loop: true,
+            spaceBetween: 24,
+            slidesPerView: 1.2,
+            centeredSlides: true,
+            pagination: { el: '.innovationSwiper .swiper-pagination', clickable: true },
+            navigation: { nextEl: '.innovationSwiper .swiper-button-next', prevEl: '.innovationSwiper .swiper-button-prev' },
+            breakpoints: {
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                992: { slidesPerView: 4 }
+            }
+        });
+    </script>
+</body>
+
+</html>
