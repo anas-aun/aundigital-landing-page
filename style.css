@@ -15,11 +15,186 @@ body {
     background-color: #A379C5;
 }
 
+.animated-switch {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    height: 40px;
+    line-height: 1;
+    vertical-align: middle;
+    position: relative;
+
+    .static-text {
+        font-weight: inherit;
+        font-size: inherit;
+        white-space: nowrap;
+        line-height: 40px;
+    }
+
+    .switch-wrapper {
+        position: relative;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    .switch-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        animation: switchText 10s infinite;
+        position: relative;
+
+        li {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            font-weight: inherit;
+            font-size: inherit;
+            white-space: nowrap;
+
+            .selection-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                z-index: -1;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@keyframes switchText {
+
+    0%,
+    12.66%,
+    100% {
+        transform: translateY(0);
+    }
+
+    16.66%,
+    29.32% {
+        transform: translateY(-40px);
+    }
+
+    33.32%,
+    45.98% {
+        transform: translateY(-80px);
+    }
+
+    49.98%,
+    62.64% {
+        transform: translateY(-120px);
+    }
+
+    66.64%,
+    79.3% {
+        transform: translateY(-80px);
+    }
+
+    83.3%,
+    95.96% {
+        transform: translateY(-40px);
+    }
+}
+
+
+
+.btn-primary {
+    background-color: #A379C5;
+    border: none;
+    border-radius: 300px;
+}
+
+.btn-secondary {
+    background: #FFFFFF;
+    border: none;
+    color: #535353;
+    border-radius: 300px;
+}
+
+.contact-form-card {
+    position: relative;
+    /* Needed for positioning the absolute circle */
+    overflow: visible;
+    /* Allow the circle to extend beyond the card */
+}
+
+.start-project-circle {
+    position: absolute;
+    top: -45px;
+    left: -45px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    background-color: #A379C5C7;
+    border: 0.4px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.start-project-circle svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotate-btn 10s linear infinite;
+}
+
+.start-project-circle text {
+    font-size: 9px;
+    fill: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.plus-icon {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    z-index: 2;
+    line-height: 1;
+}
+
+@keyframes rotate-btn {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Adjust form input focus colors if needed */
+.form-control:focus,
+.form-select:focus,
+.form-control.is-valid:focus,
+.form-control.is-invalid:focus {
+    border-color: #A379C5C7;
+    /* A lighter purple */
+    box-shadow: 0 0 0 0.25rem rgba(163, 121, 197, 0.25);
+    /* Lighter purple glow */
+}
+
+.btn-custom-purple {
+    background-color: #451769;
+    /* Darker purple for the button */
+    border-color: #451769;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-purple:hover {
+    background-color: #5d258a;
+    /* Slightly lighter on hover */
+    border-color: #5d258a;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
     background: url("assets/images/bg/hero_bg.webp") center/cover no-repeat;
-    height: calc(100vh+20vh);
+    height: calc(100vh + 10vh);
 }
 
 .hero .overlay {
@@ -37,7 +212,6 @@ body {
 
 .section-heading .badge {
     font-size: 0.75rem;
-    font-weight: 400;
     letter-spacing: -0.28px;
     padding: 0.25rem 0.5rem;
 }
@@ -61,20 +235,61 @@ body {
 
 /* Video Section */
 .video-section {
-    background: #fff;
     padding: 6rem 0;
+    position: relative;
+    background-color: #ffffff;
+    min-height: 80vh;
+    text-align: center;
+
 }
 
 .video-container {
-    position: relative;
+    position: absolute;
     max-width: 1400px;
+    top: -6rem;
+    left: 0;
+    right: 0;
     margin: 0 auto;
+
+    z-index: 50;
 }
 
 .video-container video {
     border-radius: 1rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
+
+.section_title {
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 57.6px;
+    text-align: center;
+    text-transform: capitalize;
+
+    background: linear-gradient(90deg, #000000, #878787, #000000);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    animation: shineText 6s ease-in-out infinite;
+}
+
+@keyframes shineText {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+
 
 /* Trusted Partners */
 .trusted-partners {
@@ -85,86 +300,196 @@ body {
 .partner-logos img {
     max-height: 50px;
     object-fit: contain;
+    margin: 10% 0;
 }
 
 /* Custom Designs */
 .custom-designs {
-    background: #fff;
-    padding: 4rem 0;
+    background-color: #f8f9fa;
+    /* Light background to match the image */
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.custom-designs .badge {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.custom-designs h2 {
+    font-size: 2.8rem;
+    /* Larger heading as in the image */
+    line-height: 1.2;
+    margin-bottom: 1.5rem !important;
+    color: #212529;
+}
+
+.custom-designs p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
 }
 
 .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    margin-top: 3rem !important;
+    /* Adjust spacing as in the image */
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    /* Spacing between feature items */
+
 }
 
 .feature-item img {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    flex-shrink: 0;
     width: 40px;
     height: 40px;
-    background: #4b2a82;
-    padding: 8px;
+    background-color: #4b2a82;
+    padding: 10px;
     border-radius: 50%;
 }
 
+.feature-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
 .stats-grid {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+    margin-top: 3rem !important;
+    /* Adjust spacing as in the image */
 }
 
 .stats-item h3 {
-    color: #7e22ce;
-    font-size: 2.2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    /* Larger numbers */
+    margin-bottom: 0.25rem;
+    color: var(--purple);
+    /* Purple color for stats numbers */
 }
 
-.image {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+.stats-item p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.custom-designs .img-fluid {
+    border-radius: 0.5rem;
+    /* Slightly more rounded corners */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    /* Maintains the aspect ratio */
 }
 
 .stats-overlay {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #7e22ce, #5b21b6);
-    color: #fff;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #8651B14D;
+    backdrop-filter: blur(14px);
+    opacity: 0.8;
+    /* Semi-transparent black */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-align: center;
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
+    width: 80%;
 }
 
-.stats-overlay h3 {
+.stat-item {
+    margin: 0 1rem;
+}
+
+.stat-item h3 {
     font-size: 1.5rem;
+    margin-bottom: 0.2rem;
 }
 
-.stats-overlay p {
-    font-size: 0.8rem;
+.stat-item p {
+    font-size: 0.9rem;
+    margin: 0;
 }
 
-@media (max-width: 900px) {
-    .custom-designs {
-        grid-template-columns: 1fr;
-        text-align: center;
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .custom-designs h2 {
+        font-size: 2.2rem;
     }
 
-    .stats-overlay {
-        flex-direction: column;
-        gap: 0.5rem;
+    .feature-item {
+        margin-bottom: 1rem;
     }
 }
 
-/* Innovation Display */
+@media (max-width: 767.98px) {
+    .feature-grid .col-6 {
+        width: 100%;
+        /* Stack features on smaller screens */
+    }
+
+    .stats-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
 .innovation-display {
     background: linear-gradient(180deg, #554681 0%, #1B022C 100%);
-    padding: 4rem 0;
 }
 
-.innovationSwiper img {
+.innovation-display .badge {
+    background-color: #A379C5;
+    color: white;
+}
+
+.innovation-display h2 {
+    color: white;
+}
+
+.innovation-display .carousel-item img {
     border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 20;
+    object-fit: cover;
+}
+
+
+/* Ensure carousel auto-scrolls */
+#innovationCarousel {
+    --bs-carousel-fade: false;
+    /* Optional: Use slide instead of fade */
+}
+
+@media (min-width: 768px) {
+    .carousel-inner {
+        display: flex;
+    }
+
+    .carousel-item {
+        display: block;
+        flex: 0 0 calc(25% - 24px);
+        /* 4 items with spacing */
+        margin-right: 24px;
+    }
+
+    .carousel-item:last-child {
+        margin-right: 0;
+    }
 }
 
 /* Services Section */
@@ -189,150 +514,708 @@ body {
     z-index: 1;
 }
 
-/* Portfolio Section */
+:root {
+    --text-purple: #A379C5;
+    --light-purple: #A379C5;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --bg-purple: #554681;
+    --light-purple-bg: #f3effc;
+    /* The very light purple background of the card */
+    --purple-badge: #9d6dcc;
+    /* Color for the "Your dream projects" badge */
+    --dark-heading: #333;
+    /* Dark color for the heading */
+    --text-color: #666;
+    /* General text color */
+    --button-purple: #7b4397;
+    /* Button background color */
+    --button-hover-purple: #6a3a82;
+    /* Button hover background color */
+    --avatar-border: #f3effc;
+    --purple-bg-dark: #3e2666;
+    /* Dark purple for some backgrounds */
+    --purple-bg-light: #f3effc;
+    /* Very light purple for general background */
+    --purple-text-main: #7b4397;
+    /* Main purple for titles/accents */
+    --purple-text-light: #baa6d8;
+    /* Lighter purple text */
+    --gray-text: #6c757d;
+    /* Standard gray text */
+    --blue-card-bg: #2196f3;
+    /* For the specific blue testimonial card */
+    --teal-card-bg: #21a1f3;
+    /* For the specific teal testimonial card */
+    --card-shadow: rgba(0, 0, 0, 0.08);
+    /* Subtle shadow for cards */
+    --card-border-radius: 1.5rem;
+    /* Consistent border-radius for car
+    /* Border color for avatars, same as card bg */
+}
+
 .websites-drive-results-section {
-    background: #f0f2f5;
+    background: linear-gradient(to bottom, #554681 0%, #554681 50%, #FFFFFF 100%);
+    color: #ffffff;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.header-content {
-    background: #6a0dad;
-    padding: 5rem 0;
+.websites-drive-results-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #554681 0%, #1B022C 100%);
+    opacity: 0.8;
 }
 
-.filter-tabs .btn-outline-light.active {
-    background: #6a0dad;
-    border-color: #6a0dad;
+.websites-drive-results-section .container {
+    position: relative;
+    z-index: 1;
 }
 
-.portfolio-swiper .swiper-slide {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.websites-drive-results-section .badge.bg-purple {
+    background-color: #A379C5;
 }
 
-.portfolio-swiper .swiper-slide:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+.websites-drive-results-section .text-uppercase {
+    color: var(--text-purple);
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem !important;
+}
+
+.websites-drive-results-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.websites-drive-results-section .lead {
+    font-size: 1.15rem;
+    color: var(--text-purple);
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.websites-drive-results-section .btn-outline-light {
+    font-weight: 600;
+    padding: 0.85rem 2.5rem;
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.websites-drive-results-section .btn-outline-light:hover {
+    background-color: var(--light-purple);
+    border-color: var(--light-purple);
+    color: #ffffff;
+}
+
+.websites-drive-results-section .filter-buttons .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+}
+
+.websites-drive-results-section .filter-buttons .btn-outline-light.active,
+.websites-drive-results-section .filter-buttons .btn-outline-light:hover {
+    background-color: var(--light-purple);
+    border-color: var(--light-purple);
+    color: #ffffff;
+}
+
+.portfolio-swiper {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    overflow: visible;
+}
+
+.swiper-slide {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px var(--card-shadow);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+    width: 75% !important;
+    margin-right: 2rem;
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.swiper-slide-active {
+    transform: scale(1);
+}
+
+.portfolio-item {
+    z-index: 1000000;
 }
 
 .portfolio-item .item-header {
-    padding: 1.25rem;
-    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-.portfolio-item .item-content {
-    padding: 1.25rem;
-    background: #fdfdfd;
+.portfolio-item .badge {
+    background-color: #E5E1FF;
+    color: #6A1B9A;
+    font-size: 0.75rem;
+    padding: 0.35em 0.75em;
+    border-radius: 0.5rem;
 }
 
-.portfolio-item .screenshot-main {
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+.portfolio-item .btn-icon {
+    background-color: #f3f4f6;
+    position: absolute;
+    right: 10px;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
 }
 
-.portfolio-item .screenshot-thumb {
-    border-radius: 3px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.portfolio-item .portfolio-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-.swiper-button-next-custom,
-.swiper-button-prev-custom {
-    color: #6a0dad;
-    background: #fff;
-    border-radius: 50%;
+.portfolio-item .aspect-ratio-box {
+    position: relative;
+    width: 100%;
+    padding-top: 91%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item .aspect-ratio-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    color: var(--light-purple);
+    top: 50%;
+    transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+    background-color: #ffffff;
+}
+
+.swiper-button-prev-custom {
+    left: 1rem;
+}
+
+.swiper-button-next-custom {
+    right: 1rem;
+}
+
 @media (max-width: 991.98px) {
-    .portfolio-item .item-content {
+    .websites-drive-results-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .websites-drive-results-section .lead {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .websites-drive-results-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .websites-drive-results-section h1 {
+        font-size: 2rem;
+    }
+
+    .websites-drive-results-section .filter-buttons {
         flex-direction: column;
         align-items: center;
-    }
-
-    .portfolio-item .screenshot-main {
-        width: 100%;
-        margin: 0 0 1.25rem;
-    }
-
-    .portfolio-item .additional-screens {
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-        gap: 0.75rem;
     }
 }
 
 /* Start Project Section */
 .start-project-section {
-    background: linear-gradient(180deg, #F0E6FA 0%, #FFFFFF 100%);
-    padding: 5rem 0;
+    padding-top: 80px;
+    /* Adjust top padding for overall section */
+    padding-bottom: 80px;
+    /* Adjust bottom padding for overall section */
+    background-color: #ffffff;
 }
 
-.start-project-card {
-    animation: fadeInScale 1s ease-out forwards;
+.start-project-section .row.g-0 {
+    background: linear-gradient(180deg, #E5C3FF 0%, rgba(255, 255, 255, 0.12) 100%);
+    border-radius: 1.5rem;
+    /* More rounded corners for the entire card */
+    overflow: hidden;
+    /* Ensures image and content stay within rounded borders */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+    /* Subtle but noticeable shadow */
 }
 
-.project-badge,
-.start-project-content h2,
-.start-project-content p,
-.btn-get-quote,
-.social-proof {
-    animation: fadeInDown 0.8s ease-out forwards;
+.start-project-section .col-lg-6.p-4 {
+    padding: 4rem 3rem !important;
+    /* Larger padding for content area */
 }
 
-.start-project-image {
-    animation: fadeInRight 1s ease-out 0.8s forwards;
+.start-project-section .badge {
+    background-color: var(--purple-badge) !important;
+    color: #fff;
+    font-size: 0.9rem;
+    /* Slightly larger badge text */
+    padding: 0.6em 1.2em;
+    /* More padding for badge */
+    border-radius: 2rem !important;
+    /* Fully rounded pill shape */
+    font-weight: 500;
+    margin-bottom: 1.5rem !important;
+    /* Increased spacing below badge */
 }
 
+.start-project-section h2 {
+    font-size: 2.5rem;
+    /* Larger heading size */
+    font-weight: 800 !important;
+    /* Make it extra bold */
+    color: var(--dark-heading);
+    margin-bottom: 1rem !important;
+    /* Adjust spacing below heading */
+}
+
+.start-project-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 2rem !important;
+    /* Increased spacing below paragraph */
+    max-width: 90%;
+    /* Constrain paragraph width slightly */
+}
+
+.start-project-section .btn-primary {
+    background-color: var(--button-purple);
+    border-color: var(--button-purple);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    /* Larger padding for the button */
+    border-radius: 0.75rem !important;
+    /* Custom border-radius for button */
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: inline-flex;
+    /* Use flex to align icon if any */
+    align-items: center;
+    gap: 8px;
+    /* Space for arrow icon */
+}
+
+.start-project-section .btn-primary:hover {
+    background-color: var(--button-hover-purple);
+    border-color: var(--button-hover-purple);
+}
+
+.start-project-section .profile-avatars img {
+    width: 48px;
+    /* Larger avatars */
+    height: 48px;
+    border: 3px solid var(--avatar-border);
+    /* Border color for avatars */
+    margin-right: -15px;
+    /* Overlap avatars */
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for avatars */
+}
+
+.start-project-section .profile-avatars img:first-child {
+    z-index: 3;
+    /* Ensure first avatar is on top */
+}
+
+.start-project-section .profile-avatars img:nth-child(2) {
+    z-index: 2;
+}
+
+.start-project-section .profile-avatars img:last-child {
+    z-index: 1;
+}
+
+.start-project-section .profile-avatars img:hover {
+    transform: translateY(-3px);
+    /* Slight lift on hover */
+}
+
+.start-project-section .social-proof {
+    font-size: 0.95rem;
+    /* Text size for social proof */
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    /* Space between button and social proof */
+}
+
+.start-project-section .social-proof span {
+    display: block;
+    /* Ensure text wraps if needed */
+}
+
+.start-project-section .col-lg-6>img {
+    height: 100%;
+    /* Image fills its container height */
+    object-fit: cover;
+    /* Ensures image covers the area without distortion */
+    border-top-right-radius: 1.5rem;
+    /* Match parent's border-radius */
+    border-bottom-right-radius: 1.5rem;
+    /* Match parent's border-radius */
+    display: block;
+    /* Remove extra space below image */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 991.98px) {
-    .start-project-card {
-        flex-direction: column;
-        padding: 2rem;
+    .start-project-section .col-lg-6.p-4 {
+        padding: 3rem 2rem !important;
     }
 
-    .start-project-content {
-        margin-bottom: 2rem;
-        text-align: center;
+    .start-project-section h2 {
+        font-size: 2rem;
+    }
+
+    .start-project-section .social-proof {
+        margin-top: 1rem;
+        margin-left: 0;
+        /* Stack on smaller screens */
+    }
+
+    .start-project-section .col-lg-6>img {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1.5rem;
+        /* Rounded bottom-left on smaller screens */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .start-project-section .profile-avatars img {
+        width: 40px;
+        height: 40px;
+        margin-right: -12px;
+    }
+
+    .start-project-section .social-proof {
+        font-size: 0.85rem;
     }
 }
 
 /* Testimonials Section */
+
 .inspire-confidence {
-    background: #f8f9fa;
-    padding: 5rem 0;
+    background-color: #f8f9fa;
+    /* Light grey background for the section */
+    padding-top: 6rem;
+    /* More padding top */
+    padding-bottom: 6rem;
+    /* More padding bottom */
 }
 
+.section-title {
+    font-size: 2.5rem;
+    /* Larger heading for the section title */
+    font-weight: 700;
+    /* Bold */
+    color: #343a40;
+    /* Darker grey */
+    margin-bottom: 4rem !important;
+    /* Increased margin bottom */
+}
+
+/* Base Testimonial Card Styling */
 .testimonial-card {
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.card-google-reviews {
-    background: linear-gradient(45deg, #a737ff, #380036);
-    padding: 2.5rem;
-}
-
-.card-voices-matter {
-    background: linear-gradient(45deg, #FFC107, #FF9800);
-    padding: 2.5rem;
-}
-
-.card-trusted-best {
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    padding: 2.5rem;
-}
-
-.card-video-testimonial {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* More pronounced shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #ffffff;
+    /* Default white background */
+    border-radius: 12px !important;
+    /* More rounded corners as per image */
     overflow: hidden;
+    /* Important for images inside to respect border-radius */
+}
+.card-ripil {
+    background-color: #7b43c4; /* A slightly different shade of purple, adjust as needed */
+    background-image: url('assets/images/common/aun_digital_u_logo.svg'); /* Path to your unique symbol SVG */
+    background-size: 65%; /* Adjust size to fit card, usually around 60-80% for central focus */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff; /* Ensure text is white if any */
+}
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    /* Lift higher on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow on hover */
+}
+
+/* Ensure all columns stretch to equal height */
+/* Applying d-flex to cols and h-100 to cards makes them equal height */
+.col-lg-4.d-flex,
+.col-md-6.d-flex,
+.col-12.d-flex {
+    display: flex;
+}
+
+.col-lg-4.d-flex>.testimonial-card,
+.col-md-6.d-flex>.testimonial-card,
+.col-12.d-flex>.testimonial-card {
+    height: 100%;
+    width: 100%;
+    /* Ensure they fill the column width */
+}
+
+
+/* Google Reviews Card Specifics */
+.google-reviews-card {
+    background: linear-gradient(135deg, #f0f2f5, #e6e9ee);
+    /* Subtle gradient for background */
+    color: #333;
+    /* Dark text for clarity */
+    padding: 3rem !important;
+    /* Increased padding */
+}
+
+.google-reviews-card .google-logo-bg {
+    width: 120px;
+    /* Size of the circular background containing Google logo */
+    height: 120px;
+    background-image: url('assets/images/common/google_op-2.svg');
+    /* This SVG should ideally contain the white G logo on a colored circle */
+    background-size: 70%;
+    /* Adjust size of the logo within the circle */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f1f1f1;
+    /* Light background for the circle if not part of SVG */
+    border-radius: 50%;
+    display: flex;
+    /* For centering content within it if needed */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem !important;
+}
+
+.google-reviews-card .rating {
+    font-size: 5rem;
+    /* Very large font for 4.6 */
+    font-weight: 700;
+    color: #212529;
+    /* Very dark grey for emphasis */
+    line-height: 1;
+    /* Reduce line height */
+    margin-bottom: 0.5rem;
+}
+
+.google-reviews-card .text-reviews {
+    font-size: 1.6rem;
+    /* Large font for "Google Reviews" */
+    font-weight: 500;
+    color: #6c757d;
+    /* Muted grey */
+}
+
+/* Video Testimonial Cards Specifics */
+.card-video-testimonial img {
+    height: 300px;
+    /* Consistent height for video images */
+    object-fit: cover;
+    filter: brightness(0.8);
+    /* Slightly dim the image to make overlay pop */
 }
 
 .card-video-testimonial .video-overlay {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px 15px 0 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    /* Darker semi-transparent overlay */
+}
+
+.card-video-testimonial .play-button {
+    font-size: 5.5rem;
+    /* Larger play icon */
+    color: rgba(255, 255, 255, 0.95);
+    /* Near-white */
+    transition: color 0.3s ease;
+}
+
+.card-video-testimonial .play-button:hover {
+    color: #fff;
+    /* Fully white on hover */
+}
+
+.card-video-testimonial .video-info {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    /* Stronger gradient from bottom */
+    padding-top: 80px !important;
+    /* Push text up from bottom */
+}
+
+.card-video-testimonial .profile-circle {
+    width: 55px;
+    /* Slightly larger profile circle */
+    height: 55px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #8c52ff;
+    /* Consistent purple for icon */
+    font-size: 1.8rem;
+    /* Larger icon */
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Small shadow for profile circle */
+}
+
+.card-video-testimonial .video-info h5 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    /* Slightly larger name font */
+    margin-bottom: 0.2rem !important;
+    /* Reduced margin */
+}
+
+.card-video-testimonial .video-info p {
+    font-size: 0.85rem;
+    /* Slightly larger title font */
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    /* Small letter spacing for uppercase */
+    opacity: 0.9;
+}
+
+
+/* Solid Color Cards (Voices That Matter, Trusted by the Best, Ripil Symbol) */
+.card-voices-matter,
+.card-trusted-best {
+    background-color: #6a0dad;
+    /* Primary purple color */
+    color: #fff;
+    padding: 3rem !important;
+    /* Consistent padding */
+}
+
+.card-voices-matter h3,
+.card-trusted-best h3 {
+    font-size: 2.8rem;
+    /* Large and bold headings */
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.card-ripil {
+    background-color: #7b43c4;
+    /* A slightly different shade of purple, adjust as needed */
+    background-image: url('assets/images/common/ripil_symbol.svg');
+    /* Path to your unique symbol SVG */
+    background-size: 65%;
+    /* Adjust size to fit card, likely larger than 60% */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    /* Ensure text is white if any */
+}
+
+/* Ensure you have `ripil_symbol.svg` in `assets/images/common/` path.
+   This SVG should be the standalone abstract symbol seen in the image. */
+
+
+/* Text Testimonial Cards Specifics */
+.testimonial-card .review-text {
+    font-size: 1.15rem;
+    /* Slightly larger quote text */
+    line-height: 1.7;
+    color: #555;
+    font-weight: 400;
+}
+
+.testimonial-card .star-rating {
+    color: #ffb700;
+    /* More vibrant yellow for stars */
+    font-size: 1.2rem;
+    /* Slightly larger stars */
+    letter-spacing: 0.1em;
+    /* Small gap between stars */
+}
+
+.reviewer-info {
+    border-top: 1px solid #f0f0f0;
+    /* Very light grey separator */
+    padding-top: 1.5rem !important;
+    /* More padding above separator */
+    margin-top: 1.5rem !important;
+    /* More margin above separator */
+    align-items: center;
+    /* Ensure vertical alignment */
+}
+
+.reviewer-avatar {
+    width: 65px;
+    /* Slightly larger avatar */
+    height: 65px;
+    border: 3px solid #f0f0f0;
+    /* Thicker, lighter border around avatar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for avatar */
+    object-fit: cover;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.reviewer-title {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: 400;
 }
 
 /* FAQ Section */
@@ -341,27 +1224,52 @@ body {
     padding: 5rem 0;
 }
 
-.faq-badge {
-    background: #e0d0f7;
-    color: #6a11cb;
+.faq-accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0.5rem;
 }
 
-.accordion-button {
-    transition: color 0.3s ease;
+.faq-accordion .accordion-button {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 1rem 0;
+    color: #333;
 }
 
-.accordion-button:not(.collapsed) {
-    color: #6a11cb;
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
 }
 
-.accordion-icon {
-    background: #6a11cb;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.faq-accordion .accordion-button::after {
+    display: none;
+    /* Hide default icon */
 }
 
-.accordion-button:not(.collapsed) .accordion-icon {
-    transform: rotate(45deg);
-    background: #8c4ad0;
+/* Custom + Icon */
+.faq-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #a47ddf;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.faq-icon::before {
+    content: "+";
+}
+
+/* When accordion is open, change + to – */
+.accordion-button:not(.collapsed) .faq-icon::before {
+    content: "–";
 }
 
 /* Animations */
