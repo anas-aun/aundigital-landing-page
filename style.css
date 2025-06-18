@@ -189,7 +189,22 @@ body {
     /* Slightly lighter on hover */
     border-color: #5d258a;
 }
+.section_title {
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 57.6px;
+    text-align: center;
+    text-transform: capitalize;
 
+    background: linear-gradient(90deg, #000000, #878787, #000000);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    animation: shineText 6s ease-in-out infinite;
+}
 /* Hero Section */
 .hero {
     position: relative;
@@ -232,49 +247,49 @@ body {
     font-size: 0.5rem;
     line-height: 0.75rem;
 }
-
-/* Video Section */
 .video-section {
-    padding: 6rem 0;
-    position: relative;
+    padding: 4rem 0;
     background-color: #ffffff;
-    min-height: 80vh;
     text-align: center;
-
 }
 
 .video-container {
-    position: absolute;
-    max-width: 1400px;
-    top: -6rem;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-
-    z-index: 50;
 }
 
 .video-container video {
+    width: 100%;
+    height: auto;
     border-radius: 1rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-.section_title {
-    font-weight: 400;
-    font-size: 45px;
-    line-height: 57.6px;
-    text-align: center;
-    text-transform: capitalize;
-
-    background: linear-gradient(90deg, #000000, #878787, #000000);
-    background-size: 300% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-
-    animation: shineText 6s ease-in-out infinite;
+.video-overlay {
+    transition: all 0.3s ease-in-out;
 }
+
+.video-overlay button {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+    .video-section {
+        padding: 2rem 0;
+    }
+
+    .video-overlay button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+}
+
 
 @keyframes shineText {
     0% {
@@ -949,57 +964,42 @@ body {
 }
 
 /* Testimonials Section */
-
 .inspire-confidence {
     background-color: #f8f9fa;
-    /* Light grey background for the section */
     padding-top: 6rem;
-    /* More padding top */
     padding-bottom: 6rem;
-    /* More padding bottom */
 }
 
 .section-title {
     font-size: 2.5rem;
-    /* Larger heading for the section title */
     font-weight: 700;
-    /* Bold */
     color: #343a40;
-    /* Darker grey */
     margin-bottom: 4rem !important;
-    /* Increased margin bottom */
 }
 
-/* Base Testimonial Card Styling */
 .testimonial-card {
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    /* More pronounced shadow for depth */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background-color: #ffffff;
-    /* Default white background */
     border-radius: 12px !important;
-    /* More rounded corners as per image */
     overflow: hidden;
-    /* Important for images inside to respect border-radius */
-}
-.card-ripil {
-    background-color: #7b43c4; /* A slightly different shade of purple, adjust as needed */
-    background-image: url('assets/images/common/aun_digital_u_logo.svg'); /* Path to your unique symbol SVG */
-    background-size: 65%; /* Adjust size to fit card, usually around 60-80% for central focus */
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #fff; /* Ensure text is white if any */
-}
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    /* Lift higher on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    /* Stronger shadow on hover */
 }
 
-/* Ensure all columns stretch to equal height */
-/* Applying d-flex to cols and h-100 to cards makes them equal height */
+.card-ripil {
+    background-color: #7b43c4;
+    background-image: url('assets/images/common/aun_digital_u_logo.svg');
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .col-lg-4.d-flex,
 .col-md-6.d-flex,
 .col-12.d-flex {
@@ -1011,35 +1011,24 @@ body {
 .col-12.d-flex>.testimonial-card {
     height: 100%;
     width: 100%;
-    /* Ensure they fill the column width */
 }
 
-
-/* Google Reviews Card Specifics */
 .google-reviews-card {
     background: linear-gradient(135deg, #f0f2f5, #e6e9ee);
-    /* Subtle gradient for background */
     color: #333;
-    /* Dark text for clarity */
     padding: 3rem !important;
-    /* Increased padding */
 }
 
 .google-reviews-card .google-logo-bg {
     width: 120px;
-    /* Size of the circular background containing Google logo */
     height: 120px;
     background-image: url('assets/images/common/google_op-2.svg');
-    /* This SVG should ideally contain the white G logo on a colored circle */
     background-size: 70%;
-    /* Adjust size of the logo within the circle */
     background-repeat: no-repeat;
     background-position: center;
     background-color: #f1f1f1;
-    /* Light background for the circle if not part of SVG */
     border-radius: 50%;
     display: flex;
-    /* For centering content within it if needed */
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem !important;
@@ -1047,129 +1036,85 @@ body {
 
 .google-reviews-card .rating {
     font-size: 5rem;
-    /* Very large font for 4.6 */
     font-weight: 700;
     color: #212529;
-    /* Very dark grey for emphasis */
     line-height: 1;
-    /* Reduce line height */
     margin-bottom: 0.5rem;
 }
 
 .google-reviews-card .text-reviews {
     font-size: 1.6rem;
-    /* Large font for "Google Reviews" */
     font-weight: 500;
     color: #6c757d;
-    /* Muted grey */
 }
 
-/* Video Testimonial Cards Specifics */
 .card-video-testimonial img {
     height: 300px;
-    /* Consistent height for video images */
     object-fit: cover;
     filter: brightness(0.8);
-    /* Slightly dim the image to make overlay pop */
 }
 
 .card-video-testimonial .video-overlay {
     background-color: rgba(0, 0, 0, 0.45);
-    /* Darker semi-transparent overlay */
 }
 
 .card-video-testimonial .play-button {
     font-size: 5.5rem;
-    /* Larger play icon */
     color: rgba(255, 255, 255, 0.95);
-    /* Near-white */
     transition: color 0.3s ease;
 }
 
 .card-video-testimonial .play-button:hover {
     color: #fff;
-    /* Fully white on hover */
 }
 
 .card-video-testimonial .video-info {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
-    /* Stronger gradient from bottom */
     padding-top: 80px !important;
-    /* Push text up from bottom */
 }
 
 .card-video-testimonial .profile-circle {
     width: 55px;
-    /* Slightly larger profile circle */
     height: 55px;
     background-color: #fff;
     border-radius: 50%;
     color: #8c52ff;
-    /* Consistent purple for icon */
     font-size: 1.8rem;
-    /* Larger icon */
     flex-shrink: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    /* Small shadow for profile circle */
 }
 
 .card-video-testimonial .video-info h5 {
     font-weight: 600;
     font-size: 1.25rem;
-    /* Slightly larger name font */
     margin-bottom: 0.2rem !important;
-    /* Reduced margin */
 }
 
 .card-video-testimonial .video-info p {
     font-size: 0.85rem;
-    /* Slightly larger title font */
     font-weight: 500;
     letter-spacing: 0.05em;
-    /* Small letter spacing for uppercase */
     opacity: 0.9;
 }
 
-
-/* Solid Color Cards (Voices That Matter, Trusted by the Best, Ripil Symbol) */
 .card-voices-matter,
-.card-trusted-best {
+.card-trusted-best,
+.card-ripil {
     background-color: #6a0dad;
-    /* Primary purple color */
     color: #fff;
     padding: 3rem !important;
-    /* Consistent padding */
 }
 
 .card-voices-matter h3,
-.card-trusted-best h3 {
+.card-trusted-best h3,
+.card-ripil h3 {
     font-size: 2.8rem;
-    /* Large and bold headings */
     font-weight: 700;
     line-height: 1.2;
 }
 
-.card-ripil {
-    background-color: #7b43c4;
-    /* A slightly different shade of purple, adjust as needed */
-    background-image: url('assets/images/common/ripil_symbol.svg');
-    /* Path to your unique symbol SVG */
-    background-size: 65%;
-    /* Adjust size to fit card, likely larger than 60% */
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #fff;
-    /* Ensure text is white if any */
-}
-
-/* Ensure you have `ripil_symbol.svg` in `assets/images/common/` path.
-   This SVG should be the standalone abstract symbol seen in the image. */
-
-
-/* Text Testimonial Cards Specifics */
 .testimonial-card .review-text {
     font-size: 1.15rem;
-    /* Slightly larger quote text */
     line-height: 1.7;
     color: #555;
     font-weight: 400;
@@ -1177,32 +1122,22 @@ body {
 
 .testimonial-card .star-rating {
     color: #ffb700;
-    /* More vibrant yellow for stars */
     font-size: 1.2rem;
-    /* Slightly larger stars */
     letter-spacing: 0.1em;
-    /* Small gap between stars */
 }
 
 .reviewer-info {
     border-top: 1px solid #f0f0f0;
-    /* Very light grey separator */
     padding-top: 1.5rem !important;
-    /* More padding above separator */
     margin-top: 1.5rem !important;
-    /* More margin above separator */
     align-items: center;
-    /* Ensure vertical alignment */
 }
 
 .reviewer-avatar {
     width: 65px;
-    /* Slightly larger avatar */
     height: 65px;
     border: 3px solid #f0f0f0;
-    /* Thicker, lighter border around avatar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for avatar */
     object-fit: cover;
 }
 
@@ -1216,6 +1151,31 @@ body {
     font-size: 0.9rem;
     color: #777;
     font-weight: 400;
+}
+
+/* New Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 2rem !important;
+    }
+
+    .google-reviews-card .rating {
+        font-size: 3.5rem;
+    }
+
+    .card-video-testimonial img {
+        height: 200px;
+    }
+
+    .card-voices-matter h3,
+    .card-trusted-best h3,
+    .card-ripil h3 {
+        font-size: 2rem;
+    }
 }
 
 /* FAQ Section */

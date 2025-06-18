@@ -159,9 +159,9 @@
     <!-- Video Section -->
     <section class="video-section py-5">
         <div class="container">
-            <div class="video-container" data-aos="zoom-in" data-aos-duration="800">
-                <video id="companyVideo" class="w-100 rounded shadow" poster="assets/images/bg/video_bg.svg">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <div class="video-container position-relative" data-aos="zoom-in" data-aos-duration="800">
+                <video id="companyVideo" class="w-100 rounded shadow" controls poster="assets/images/bg/video_bg.svg">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div
@@ -172,6 +172,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Trusted Partners Section -->
     <section class="trusted-partners py-5">
@@ -475,11 +476,13 @@
         </div>
     </section>
 
-
     <!-- Testimonials Section -->
     <section class="inspire-confidence text-center py-5">
         <div class="container">
-            <h2 class="mb-5 section-title">Words That Inspire Confidence</h2>
+            <div class="mb-4" data-aos="fade-up">
+                <span class="badge bg-purple rounded-pill px-3 py-2">Testimonials</span>
+                <h2 class="section_title py-2">Words That Inspire Confidence</h2>
+            </div>
             <div class="row testimonials-grid justify-content-center">
 
                 <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
@@ -515,7 +518,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
+                <div class="col-lg-3 col-md-6 col-12 mb-6 d-flex">
                     <div
                         class="testimonial-card card-voices-matter p-4 h-100 d-flex flex-column justify-content-center align-items-center text-white rounded-3 shadow-sm">
                         <h3>Voices That Matter</h3>
@@ -613,16 +616,11 @@
 
                 <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
                     <div
-                        class="testimonial-card card-trusted-best p-4 h-100 d-flex flex-column justify-content-center align-items-center text-white rounded-3 shadow-sm">
-                        <h3>Trusted by the Best</h3>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
-                    <div
                         class="testimonial-card card-ripil p-4 h-100 d-flex flex-column justify-content-center align-items-center text-white rounded-3 shadow-sm">
                     </div>
                 </div>
+
+
 
             </div>
         </div>
@@ -725,10 +723,9 @@
     <script>
         AOS.init();
         function playVideo() {
-            const video = document.getElementById("companyVideo");
-            video.controls = true;
+            const video = document.getElementById('companyVideo');
             video.play();
-            document.querySelector(".video-overlay").style.display = "none";
+            document.querySelector('.video-overlay').style.display = 'none';
         }
 
         new Swiper('.portfolio-swiper', {
