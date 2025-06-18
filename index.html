@@ -20,26 +20,29 @@
 
 <body>
     <!-- Hero Section -->
-    <section class="hero position-relative py-5 bg-dark text-white overflow-hidden">
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
-        <div class="container position-relative z-1">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-7 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="display-4 fw-bold">
+    <section class="hero-section position-relative bg-dark text-white overflow-hidden">
+        <!-- <div class="hero-section__background">
+            <img src="assets/images/bg/hero_bg.webp" alt="Hero Background" />
+        </div> -->
+        <div class="container hero-section__container">
+            <div class="hero-section__content-area row">
+                <!-- Left Column: Text and Awards -->
+                <div class="hero-section__left col-lg-7 mb-4 mb-lg-0">
+                    <h1 class="hero-section__title">
                         Professional Website<br>
-                        <span class="text-purple animated-switch">
+                        <span class="text-purple animated-switch text-gradient-purple">
                             <span class="static-text">Design&nbsp;</span>
                             <div class="switch-wrapper">
-                                <ul class="switch-list">
+                                <ul class="text-gradient-purple switch-list">
                                     <li>
                                         <img class="selection-img" src="assets/images/common/selection_text.svg"
                                             alt="highlight" />
                                         Development
                                     </li>
                                     <li>
+                                        Optimization
                                         <img class="selection-img" src="assets/images/common/selection_text.svg"
                                             alt="highlight" />
-                                        Optimization
                                     </li>
                                     <li>
                                         <img class="selection-img" src="assets/images/common/selection_text.svg"
@@ -56,11 +59,7 @@
                         </span><br>
                         That Grows Your Business
                     </h1>
-
-
-
-
-                    <p class="mt-4 fs-5">
+                    <p class="hero-section__subtitle">
                         Aun Digital is an award-winning web development agency with over five years of experience and
                         850+ custom websites delivered globally.
                     </p>
@@ -68,40 +67,40 @@
                         <a href="#" class="btn btn-secondary px-4 py-2 rounded-6">Schedule a call →</a>
                         <a href="#" class="btn btn-primary text-white px-4 py-2 rounded-6">Get in touch</a>
                     </div>
-                    <div class="d-flex flex-wrap mt-5ertificate-section mt-4">
-                        <div class="certificate text-center p-3  rounded" data-aos="fade-up" data-aos-delay="100">
-                            <img src="assets/images/certificate/cert_1.svg" height="50" alt="Award">
-                            <p class="fw-bold mb-1">TechBehemoths</p>
-                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                    <!-- Awards Section -->
+                    <div class="hero-section__awards mt-4">
+                        <div class="award-item" data-aos="fade-up" data-aos-delay="100">
+                            <img src="assets/images/certificate/cert_1.svg" alt="Award" />
+                            <h3>TechBehemoths</h3>
+                            <p>Top Mobile App Development company in UAE</p>
                         </div>
-                        <!-- Repeated certificates optimized with dynamic loop in production -->
-                        <div class="certificate text-center p-3  rounded" data-aos="fade-up" data-aos-delay="200">
-                            <img src="assets/images/certificate/cert_2.svg" height="50" alt="Award 2">
-                            <p class="fw-bold mb-1">TechBehemoths</p>
-                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        <div class="award-item" data-aos="fade-up" data-aos-delay="200">
+                            <img src="assets/images/certificate/cert_2.svg" alt="Award 2" />
+                            <h3>TechBehemoths</h3>
+                            <p>Top Mobile App Development company in UAE</p>
                         </div>
-                        <div class="certificate text-center p-3  rounded" data-aos="fade-up" data-aos-delay="300">
-                            <img src="assets/images/certificate/cert_3.svg" height="50" alt="Award 3">
-                            <p class="fw-bold mb-1">TechBehemoths</p>
-                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        <div class="award-item" data-aos="fade-up" data-aos-delay="300">
+                            <img src="assets/images/certificate/cert_3.svg" alt="Award 3" />
+                            <h3>TechBehemoths</h3>
+                            <p>Top Mobile App Development company in UAE</p>
                         </div>
-                        <div class="certificate text-center p-3  rounded" data-aos="fade-up" data-aos-delay="400">
-                            <img src="assets/images/certificate/cert_4.svg" height="50" alt="Award 4">
-                            <p class="fw-bold mb-1">TechBehemoths</p>
-                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
+                        <div class="award-item" data-aos="fade-up" data-aos-delay="400">
+                            <img src="assets/images/certificate/cert_4.svg" alt="Award 4" />
+                            <h3>TechBehemoths</h3>
+                            <p>Top Mobile App Development company in UAE</p>
                         </div>
-                        <div class="certificate text-center p-3  rounded" data-aos="fade-up" data-aos-delay="500">
-                            <img src="assets/images/certificate/cert_5.svg" height="50" alt="Award 5">
-                            <p class="fw-bold mb-1">TechBehemoths</p>
-                            <p class="text-muted small">Top Mobile App Development company in UAE</p>
-                        </div>
+                        <!-- <div class="award-item" data-aos="fade-up" data-aos-delay="500">
+                            <img src="assets/images/certificate/cert_5.svg" alt="Award 5" />
+                            <h3>TechBehemoths</h3>
+                            <p>Top Mobile App Development company in UAE</p>
+                        </div> -->
                     </div>
                 </div>
-                <div class="col-12 col-lg-7 col-xl-5">
-                    <!-- Adjusted column size for better centering on various screens -->
-                    <div class="bg-white p-4 p-md-5 rounded-3 shadow contact-form-card">
-                        <!-- START A PROJECT Circle -->
-                        <div class="start-project-circle" title="Start a Project">
+                <!-- Right Column: Form -->
+                <div class="hero-section__right col-lg-5">
+                    <div class="hero-form-wrapper contact-form-card">
+                        <!-- Project Badge -->
+                        <div class="hero-section__project-badge start-project-circle" title="Start a Project">
                             <span class="plus-icon">+</span>
                             <svg viewBox="0 0 100 100" width="90" height="90">
                                 <defs>
@@ -115,40 +114,33 @@
                                 </text>
                             </svg>
                         </div>
-
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="nameInput" class="form-label">Name</label>
-                                    <input type="text" class="form-control rounded-3" id="nameInput"
-                                        placeholder="Enter full name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="emailInput" class="form-label">Email</label>
-                                    <input type="email" class="form-control rounded-3" id="emailInput"
-                                        placeholder="Enter email">
-                                </div>
-                                <div class="col-12">
-                                    <label for="subjectSelect" class="form-label">Subject</label>
-                                    <select class="form-select rounded-3" id="subjectSelect">
-                                        <option selected>Select one</option>
-                                        <option value="1">Web Development</option>
-                                        <option value="2">App Development</option>
-                                        <option value="3">UI/UX Design</option>
-                                        <option value="4">Digital Marketing</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label for="messageTextarea" class="form-label">Message</label>
-                                    <textarea class="form-control rounded-3" id="messageTextarea" rows="5"
-                                        placeholder="How can we help you?"></textarea>
-                                </div>
-                                <div class="col-12 mt-4">
-                                    <button type="submit"
-                                        class="btn w-100 text-white btn-lg rounded-3 btn-custom-purple">Submit
-                                        enquiry</button>
-                                </div>
+                        <form class="hero-form">
+                            <div class="hero-form__field">
+                                <label for="nameInput">Name <span class="required">*</span></label>
+                                <input type="text" id="nameInput" placeholder="Enter full name" required />
                             </div>
+                            <div class="hero-form__field">
+                                <label for="emailInput">Email <span class="required">*</span></label>
+                                <input type="email" id="emailInput" placeholder="Enter email" required />
+                            </div>
+                            <div class="hero-form__field">
+                                <label for="subjectSelect">Subject <span class="required">*</span></label>
+                                <select id="subjectSelect" required>
+                                    <option value="" selected>Select one</option>
+                                    <option value="1">Web Development</option>
+                                    <option value="2">App Development</option>
+                                    <option value="3">UI/UX Design</option>
+                                    <option value="4">Digital Marketing</option>
+                                </select>
+                                <img class="select-arrow" src="assets/images/common/select-arrow.svg"
+                                    alt="Select Arrow" />
+                            </div>
+                            <div class="hero-form__field">
+                                <label for="messageTextarea">Message <span class="required">*</span></label>
+                                <textarea id="messageTextarea" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="hero-form__submit btn btn-custom-purple w-100">Submit
+                                enquiry</button>
                         </form>
                     </div>
                 </div>
@@ -160,14 +152,23 @@
     <section class="video-section py-5">
         <div class="container">
             <div class="video-container position-relative" data-aos="zoom-in" data-aos-duration="800">
-                <video id="companyVideo" class="w-100 rounded shadow" controls poster="assets/images/bg/video_bg.svg">
+                <video id="companyVideo" class="w-100 rounded-md shadow" muted loop playsinline
+                    poster="assets/images/bg/video_bg.svg">
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div
                     class="video-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                    <button onclick="playVideo()" class="btn btn-primary text-white px-4 py-2 rounded-6">▶ Play
-                        video</button>
+                    <div class="video-controls text-center">
+                        <button id="playButton" class="btn btn-primary text-white px-4 py-2 rounded-6 mb-3">
+                            <i class="bi bi-pause-fill"></i> Pause video
+                        </button>
+                        <div class="loading-spinner d-none">
+                            <div class="spinner-border text-light" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,7 +179,7 @@
     <section class="trusted-partners py-5">
         <div class="container text-center">
             <div class="mb-4" data-aos="fade-up">
-                <span class="badge bg-purple rounded-pill px-3 py-2">Clientele</span>
+                <div class="section-title-tag"><span class="dot"></span>Clientele</div>
                 <h2 class="section_title py-2">Our Trusted Partners</h2>
             </div>
             <div class="row g-4 justify-content-center partner-logos py-[10%]">
@@ -334,12 +335,47 @@
     </section>
 
 
+    <!-- USP Item -->
+    <section id="section-usp" class="usp-section">
+        <div class="container text-center">
+            <div class="section-title-tag" style="margin-left:auto; margin-right:auto;"><span class="dot"></span>USPs
+            </div>
+            <h2 class="sub-heading">Powering Dubai’s Most Recognized Brands</h2>
+            <p class="usp-section__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+            <div class="usp-grid">
+                <!-- USP Item 1 -->
+                <div class="usp-item">
+                    <h3>Custom<br>Appearance</h3>
+                    <p>We prefer to create a custom website from scratch with a unique look so you can stand out in the
+                        market.</p>
+                </div>
+                <!-- USP Item 2 -->
+                <div class="usp-item">
+                    <h3>SEO<br>Friendly</h3>
+                    <p>Our web experts not only design but also optimize your website for higher visibility on Google
+                        and other search engines.</p>
+                </div>
+                <!-- USP Item 3 -->
+                <div class="usp-item">
+                    <h3>Aesthetic<br>UX/UI</h3>
+                    <p>Our web experts not only design but also optimize your website for higher visibility on Google
+                        and other search engines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section class="services-section py-5">
         <div class="container text-center">
             <div class="mb-4" data-aos="fade-up">
-                <span class="badge bg-purple rounded-pill px-3 py-2">Our Services</span>
+                <div class="section-title-tag" style="margin-left:auto; margin-right:auto;"><span class="dot"></span>Our
+                    Services
+                </div>
                 <h2 class="section_title py-2">Services That Drive Success</h2>
             </div>
 
@@ -375,102 +411,141 @@
     </section>
 
     <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
     <section class="websites-drive-results-section py-5 position-relative">
-        <div class="container text-start">
-            <div class="mb-4" data-aos="fade-up">
-                <span class="badge bg-purple rounded-pill px-3 py-2">Case Studies</span>
-                <h1 class="display-4 fw-bold mb-4 text-white" data-aos="fade-up" data-aos-delay="100">Building Websites
-                    That Drive Results</h1>
-                <p class=" text-start mx-auto mb-4 text-white" data-aos="fade-up" data-aos-delay="200">
-                    Looking for a website that turns visitors into loyal customers? Explore our portfolio to see how we
-                    transform ideas into impactful digital experiences. From sleek e-commerce platforms to engaging
-                    corporate websites, our custom designs are tailored.
-                </p>
-                <a href="#" class="btn btn-outline-light px-5 py-3 rounded-pill mb-5" data-aos="fade-up"
-                    data-aos-delay="300">View Case Studies</a>
-                <div class="d-flex flex-wrap justify-content-start gap-2 mb-5 filter-buttons">
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2 active">Real Estate</a>
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Technology</a>
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Education</a>
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Healthcare</a>
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Retail</a>
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Manufacturing</a>
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">E-commerce</a>
-                    <a href="#" class="btn btn-outline-light rounded-pill px-3 py-2">Services</a>
+        <div class="container">
+            <!-- Intro Section -->
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-up">
+                    <div class="section-title-tag mb-3">
+                        <span class="dot"></span>Case Studies
+                    </div>
+                    <h1 class="display-4 fw-bold mb-4 text-white">Building Websites That Drive Results</h1>
+                    <p class="lead mb-4 text-white">
+                        <strong>Looking for a website that turns visitors into loyal customers?</strong><br>
+                        Explore our portfolio to see how we transform ideas into impactful digital experiences. From
+                        sleek e-commerce platforms to engaging corporate websites, our custom designs are tailored.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="btn btn-primary px-5 py-3 rounded-pill">View Case Studies</a>
                 </div>
             </div>
-            <div class="swiper portfolio-swiper" data-aos="fade-up" data-aos-duration="800">
+
+            <!-- Filter Buttons -->
+            <div class="d-flex flex-wrap gap-2 mb-5 filter-buttons justify-content-start" data-aos="fade-up"
+                data-aos-delay="200">
+                <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn active"
+                    data-filter="Real Estate">Real Estate</button>
+                <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn"
+                    data-filter="Technology">Technology</button>
+                <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn"
+                    data-filter="Education">Education</button>
+                <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn"
+                    data-filter="Healthcare">Healthcare</button>
+                <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn"
+                    data-filter="Restaurants">Restaurants</button>
+                <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn"
+                    data-filter="Manufacturing">Manufacturing</button>
+                <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn"
+                    data-filter="Logistics">Logistics</button>
+            </div>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper portfolio-swiper" data-aos="fade-up" data-aos-delay="300">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide portfolio-item">
-                        <div class="item-header d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-light-purple text-dark">Real Estate</span>
-                            <a href="#" class="btn btn-sm btn-icon rounded-circle shadow-sm">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                        <h5 class="portfolio-title">Free Room</h5>
-                        <div class="aspect-ratio-box">
-                            <img src="assets/images/projects/freeroom.svg" alt="Real Estate Website"
-                                class="img-fluid rounded shadow">
-                        </div>
-                    </div>
-                    <div class="swiper-slide portfolio-item">
-                        <div class="item-header d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-light-purple text-dark">Logistics</span>
-                            <a href="#" class="btn btn-sm btn-icon rounded-circle shadow-sm">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                        <h5 class="portfolio-title">Wurth</h5>
-                        <div class="aspect-ratio-box">
-                            <img src="assets/images/projects/wurth.svg" alt="Logistics Website"
-                                class="img-fluid rounded shadow">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide portfolio-item" data-category="Real Estate">
+                        <div class="case-study-item">
+                            <div>
+                                <div class="case-study-item__content">
+                                    <span class="case-study-item__category">Real Estate</span>
+                                    <h3 class="case-study-item__title">Gul Properties</h3>
+                                    <a href="#" class="case-study-item__arrow">
+                                        <img src="assets/images/arrow.svg" alt="arrow">
+                                    </a>
+                                </div>
+                                <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties"
+                                    class="case-study-item__bg">
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide portfolio-item">
-                        <div class="item-header d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-light-purple text-dark">Real Estate</span>
-                            <a href="#" class="btn btn-sm btn-icon rounded-circle shadow-sm">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide portfolio-item" data-category="Real Estate">
+                        <div class="case-study-item">
+                            <img src="assets/images/projects/freeroom.svg" alt="Free Room" class="case-study-item__bg">
+                            <div class="case-study-item__content">
+                                <span class="case-study-item__category">Real Estate</span>
+                                <h3 class="case-study-item__title">Free Room</h3>
+                                <a href="#" class="case-study-item__arrow">
+                                    <img src="assets/images/arrow.svg" alt="arrow">
+                                </a>
+                            </div>
                         </div>
-                        <h5 class="portfolio-title">Free Room</h5>
-                        <div class="aspect-ratio-box">
-                            <img src="assets/images/projects/freeroom.svg" alt="Real Estate Website"
-                                class="img-fluid rounded shadow">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide portfolio-item" data-category="Logistics">
+                        <div class="case-study-item case-study-item--detailed">
+                            <img src="assets/images/projects/wurth.svg" alt="Wurth" class="case-study-item__bg">
+                            <div class="case-study-item__content">
+                                <span class="case-study-item__category">Logistics</span>
+                                <h3 class="case-study-item__title">Wurth</h3>
+                                <a href="#" class="case-study-item__arrow case-study-item__arrow--dark">
+                                    <img src="assets/images/arrow.svg" alt="arrow">
+                                </a>
+                            </div>
+                            <div class="case-study-item__overlays">
+                                <div class="overlay-box">
+                                    <p>Web Portal Development</p>
+                                </div>
+                                <div class="overlay-box">
+                                    <p>Sales Agent App Development</p>
+                                </div>
+                                <div class="overlay-box">
+                                    <p>Order Management</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="swiper-button-prev swiper-button-prev-custom"></div>
-                <div class="swiper-button-next swiper-button-next-custom"></div> -->
             </div>
+
+
         </div>
     </section>
     <!-- Start Project Section -->
-    <section class="start-project-section py-5">
+    <section class="start-project-section py-5 position-relative">
         <div class="container">
-            <div class="row g-0 rounded-3 shadow">
-                <div class="col-lg-6 p-4 p-md-5" data-aos="fade-right">
-                    <span class="badge rounded-pill mb-3">Your dream projects</span>
+            <div class="row g-0 shadow cta-banner-section__container" data-aos="fade-up">
+                <!-- Text Content -->
+                <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center align-items-start"
+                    data-aos="fade-right" data-aos-delay="100">
+                    <span class="badge rounded-pill mb-3">
+                        <div class="section-title-tag mb-3">
+                            <span class="dot"></span>Your dream projects
+                        </div>
+                    </span>
                     <h2 class="fw-bold mb-3">Start Your Project</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's
-                        standard dummy text ever since the 1500s,</p>
-                    <div class="d-flex align-items-center flex-wrap gap-3">
-                        <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get a free quote <i
-                                class="fas fa-arrow-right ms-2"></i></a>
-                        <div class="social-proof d-flex align-items-center gap-4">
-                            <div class="profile-avatars d-flex">
-                                <img src="https://i.pravatar.cc/48?img=1" alt="Profile 1" class="rounded-circle">
-                                <img src="https://i.pravatar.cc/48?img=2" alt="Profile 2" class="rounded-circle">
-                                <img src="https://i.pravatar.cc/48?img=3" alt="Profile 3" class="rounded-circle">
+                    <p>Transform your vision into reality with our expert team. Whether it's a sleek website or a robust
+                        app, we deliver tailored solutions that drive results.</p>
+                    <div class="d-flex align-items-center flex-wrap gap-3 mt-3">
+                        <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">
+                            Get a free quote <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="profile-avatars d-flex align-items-center">
+                                <img src="https://i.pravatar.cc/48?img=1" class="rounded-circle" alt="User">
+                                <img src="https://i.pravatar.cc/48?img=2" class="rounded-circle" alt="User">
+                                <img src="https://i.pravatar.cc/48?img=3" class="rounded-circle" alt="User">
                             </div>
-                            <span>550+ people loved working with Aun Digital</span>
+                            <p class="mb-0 small">550+ people loved working with Aun Digital</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="assets/images/common/bussnies.svg" alt="Start Project" class="" style="margin: 5% 0;">
+                <!-- Image -->
+                <div class="col-lg-6" style="padding: 6%;" data-aos="fade-left" data-aos-delay="200">
+                    <img src="assets/images/common/bussnies.svg" alt="Start Project"
+                        class="img-fluid w-100 h-100 object-fit-cover rounded-end">
                 </div>
             </div>
         </div>
@@ -529,7 +604,7 @@
                     <div class="testimonial-card p-4 h-100 d-flex flex-column rounded-3 shadow-sm">
                         <div class="testimonial-content flex-grow-1 mb-3 text-start">
                             <p class="mb-3 review-text">"Aun Digital exceeded our expectations, and delivered our
-                                website in less than 30 days. It’s intuitive, aesthetically appealing & responsive
+                                website in less than 30 days. It's intuitive, aesthetically appealing & responsive
                                 design perfectly aligned with our brand identity"</p>
                             <div class="star-rating">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -728,20 +803,6 @@
             document.querySelector('.video-overlay').style.display = 'none';
         }
 
-        new Swiper('.portfolio-swiper', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next-custom',
-                prevEl: '.swiper-button-prev-custom',
-            },
-            breakpoints: {
-                320: { slidesPerView: 1, spaceBetween: 20 },
-                768: { slidesPerView: 2, spaceBetween: 30 },
-                992: { slidesPerView: 3, spaceBetween: 30 }
-            }
-        });
 
         document.addEventListener('DOMContentLoaded', function () {
             const carousel = new bootstrap.Carousel('#innovationCarousel', {
@@ -749,62 +810,52 @@
                 ride: 'carousel'
             });
         });
-        var swiper = new Swiper('.portfolio-swiper', {
-            slidesPerView: 'auto', // Allows multiple slides per view, auto adjusts
-            centeredSlides: true, // Center the active slide
-            spaceBetween: 30, // Space between slides
-            loop: true, // Enable loop mode
+
+        const swiper = new Swiper('.portfolio-swiper', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 30,
             navigation: {
                 nextEl: '.swiper-button-next-custom',
                 prevEl: '.swiper-button-prev-custom',
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            effect: 'slide', // Default slide effect
-            speed: 800, // Smooth transition speed
-            autoplay: {
-                delay: 3000, // Autoplay slides every 3 seconds
-                disableOnInteraction: false, // Continue autoplay after user interaction
-            },
             breakpoints: {
-                // when window width is >= 768px
                 768: {
-                    slidesPerView: 2.2, // Show 2.2 slides for larger screens
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
                 },
-                // when window width is >= 992px
-                992: {
-                    slidesPerView: 2.8, // Show 2.8 slides for even larger screens
-                },
-                1200: {
-                    slidesPerView: 3.2, // Show more slides for extra large screens
-                }
-            },
-            on: {
-                init: function () {
-                    // Set initial opacity and scale for non-active slides
-                    this.slides.forEach(slide => {
-                        if (!slide.classList.contains('swiper-slide-active')) {
-                            slide.style.opacity = '0.5';
-                            slide.style.transform = 'scale(0.9)';
-                        }
-                    });
-                },
-                slideChangeTransitionEnd: function () {
-                    // Reset opacity and scale for all slides
-                    this.slides.forEach(slide => {
-                        slide.style.opacity = '0.5';
-                        slide.style.transform = 'scale(0.9)';
-                    });
-                    // Set active slide to full opacity and scale
-                    if (this.slides[this.activeIndex]) {
-                        this.slides[this.activeIndex].style.opacity = '1';
-                        this.slides[this.activeIndex].style.transform = 'scale(1)';
-                    }
+                320: {
+                    slidesPerView: 1,
+                    centeredSlides: true,
                 }
             }
         });
+
+        // Filter Functionality
+        document.querySelectorAll('.tag-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Filter slides
+                const filter = button.getAttribute('data-filter');
+                const slides = document.querySelectorAll('.swiper-slide');
+
+                slides.forEach(slide => {
+                    const category = slide.getAttribute('data-category');
+                    if (filter === category || filter === 'All') {
+                        slide.style.display = 'block';
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+
+                // Update Swiper
+                swiper.update();
+            });
+        });
+
     </script>
 </body>
 
