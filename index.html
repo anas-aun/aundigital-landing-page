@@ -27,28 +27,7 @@
 </head>
 
 <body>
-  <!-- <header id="section-header" class="site-header">
-        <div class="container site-header__container">
-            <a href="#" class="site-header__logo">
-                <img src="images/eac195eae5ed2156dd158ef35454793f6aab17e3.png" alt="Aun Digital Logo">
-            </a>
-            <nav class="site-header__nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services <img src="images/2430_1339.svg" alt="dropdown icon" class="nav-arrow"></a>
-                    </li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Resources <img src="images/2430_1352.svg" alt="dropdown icon" class="nav-arrow"></a>
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="btn btn-primary site-header__cta">Schedule a call <img src="images/2430_1362.svg"
-                    alt="arrow icon" class="btn-icon"></a>
-        </div>
-    </header> -->
-  <!-- Hero Section -->
+
   <section class="hero-section position-relative bg-dark text-white ">
     <div class="container ">
       <div class="hero-section__content-area row">
@@ -381,22 +360,59 @@
     </div>
     <!-- owl -->
     <div class="display owl-carousel owl-theme">
+
       <div class="item">
-        <img src="assets/images/display/inn_1.png" alt="Image 1" class="img-fluid rounded shadow-sm w-100" />
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_1.png" alt="Image 1" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Real Estate</h5>
+            <p>Centralized data access for streamlined property management, improving efficiency and profitability.</p>
+          </div>
+        </div>
       </div>
+
       <div class="item">
-        <img src="assets/images/display/inn_2.png" alt="Image 2" class="img-fluid rounded shadow-sm w-100" />
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_2.png" alt="Image 2" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Technology</h5>
+            <p>Modern websites that inspire trust and work flawlessly across all devices.</p>
+          </div>
+        </div>
       </div>
+
       <div class="item">
-        <img src="assets/images/display/inn_3.png" alt="Image 3" class="img-fluid rounded shadow-sm w-100" />
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_3.png" alt="Image 3" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Restaurants</h5>
+            <p>Boosting presence through custom listings, menus, and reservation systems.</p>
+          </div>
+        </div>
       </div>
+
       <div class="item">
-        <img src="assets/images/display/inn_4.png" alt="Image 4" class="img-fluid rounded shadow-sm w-100" />
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_4.png" alt="Image 4" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Healthcare</h5>
+            <p>Fast-loading, reliable websites that help people access medical services online with ease.</p>
+          </div>
+        </div>
       </div>
+
       <div class="item">
-        <img src="assets/images/display/inn_5.png" alt="Image 5" class="img-fluid rounded shadow-sm w-100" />
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_5.png" alt="Image 5" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Manufacturing</h5>
+            <p>Showcase products, certifications, and turn traffic into real contracts with SEO-powered websites.</p>
+          </div>
+        </div>
       </div>
+
     </div>
+
   </section>
 
   <!-- USP Item -->
@@ -806,8 +822,8 @@
   <footer id="section-footer" class="site-footer py-5 py-md-6 text-white">
     <div class="container">
       <div class="row justify-content-between gy-5 mb-5">
-        <div class="col-lg-6 text-center text-lg-start">
-          <h2 class="main-heading text-gradient-purple mb-4">Got a project in mind?</h2>
+        <div class="col-lg-6 text-start">
+          <h2 class="main-heading text-gradient-purple mb-4 text-md-start">Got a project in mind?</h2>
           <a href="#" class="btn btn-primary mb-4">
             Get Free Consultation <i class="bi bi-arrow-right ms-2"></i>
           </a>
@@ -816,7 +832,7 @@
             <a href="#" class="text-white text-decoration-none">Term & Conditions</a>
           </div>
         </div>
-        <div class="col-lg-5 text-center text-lg-start">
+        <div class="col-lg-5 text-start text-lg-start">
           <h3 class="text-purple mb-3">UAE (United Arab Emirates)</h3>
           <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i> Office# H21 Prime Tower, 31st floor, 3101
             Business Bay Dubai.</p>
@@ -1088,7 +1104,12 @@
 
       const firstCard = carousel.children[0];
 
-      // Animate fade out with 3D-like scale down
+      // ✅ Apply the custom style BEFORE fade out
+      firstCard.style.background = "linear-gradient(180deg, #554681 0%, #1B022C 100%)";
+      firstCard.style.borderTopRightRadius = "50px";
+      firstCard.style.color = "white";
+
+      // Animate fade out with scale down
       gsap.to(firstCard, {
         opacity: 0,
         scale: 0.8,
@@ -1098,7 +1119,7 @@
           // Move card to end
           carousel.appendChild(firstCard);
 
-          // Reset styles
+          // Reset styles (optional: keep color if you want it to persist)
           gsap.set(firstCard, { opacity: 0, scale: 1.2 });
 
           // Animate fade-in with scale up
@@ -1118,6 +1139,7 @@
     // Auto loop every 3s
     setInterval(animateCardFade, 3000);
   </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script>
     const slider = document.getElementById("awardsSlider");
@@ -1150,7 +1172,7 @@
     }
 
     // Start auto scroll
-    setInterval(slideAward, 1000); // scroll every 3s
+    setInterval(slideAward, 800); // scroll every 3s
   </script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {

@@ -965,6 +965,52 @@ body {
   }
 }
 
+
+.overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.overlay-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.overlay-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(193, 94, 223, 0.7);
+  /* Dark transparent overlay */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+.overlay h5 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.overlay p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.overlay-wrapper:hover .overlay {
+  opacity: 1;
+}
 /* Services Section */
 .services-section {
   background: #f8f9fa;
@@ -1006,14 +1052,13 @@ body {
 
 .usp-card {
   flex: 0 0 calc(33.333% - 20px);
-  /* min-width: calc(33.333% - 20px); */
   display: flex;
   flex-direction: column;
   background-color: #e5c3ff;
   align-items: start;
   justify-content: center;
   padding: 30px;
-  height: 40vh;
+  height: 35vh;
   border-radius: 12px;
   color: #000000;
   text-align: left;
