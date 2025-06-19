@@ -57,8 +57,6 @@ body {
     background-size: 100% 300%;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
     animation: shineText 8s ease-in-out infinite;
 }
 
@@ -570,7 +568,6 @@ body {
     justify-content: start;
 }
 
-/* ✅ Feature Items */
 .feature-item {
     position: relative;
     flex: 0 0 auto;
@@ -585,68 +582,110 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    color: #fff;
+    transition: 0.4s;
     z-index: 1;
+
+    /* ✅ Real gradient border */
+    border: 1px solid transparent;
+    border-image: linear-gradient(120deg, #E5C3FF, #5E3778);
+    border-image-slice: 1;
 }
 
-/* ::before animated border effect */
-.feature-item::before {
-    content: '';
+.feature-item:hover {
+    /* ✅ Dull gradient background on hover */
+    background: linear-gradient(180deg, #32224d, #1d102e);
+    color: #e6e6e6;
+    box-shadow: 0 0 15px rgba(229, 195, 255, 0.2);
+}
+
+/* 🔹 Neon animated span border */
+.feature-item span {
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 0.6rem;
-    padding: 2px;
-    background: conic-gradient(from 0deg,
-            #e5c3ff,
-            #5e3778,
-            #e5c3ff,
-            #5e3778,
-            #e5c3ff);
-    background-size: 400% 400%;
-    z-index: -1;
-    animation: neonBorderFlow 4s linear infinite;
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    -webkit-mask-composite: destination-out;
+    display: block;
 }
 
-@keyframes neonBorderFlow {
+/* ✅ Add gradient + delay to each animated border span */
+.feature-item span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #E5C3FF, #5E3778);
+    animation: animate-top 1.6s linear infinite;
+    animation-delay: 0s;
+}
+
+.feature-item span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #E5C3FF, #5E3778);
+    animation: animate-right 1.6s linear infinite;
+    animation-delay: 0.4s;
+}
+
+.feature-item span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #E5C3FF, #5E3778);
+    animation: animate-bottom 1.6s linear infinite;
+    animation-delay: 0.8s;
+}
+
+.feature-item span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #E5C3FF, #5E3778);
+    animation: animate-left 1.6s linear infinite;
+    animation-delay: 1.2s;
+}
+
+/* 🔁 Keyframes (unchanged) */
+@keyframes animate-top {
     0% {
-        transform: rotate(0deg);
+        left: -100%;
     }
 
     100% {
-        transform: rotate(360deg);
+        left: 100%;
     }
 }
 
-/* On hover, show the animated border */
-.feature-item:hover::before {
-    opacity: 1;
-}
-
-/* Animation keyframes */
-@keyframes borderShift {
+@keyframes animate-right {
     0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
+        top: -100%;
     }
 
     100% {
-        background-position: 0% 50%;
+        top: 100%;
     }
 }
 
+@keyframes animate-bottom {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes animate-left {
+    0% {
+        bottom: -100%;
+    }
+
+    100% {
+        bottom: 100%;
+    }
+}
 
 .feature-item img {
     max-width: 32px;
@@ -908,12 +947,13 @@ body {
     overflow: visible;
 }
 
+/* Swiper Slide Styling */
 .swiper-slide {
-    width: 752px !important;
-    height: 811px;
+    width: 448px !important;
+    height: 668px;
     opacity: 0.7;
     transform: scale(0.9);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .swiper-slide-active {
@@ -921,49 +961,58 @@ body {
     transform: scale(1);
 }
 
+/* Case Study Card */
 .case-study-item {
-    background-color: #ffffff;
-    border-radius: 24px;
-    border: 10px solid rgba(0, 109, 199, 0.1);
-    backdrop-filter: blur(1px);
-    overflow: hidden;
+    position: relative;
+    width: 100%;
     height: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.case-study-item__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Main Image */
+.case-study-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
+    padding-top: 25%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
 }
 
+/* Overlay Content at Bottom */
 .case-study-item__content {
     position: absolute;
     top: 0;
-    z-index: 1;
+    width: 100%;
+    padding: 0px 30px;
+    padding-top: 5%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    align-items: flex-end;
+    z-index: 2;
 }
 
+/* Category Label */
 .case-study-item__category {
     display: inline-block;
-    background-color: rgba(80, 108, 131, 0.3);
+    background: #506C834D;
+
     border-radius: 12px;
     padding: 5px 10px;
     font-size: 13.45px;
-    color: #181A1D;
+    color: #000000;
     margin-bottom: 10px;
+    backdrop-filter: blur(2px);
 }
 
+/* Title Gradient Text */
 .case-study-item__title {
     font-size: 22.875px;
     line-height: 1.25;
@@ -971,22 +1020,25 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin: 0 0 10px 0;
+    margin: 0;
+    font-weight: 600;
 }
 
+/* Arrow Button */
 .case-study-item__arrow {
-    display: inline-flex;
     width: 50px;
     height: 50px;
     background-color: #A379C5;
     border-radius: 50%;
+    display: flex;
     align-items: center;
+    color: white;
     justify-content: center;
     transition: background-color 0.3s ease;
 }
 
-.case-study-item__arrow--dark {
-    background-color: #506C83;
+.case-study-item__arrow:hover {
+    background-color: #340E4C;
 }
 
 .case-study-item__arrow img {
@@ -994,15 +1046,6 @@ body {
     height: 16px;
 }
 
-.case-study-item--detailed .case-study-item__overlays {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 2;
-}
 
 .overlay-box {
     background-color: rgba(29, 31, 44, 0.3);
