@@ -162,9 +162,9 @@
                 <div
                     class="video-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                     <div class="video-controls text-center">
-                        <button id="playButton" class="btn btn-primary text-white px-4 py-2 rounded-6 mb-3">
-                            <i class="bi bi-pause-fill"></i> Pause video
-                        </button>
+                        <a id="playButton" class="btn btn-primary text-white px-4 py-2 rounded-6" sty>
+                            <i class="bi bi-play-fill"></i> Play video
+                        </a>
                         <div class="loading-spinner d-none">
                             <div class="spinner-border text-light" role="status">
                                 <span class="visually-hidden">Loading...</span>
@@ -321,50 +321,45 @@
 
 
     <!-- Services Section -->
-    <section class="services-section py-5">
-        <div class="container text-center">
-            <div class="mb-4" data-aos="fade-up">
-                <div class="section-title-tag" style="margin-left:auto; margin-right:auto;"><span class="dot"></span>Our
-                    Services
-                </div>
-                <h2 class="section_title py-2">Services That Drive Success</h2>
+<section class="services-section py-5">
+    <div class="container text-center">
+        <div class="mb-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="section-title-tag" style="margin-left:auto; margin-right:auto;">
+                <span class="dot"></span>Our Services
             </div>
+            <h2 class="section_title py-2" data-aos="zoom-in" data-aos-duration="600">Services That Drive Success</h2>
+        </div>
 
-            <div class="row g-2 text-start">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card p-4 h-100 border rounded-3 shadow-sm">
-                        <h4 class="section_title " style="font-size: 34px;text-align: start;">Custom Website Design</h4>
-                        <p class="">Tailored designs that reflect your brand and engage users effectively.</p>
-                        <img src="assets/images/services/custom-web.svg" alt="Custom Website Design"
-                            class="img-fluid mt-3">
-                    </div>
+        <div class="row g-2 text-start">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                <div class="service-card p-4 h-100 border rounded-3 shadow-sm" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
+                    <h4 class="section_title" style="font-size: 34px; text-align: start;" data-aos="fade-right" data-aos-delay="200" data-aos-duration="600">Custom Website Design</h4>
+                    <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">Tailored designs that reflect your brand and engage users effectively.</p>
+                    <img src="assets/images/services/custom-web.svg" alt="Custom Website Design" class="img-fluid mt-3" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600">
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card p-4 h-100 border rounded-3 shadow-sm">
-                        <h4 class="section_title" style="font-size: 34px;text-align: start;">eCommerce Development</h4>
-                        <p class="">Robust online stores with seamless user experiences and secure payments.
-                        </p>
-                        <img src="assets/images/services/ecom_web.svg" alt="E-commerce Development"
-                            class="img-fluid mt-3">
-                    </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                <div class="service-card p-4 h-100 border rounded-3 shadow-sm" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
+                    <h4 class="section_title" style="font-size: 34px; text-align: start;" data-aos="fade-right" data-aos-delay="200" data-aos-duration="600">eCommerce Development</h4>
+                    <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">Robust online stores with seamless user experiences and secure payments.</p>
+                    <img src="assets/images/services/ecom_web.svg" alt="E-commerce Development" class="img-fluid mt-3" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600">
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card p-4 h-100 border rounded-3 shadow-sm">
-                        <h4 class="section_title " style="font-size: 34px;text-align: start;">Wordpress & CMS Solutions
-                        </h4>
-                        <p class="">Flexible and scalable content management for easy updates and growth.</p>
-                        <img src="assets/images/services/cms_web.svg" alt="WordPress & CMS Solutions"
-                            class="img-fluid mt-3">
-                    </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                <div class="service-card p-4 h-100 border rounded-3 shadow-sm" style="transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
+                    <h4 class="section_title" style="font-size: 34px; text-align: start;" data-aos="fade-right" data-aos-delay="200" data-aos-duration="600">Wordpress & CMS Solutions</h4>
+                    <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">Flexible and scalable content management for easy updates and growth.</p>
+                    <img src="assets/images/services/cms_web.svg" alt="WordPress & CMS Solutions" class="img-fluid mt-3" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Innovation Display Section -->
     <section class="innovation-display " style="padding-top: 3%;">
         <div class="text-start">
-            <div class="mb-4 ps-lg-5 ps-3" data-aos="fade-up">
+            <div class="mb-4 ps-lg-5 ps-3 py-5" data-aos="fade-up">
                 <div class="section-title-tag"><span class="dot"></span>Aun Digital's Latest Work</div>
                 <h2 class="mt-3 text-white">Innovation On Display</h2>
             </div>
@@ -372,23 +367,23 @@
             <!-- Swiper -->
             <div class="swiper innovation-swiper" data-aos="fade-up" data-aos-duration="800">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide2">
                         <img src="assets/images/display/inn_1.svg" alt="Image 1"
                             class="img-fluid rounded shadow-sm w-100">
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide2">
                         <img src="assets/images/display/inn_2.svg" alt="Image 2"
                             class="img-fluid rounded shadow-sm w-100">
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide2">
                         <img src="assets/images/display/inn_3.svg" alt="Image 3"
                             class="img-fluid rounded shadow-sm w-100">
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide2">
                         <img src="assets/images/display/inn_4.svg" alt="Image 4"
                             class="img-fluid rounded shadow-sm w-100">
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide2">
                         <img src="assets/images/display/inn_5.svg" alt="Image 5"
                             class="img-fluid rounded shadow-sm w-100">
                     </div>
@@ -439,7 +434,7 @@
 
     <!-- Portfolio Section -->
     <!-- Portfolio Section -->
-    <section class="websites-drive-results-section py-5 position-relative">
+    <section class="websites-drive-results-section  position-relative">
         <div class="container">
             <!-- Intro Section -->
             <div class="row align-items-end mb-5">
@@ -576,6 +571,15 @@
                     <img src="assets/images/common/bussnies.svg" alt="Start Project"
                         class="img-fluid w-100 h-100 object-fit-cover rounded-end">
                 </div>
+                <img src="assets/icons/plus.svg"
+                    style="position: absolute; top: 5px; right: 5px; height: 15px; width: 15px;" />
+                <img src="assets/icons/plus.svg"
+                    style="position: absolute; top: 5px; left: 5px; height: 15px; width: 15px;" />
+                <img src="assets/icons/plus.svg"
+                    style="position: absolute; bottom: 5px; right: 5px; height: 15px; width: 15px;" />
+                <img src="assets/icons/plus.svg"
+                    style="position: absolute; bottom: 5px; left: 5px; height: 15px; width: 15px;" />
+
             </div>
         </div>
     </section>
@@ -624,7 +628,7 @@
                         <img src="assets/images/testimonials/eva_walsh.svg" alt="Eva Walsh Video Testimonial"
                             loading="lazy">
                         <video preload="metadata" playsinline>
-                            <source src="https://www.bigbuckbunny.org/" type="video/mp4">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div class="video-overlay">
@@ -676,7 +680,7 @@
                         <img src="assets/images/testimonials/kim_chanj.svg" alt="Kim Chanj Video Testimonial"
                             loading="lazy">
                         <video preload="metadata" playsinline>
-                            <source src="https://www.bigbuckbunny.org/" type="video/mp4">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div class="video-overlay">
@@ -830,11 +834,26 @@
         AOS.init();
 
         // 🔹 Play Video Function
-        function playVideo() {
+        function toggleVideo() {
             const video = document.getElementById('companyVideo');
-            video.play();
-            document.querySelector('.video-overlay').style.display = 'none';
+            const playButton = document.getElementById('playButton');
+            const videoOverlay = document.querySelector('.video-overlay');
+
+            if (video.paused) {
+                // Play the video
+                video.play();
+                videoOverlay.style.display = 'none'; // Hide overlay when playing
+                playButton.innerHTML = '<i class="bi bi-pause-fill"></i> Pause video';
+            } else {
+                // Pause the video
+                video.pause();
+                videoOverlay.style.display = 'flex'; // Show overlay when paused
+                playButton.innerHTML = '<i class="bi bi-play-fill"></i> Play video';
+            }
         }
+
+        // Attach the toggleVideo function to the play button's click event
+        document.getElementById('playButton').addEventListener('click', toggleVideo);
 
         // 🔹 Bootstrap Carousel Initialization
         document.addEventListener('DOMContentLoaded', function () {

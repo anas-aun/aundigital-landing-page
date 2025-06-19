@@ -817,7 +817,16 @@ body {
     padding: 30px;
     border-radius: 12px;
     /* Visual guess */
+    color: #000000;
+
     text-align: left;
+}
+
+.usp-item:hover {
+    background: linear-gradient(180deg, #554681 0%, #1B022C 100%);
+    border-top-right-radius: 50px;
+    color: white !important;
+
 }
 
 .usp-item h3 {
@@ -827,7 +836,6 @@ body {
     /* style_185 */
     line-height: 1.025;
     /* 41px / 40px */
-    color: #000000;
     /* style_183 */
     margin-top: 0;
     margin-bottom: 15px;
@@ -838,7 +846,6 @@ body {
     /* style_183 */
     line-height: 24px;
     /* style_183 */
-    color: #000000;
     /* style_183 */
     margin-bottom: 0;
 }
@@ -894,9 +901,8 @@ body {
 .websites-drive-results-section {
     background: linear-gradient(180deg, #554681 0%, #1B022C 100%);
     color: #ffffff;
-    padding: 80px 0;
     position: relative;
-    overflow: hidden;
+    padding-top: 5%;
 }
 
 
@@ -948,12 +954,14 @@ body {
 }
 
 /* Swiper Slide Styling */
+/* Swiper Slide Wrapper */
+/* Swiper Slide */
 .swiper-slide {
-    width: 448px !important;
-    height: 668px;
+    width: 748px !important;
+    height: 810px;
     opacity: 0.7;
     transform: scale(0.9);
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .swiper-slide-active {
@@ -966,7 +974,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 12px;
     overflow: hidden;
     display: flex;
@@ -974,17 +982,53 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Main Image */
+/* Main Image Container */
 .case-study-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    padding-top: 25%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-
+    padding: 25% 5% 5%;
+    box-sizing: border-box;
 }
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1200px) {
+    .swiper-slide {
+        width: 640px !important;
+        height: 740px;
+    }
+
+    .case-study-image {
+        padding: 20% 4% 4%;
+    }
+}
+
+@media (max-width: 991px) {
+    .swiper-slide {
+        width: 520px !important;
+        height: 680px;
+    }
+
+    .case-study-image {
+        padding: 15% 4% 4%;
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper-slide {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .case-study-item {
+        border-radius: 8px;
+    }
+
+    .case-study-image {
+        padding: 12% 4% 4%;
+    }
+}
+
 
 /* Overlay Content at Bottom */
 .case-study-item__content {
@@ -1129,7 +1173,7 @@ body {
 }
 
 .start-project-section {
-    padding: 80px 0;
+    padding: 10rem 0;
     background-color: #ffffff;
     position: relative;
     overflow: hidden;
@@ -1139,8 +1183,6 @@ body {
 
 .cta-banner-section__container {
     background: linear-gradient(180deg, #E5C3FF 0%, rgba(255, 255, 255, 0.12) 100%);
-    border: 1px solid rgba(80, 108, 131, 0.2);
-    border-radius: 20px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
@@ -1360,7 +1402,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 1.5rem;
-    min-height: 150px;
+    min-height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1370,10 +1412,8 @@ body {
 .google-reviews-card img {
     position: absolute;
     top: 1rem;
-    right: 1rem;
-    width: 50px;
+    right: 0rem;
     height: auto;
-    loading: lazy;
 }
 
 .rating {
@@ -1623,18 +1663,24 @@ body {
     border-radius: 0;
     padding: 1rem 0;
     color: #333;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
 }
 
 .faq-accordion .accordion-button:focus {
     box-shadow: none;
 }
 
+/* Remove default arrow icon */
 .faq-accordion .accordion-button::after {
     display: none;
-    /* Hide default icon */
 }
 
-/* Custom + Icon */
+/* Custom Icon */
 .faq-icon {
     width: 32px;
     height: 32px;
@@ -1652,9 +1698,17 @@ body {
     content: "+";
 }
 
-/* When accordion is open, change + to – */
+/* Change icon on open */
 .accordion-button:not(.collapsed) .faq-icon::before {
     content: "–";
+}
+
+/* Accordion Body */
+.accordion-body {
+    font-size: 0.95rem;
+    color: #555;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Animations */
@@ -1691,5 +1745,44 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 3rem 1rem;
+    }
+
+    .faq-accordion .accordion-button {
+        font-size: 0.95rem;
+        padding: 0.75rem 0;
+    }
+
+    .faq-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .accordion-body {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-accordion .accordion-button {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .faq-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.9rem;
+    }
+
+    .accordion-body {
+        font-size: 0.85rem;
     }
 }
