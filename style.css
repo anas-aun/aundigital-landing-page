@@ -587,7 +587,7 @@ section {
     background: linear-gradient(180deg, #554681 0%, #1B022C 100%);
     color: #fff;
     position: relative;
-    margin-top: 2%;
+    margin-top: 6%;
 }
 
 /* ✅ Title Width Handling */
@@ -912,7 +912,7 @@ section {
     align-items: start;
     justify-content: center;
     padding: 30px;
-    height: 40vh;
+    height: 35vh;
     border-radius: 12px;
     color: #000000;
     text-align: left;
@@ -1890,4 +1890,52 @@ section {
     .accordion-body {
         font-size: 0.9rem;
     }
+}
+
+.site-footer {
+    background: linear-gradient(180deg, #554681 0%, #1b022c 100%);
+}
+
+
+
+.site-footer__legal-links a:hover {
+    text-decoration: underline;
+}
+
+.site-footer__contact-info h3 {
+    color: #e5c3ff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.site-footer__contact-info p img {
+    width: 20px;
+    height: auto;
+}
+
+.site-footer__copyright {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14.75px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.social-icon img {
+    max-width: 22px;
+    max-height: 22px;
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
 }
