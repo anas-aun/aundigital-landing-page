@@ -32,7 +32,7 @@
     <div class="container ">
       <div class="hero-section__content-area row">
         <!-- Left Column: Text and Awards -->
-        <div class="hero-section__left col-lg-8 mb-4 mb-lg-0">
+        <div class="hero-section__left ">
           <h1 class="hero-section__title">
             Professional Website<br />
             <span class=" animated-switch ">
@@ -47,18 +47,10 @@
                     Optimization
                     <img class="selection-img" src="assets/images/common/selection_text.svg" alt="highlight" />
                   </li>
-                  <li>
-                    <img class="selection-img" src="assets/images/common/selection_text.svg" alt="highlight" />
-                    Strategy
-                  </li>
-                  <li>
-                    <img class="selection-img" src="assets/images/common/selection_text.svg" alt="highlight" />
-                    Growth
-                  </li>
                 </ul>
               </div>
             </span><br />
-            That Grows Your Business
+            That <span class="text-gradient-purple">Grows</span> Your Business
           </h1>
           <p class="hero-section__subtitle">
             Aun Digital is an award-winning web development agency with over
@@ -66,7 +58,9 @@
             globally.
           </p>
           <div class="mt-4 d-flex gap-3 flex-wrap">
-            <a href="#" class="btn btn-secondary px-4 py-2 rounded-6">Schedule a call →</a>
+            <!-- <a href="#" class="btn btn-secondary px-4 py-2 rounded-6">
+              Schedule a call <i class="bi bi-arrow-right ms-2"></i>
+            </a>  -->
             <a href="#" class="btn btn-primary text-white px-4 py-2 rounded-6">Get in touch</a>
           </div>
           <!-- Awards Section -->
@@ -1104,31 +1098,35 @@
 
       const firstCard = carousel.children[0];
 
-      // ✅ Apply the custom style BEFORE fade out
+      // ✅ Apply custom styles before animation
       firstCard.style.background = "linear-gradient(180deg, #554681 0%, #1B022C 100%)";
       firstCard.style.borderTopRightRadius = "50px";
       firstCard.style.color = "white";
 
-      // Animate fade out with scale down
+      // Animate fade out
       gsap.to(firstCard, {
         opacity: 0,
         scale: 0.8,
         duration: 0.8,
         ease: "power2.inOut",
         onComplete: () => {
-          // Move card to end
+          // Move to end
           carousel.appendChild(firstCard);
 
-          // Reset styles (optional: keep color if you want it to persist)
+          // Optional: reset transform immediately
           gsap.set(firstCard, { opacity: 0, scale: 1.2 });
 
-          // Animate fade-in with scale up
+          // Animate fade-in
           gsap.to(firstCard, {
             opacity: 1,
             scale: 1,
             duration: 0.8,
             ease: "power2.out",
             onComplete: () => {
+              // ✅ Remove the temporary styles after animation finishes
+              firstCard.style.background = "";
+              firstCard.style.borderTopRightRadius = "";
+              firstCard.style.color = "";
               isAnimating = false;
             }
           });
@@ -1136,9 +1134,10 @@
       });
     }
 
-    // Auto loop every 3s
+    // Auto loop
     setInterval(animateCardFade, 3000);
   </script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script>
