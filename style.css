@@ -960,6 +960,7 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 0.5rem;
+
 }
 
 .overlay-wrapper img {
@@ -977,6 +978,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(193, 94, 223, 0.7);
+  bottom: 0;
   /* Dark transparent overlay */
   color: white;
   opacity: 0;
@@ -984,7 +986,7 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   text-align: start;
 }
 
