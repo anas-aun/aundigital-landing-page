@@ -5,41 +5,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Professional Website Landing</title>
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Google Font: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS Animation -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <div class="video-section">
-    <div class="wrapper">
-      <video autoplay loop muted>
-        <source src="assets/videos/about.mp4" type="video/mp4">
+  <div class="hero-video-section" id="heroVideoSection">
+    <div class="hero-video-wrapper">
+      <video autoplay loop muted id="heroVideo">
+        <source src="assets/videos/about.mp4" type="video/mp4" />
       </video>
 
-      <div class="video-mask">
-        <h2>عون</h2>
+      <div class="hero-video-mask" id="heroVideoMask">
+        <h2 id="heroVideoText">عون</h2>
       </div>
     </div>
   </div>
-
-  <section class="hero-section bg-dark text-white">
-    <video autoplay muted loop playsinline class="hero-video-bg">
-      <source src="assets/videos/about.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-video-overlay"></div>
-    <div class="container position-relative z-1">
+  <section class="hero-section  bg-dark text-white ">
+    <div class="container ">
       <div class="hero-section__content-area row">
-        <div class="hero-section__left">
+        <!-- Left Column: Text and Awards -->
+        <div class="hero-section__left ">
           <h1 class="hero-section__title">
             Professional Website<br />
-            <span class="animated-switch">
-              <span class="static-text text-gradient-purple">Design </span>
+            <span class=" animated-switch ">
+              <span class="static-text text-gradient-purple">Design&nbsp;</span>
               <div class="switch-wrapper">
                 <ul class="switch-list">
                   <li>
@@ -61,19 +68,44 @@
             globally.
           </p>
           <div class="mt-4 d-flex gap-3 flex-wrap">
+            <!-- <a href="#" class="btn btn-secondary px-4 py-2 rounded-6">
+              Schedule a call <i class="bi bi-arrow-right ms-2"></i>
+            </a>  -->
             <a href="#" class="btn btn-primary text-white px-4 py-2 rounded-6">Get in touch</a>
           </div>
-          <div class="hero-section__awards mt-4">
+          <!-- Awards Section -->
+          <div class="hero-section__awards mt-4" id="">
             <div class="award-item" data-aos="fade-up" data-aos-delay="100">
               <img src="assets/images/certificate/cert_1.svg" alt="Award" />
               <h3>TechBehemoths</h3>
               <p>Top Mobile App Development company in UAE</p>
             </div>
-            <!-- Add other award items as needed -->
+            <div class="award-item" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/images/certificate/cert_2.svg" alt="Award 2" />
+              <h3>TechBehemoths</h3>
+              <p>Top Mobile App Development company in UAE</p>
+            </div>
+            <div class="award-item" data-aos="fade-up" data-aos-delay="300">
+              <img src="assets/images/certificate/cert_3.svg" alt="Award 3" />
+              <h3>TechBehemoths</h3>
+              <p>Top Mobile App Development company in UAE</p>
+            </div>
+            <div class="award-item" data-aos="fade-up" data-aos-delay="400">
+              <img src="assets/images/certificate/cert_4.svg" alt="Award 4" />
+              <h3>TechBehemoths</h3>
+              <p>Top Mobile App Development company in UAE</p>
+            </div>
+            <!-- <div class="award-item" data-aos="fade-up" data-aos-delay="500">
+                            <img src="assets/images/certificate/cert_5.svg" alt="Award 5" />
+                            <h3>TechBehemoths</h3>
+                            <p>Top Mobile App Development company in UAE</p>
+                        </div> -->
           </div>
         </div>
+        <!-- Right Column: Form -->
         <div class="hero-section__right col-lg-5">
           <div class="hero-form-wrapper contact-form-card">
+            <!-- Project Badge -->
             <div class="hero-section__project-badge start-project-circle" title="Start a Project">
               <span class="plus-icon">+</span>
               <svg viewBox="0 0 100 100" width="90" height="90">
@@ -107,26 +139,1089 @@
                   <option value="4">Digital Marketing</option>
                 </select>
                 <i class="bi bi-chevron-down select-arrow" style="color: black;"></i>
+
               </div>
               <div class="hero-form__field">
                 <label for="messageTextarea">Message <span class="required">*</span></label>
                 <textarea id="messageTextarea" placeholder="How can we help you?" required></textarea>
               </div>
-              <button type="submit" class="hero-form__submit btn btn-custom-purple w-100">Submit enquiry</button>
+              <button type="submit" class="hero-form__submit btn btn-custom-purple w-100">Submit
+                enquiry</button>
             </form>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Video Section -->
+  <!-- Video Section -->
+  <!-- <section class="video-section py-5">
+    <div class="container">
+      <div class="video-container position-relative" data-aos="zoom-in" data-aos-duration="800">
+        <video id="companyVideo" class="w-100 rounded-md shadow" muted loop playsinline
+          poster="assets/images/bg/video_bg.svg">
+          <source src="assets/videos/about.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class=" position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+          <a id="playButton" class="btn btn-primary text-white px-4 py-2 rounded-6 ">
+            <i class="bi bi-play-fill"></i> Play video
+          </a>
+          <div class="loading-spinner d-none">
+            <div class="spinner-border text-light" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Trusted Partners Section -->
+  <section class="trusted-partners py-5">
+    <div class="container text-center">
+      <div class="mb-4" data-aos="fade-up">
+        <div class="section-title-tag"><span class="dot"></span>Clientele</div>
+        <h2 class="section_title py-2">Our Trusted Partners</h2>
+      </div>
+      <div class="partner-logos-wrapper">
+        <!-- Row 1 -->
+        <div class="logo-row left-to-right">
+          <div class="logo-track">
+            <!-- Repeat logos for seamless loop -->
+            <img src="assets/images/brands/brand_1.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_2.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_3.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_4.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_5.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_6.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_1.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_2.svg" alt="Brand" />
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="logo-row right-to-left">
+          <div class="logo-track">
+            <img src="assets/images/brands/brand_7.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_8.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_9.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_10.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_11.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_7.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_8.svg" alt="Brand" />
+            <img src="assets/images/brands/brand_9.svg" alt="Brand" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Custom Designs Section -->
+  <section class="custom-designs">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-right" data-aos-duration="1000">
+          <div class="section-title-tag"><span class="dot"></span>Who are we?</div>
+          <div class="text-content">
+            <h2 class="mb-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+              Helping Businesses in UAE with Expert Web Development Solutions
+            </h2>
+            <p class="text-white-50 mb-4" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+              Aun Digital is a creative-led web development agency driven by innovation and purpose. We
+              specialize in building fast, scalable, and visually striking websites tailored to your
+              brand’s identity and business goals.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <!-- Repeat this block for each feature -->
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
+              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="700">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
+              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
+              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="700">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
+              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
+            </div>
+            <div class="feature-item" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="700">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
+              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side Image (Sticky Position) -->
+      <div class="right-image">
+        <img src="assets/images/common/laptop.svg" alt="Laptop Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section py-5">
+    <div class="container text-center">
+      <div class="mb-4" data-aos="fade-up" data-aos-duration="800">
+        <div class="section-title-tag" style="margin-left: auto; margin-right: auto">
+          <span class="dot"></span>Our Services
+        </div>
+        <h2 class="section_title py-2" data-aos="zoom-in" data-aos-duration="600">
+          Services That Drive Success
+
+        </h2>
+      </div>
+
+      <div class="row g-2 text-start">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+          <div class="service-card p-4 h-100 border rounded-3 shadow-sm"
+            style="transition: transform 0.3s ease, box-shadow 0.3s ease"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
+            <h4 class="section_title" style="font-size: 34px; text-align: start" data-aos="fade-right"
+              data-aos-delay="200" data-aos-duration="600">
+              Custom Website Design
+            </h4>
+            <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">
+              Tailored designs
+              that reflect your brand and engage users
+              effectively.
+            </p>
+            <img src="assets/images/services/custom-web.svg" alt="Custom Website Design" class="img-fluid mt-3"
+              data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" />
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+          <div class="service-card p-4 h-100 border rounded-3 shadow-sm"
+            style="transition: transform 0.3s ease, box-shadow 0.3s ease"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
+            <h4 class="section_title" style="font-size: 34px; text-align: start" data-aos="fade-right"
+              data-aos-delay="200" data-aos-duration="600">
+              eCommerce Development
+            </h4>
+            <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">
+              Robust online
+              stores with seamless user experiences and secure
+              payments.
+            </p>
+            <img src="assets/images/services/ecom_web.svg" alt="E-commerce Development" class="img-fluid mt-3"
+              data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" />
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+          <div class="service-card p-4 h-100 border rounded-3 shadow-sm"
+            style="transition: transform 0.3s ease, box-shadow 0.3s ease"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
+            <h4 class="section_title" style="font-size: 34px; text-align: start" data-aos="fade-right"
+              data-aos-delay="200" data-aos-duration="600">
+              Wordpress & CMS Solutions
+            </h4>
+            <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">
+              Flexible and
+              scalable content management for easy updates and
+              growth.
+            </p>
+            <img src="assets/images/services/cms_web.svg" alt="WordPress & CMS Solutions" class="img-fluid mt-3"
+              data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovation Display Section -->
+  <section class="innovation-display">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="id-content-div text-start">
+            <div data-aos="fade-up">
+              <div class="section-title-tag">
+                <span class="dot"></span>Aun Digital's Latest Work
+              </div>
+              <h1 class="id-content-div-h">Innovation On Display</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- owl -->
+    <div class="display owl-carousel owl-theme">
+
+      <div class="item">
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_1.png" alt="Image 1" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Real Estate</h5>
+            <p>Centralized data access for streamlined property management, improving efficiency and profitability.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_2.png" alt="Image 2" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Technology</h5>
+            <p>Modern websites that inspire trust and work flawlessly across all devices.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_3.png" alt="Image 3" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Restaurants</h5>
+            <p>Boosting presence through custom listings, menus, and reservation systems.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_4.png" alt="Image 4" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Healthcare</h5>
+            <p>Fast-loading, reliable websites that help people access medical services online with ease.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="overlay-wrapper">
+          <img src="assets/images/display/inn_5.png" alt="Image 5" class="img-fluid rounded shadow-sm w-100" />
+          <div class="overlay">
+            <h5>Manufacturing</h5>
+            <p>Showcase products, certifications, and turn traffic into real contracts with SEO-powered websites.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- USP Item -->
+  <section class="usp-section">
+    <div class="container text-center">
+      <div class="section-title-tag"><span class="dot"></span>USPs</div>
+      <h2 class="sub-heading">Powering Dubai’s Most Recognized Brands</h2>
+      <p class="usp-section__description">Here’s how we help businesses thrive</p>
+
+      <!-- Grid Carousel Wrapper -->
+      <div class="usp-carousel-wrapper">
+        <div class="usp-carousel" id="uspCarousel">
+          <div class="usp-card">
+            <h3>Custom<br>Appearance</h3>
+            <p>Unique look to stand out.</p>
+          </div>
+          <div class="usp-card">
+            <h3>SEO<br>Friendly</h3>
+            <p>Optimized for search engines.</p>
+          </div>
+          <div class="usp-card">
+            <h3>Aesthetic<br>UX/UI</h3>
+            <p>Designed for great UX.</p>
+          </div>
+          <div class="usp-card">
+            <h3>Reliable<br>Support</h3>
+            <p>Here when you need us.</p>
+          </div>
+          <div class="usp-card">
+            <h3>Scalable<br>Systems</h3>
+            <p>Built to grow with your business.</p>
+          </div>
+          <div class="usp-card">
+            <h3>Secure<br>Architecture</h3>
+            <p>Security-first approach.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Portfolio Section -->
+  <!-- Portfolio Section -->
+  <section class="websites-drive-results-section position-relative">
+    <div class="container">
+      <!-- Intro Section -->
+      <div class="row align-items-end">
+        <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-up">
+          <div class="section-title-tag mb-3">
+            <span class="dot"></span>Case Studies
+          </div>
+          <h1 class="display-4 text-white">
+            Building Websites That Drive Results
+          </h1>
+          <p class="lead text-white">
+            <strong>Looking for a website that turns visitors into loyal
+              customers?</strong><br />
+            Explore our portfolio to see how we transform ideas into impactful
+            digital experiences. From sleek e-commerce platforms to engaging
+            corporate websites, our custom designs are tailored.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="btn btn-primary px-5 py-3 rounded-pill">View Case Studies</a>
+        </div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="d-flex flex-wrap gap-2 my-4 filter-buttons justify-content-start" data-aos="fade-up"
+        data-aos-delay="200">
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn active" data-filter="Real Estate">
+          Real Estate
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Technology">
+          Technology
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Education">
+          Education
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Healthcare">
+          Healthcare
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Restaurants">
+          Restaurants
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Manufacturing">
+          Manufacturing
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Logistics">
+          Logistics
+        </button>
+      </div>
+    </div>
+    <!-- Owl -->
+    <div class="protfolio owl-carousel owl-theme">
+      <div class="item">
+        <div class="case-study-item case-study-item--detailed">
+          <div class="case-study-item__content">
+            <div>
+              <span class="case-study-item__category">Real Estate</span>
+              <h3 class="case-study-item__title">Free Room</h3>
+            </div>
+            <a href="#" class="case-study-item__arrow">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="case-study-item-image">
+            <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="case-study-item case-study-item--detailed">
+          <div class="case-study-item__content">
+            <div>
+              <span class="case-study-item__category">Real Estate</span>
+              <h3 class="case-study-item__title">Free Room</h3>
+            </div>
+            <a href="#" class="case-study-item__arrow">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="case-study-item-image">
+            <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="case-study-item case-study-item--detailed">
+          <div class="case-study-item__content">
+            <div>
+              <span class="case-study-item__category">Real Estate</span>
+              <h3 class="case-study-item__title">Free Room</h3>
+            </div>
+            <a href="#" class="case-study-item__arrow">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="case-study-item-image">
+            <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Start Project Section -->
+  <section class="start-project-section py-5 position-relative">
+    <div class="container">
+      <div class="cta-reveal-wrapper position-relative overflow-hidden">
+        <div class="row g-0 shadow cta-banner-section__container" data-aos="fade-up">
+          <!-- Text Content -->
+          <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center align-items-start"
+            data-aos="fade-right" data-aos-delay="100">
+            <span class="badge rounded-pill mb-3">
+              <div class="section-title-tag mb-3">
+                <span class="dot"></span>Your dream projects
+              </div>
+            </span>
+            <h2 class="fw-bold mb-3">Start Your Project</h2>
+            <p>Transform your vision into reality with our expert team. Whether it's a sleek website or a
+              robust
+              app, we deliver tailored solutions that drive results.</p>
+            <div class="d-flex align-items-center flex-wrap gap-3 mt-3">
+              <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">
+                Get a free quote <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+              <div class="d-flex align-items-center gap-3">
+                <div class="profile-avatars d-flex align-items-center">
+                  <img src="https://i.pravatar.cc/48?img=1" class="rounded-circle" alt="User">
+                  <img src="https://i.pravatar.cc/48?img=2" class="rounded-circle" alt="User">
+                  <img src="https://i.pravatar.cc/48?img=3" class="rounded-circle" alt="User">
+                </div>
+                <p class="mb-0 small">550+ people loved working with Aun Digital</p>
+              </div>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="col-lg-6" style="padding: 6%;" data-aos="fade-left" data-aos-delay="200">
+            <img src="assets/images/common/bussnies.svg" alt="Start Project"
+              class="img-fluid w-100 h-100 object-fit-cover rounded-end">
+          </div>
+          <img src="assets/icons/plus.svg"
+            style="position: absolute; top: 5px; right: 5px; height: 15px; width: 15px;" />
+          <img src="assets/icons/plus.svg"
+            style="position: absolute; top: 5px; left: 5px; height: 15px; width: 15px;" />
+          <img src="assets/icons/plus.svg"
+            style="position: absolute; bottom: 5px; right: 5px; height: 15px; width: 15px;" />
+          <img src="assets/icons/plus.svg"
+            style="position: absolute; bottom: 5px; left: 5px; height: 15px; width: 15px;" />
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inspire-confidence text-center" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="section-title-tag"><span class="dot"></span>Testimonials</div>
+        <h2 class="section_title" id="testimonials-title">Words That Inspire Confidence</h2>
+      </div>
+
+      <div class="row g-4 testimonials-grid">
+        <!-- Column 1 -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card google-reviews-card">
+            <img src="assets/images/common/google_op-2.svg" alt="Google Reviews Logo" loading="lazy">
+            <div class="rating" aria-label="4.6 out of 5 stars">4.6</div>
+            <div class="text-reviews">Google Reviews</div>
+          </div>
+          <div class="testimonial-card card-viraj-soni flex-grow-1">
+            <div class="testimonial-content flex-grow-1 mb-3 text-start">
+              <p class="mb-3 review-text">"Aun Digital did a great job with our website development and
+                online marketing..."</p>
+              <div class="star-rating" aria-label="5 star rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="reviewer-info d-flex align-items-center pt-3 mt-auto">
+              <img src="assets/images/testimonials/avators/viraj_soni.svg" alt="Viraj Soni"
+                class="rounded-circle me-3 reviewer-avatar" loading="lazy">
+              <div class="text-start">
+                <h5 class="mb-0 reviewer-name">Viraj Soni</h5>
+                <p class="mb-0 small reviewer-title">Founder, Mauve Beauty Salon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card card-video-testimonial position-relative flex-grow-1" style="height: 35vh;">
+            <img src="assets/images/testimonials/eva_walsh.svg" alt="Eva Walsh" loading="lazy">
+            <video preload="metadata" playsinline>
+              <source src="assets/videos/reviews2.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"><i class="fas fa-play-circle play-button"></i></div>
+            <div class="video-info d-flex align-items-center">
+              <div class="flex-grow-1 text-start">
+                <h5 class="mb-0">Eva Walsh</h5>
+                <p class="mb-0 small text-uppercase">CEO - PADZ Dxb</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card testimonial-1 flex-grow-1">
+            <div class="testimonial-content flex-grow-1 mb-3 text-start">
+              <p class="mb-3 review-text">"What a professional and helpful team. Aun Digital designed our
+                exceptional website..."</p>
+              <div class="star-rating" aria-label="5 star rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="reviewer-info d-flex align-items-center pt-3 mt-auto">
+              <img src="assets/images/testimonials/avators/anmar_al_kamil.svg" alt="Anmar Al Kamil"
+                class="rounded-circle me-3 reviewer-avatar" loading="lazy">
+              <div class="text-start">
+                <h5 class="mb-0 reviewer-name">Anmar Al Kamil</h5>
+                <p class="mb-0 small reviewer-title">CEO, Chic Floors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card card-voices-matter flex-grow-1">
+            <h3>Voices That Matter</h3>
+          </div>
+          <div class="testimonial-card card-video-testimonial position-relative flex-grow-1" style="height: 35vh;">
+            <img src="assets/images/testimonials/kim_chanj.svg" alt="Kim Chanj" loading="lazy">
+            <video preload="metadata" playsinline>
+              <source src="assets/videos/reviews1.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"><i class="fas fa-play-circle play-button"></i></div>
+            <div class="video-info d-flex align-items-center">
+              <div class="flex-grow-1 text-start">
+                <h5 class="mb-0">Kim Chanj</h5>
+                <p class="mb-0 small text-uppercase">CEO - CKSR</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card card-trusted-by-best flex-grow-1">
+            <h3>Trusted by the Best</h3>
+          </div>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="col-lg-3 col-md-6 col-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="400">
+          <div class="testimonial-card testimonial-1 flex-grow-1">
+            <div class="testimonial-content flex-grow-1 mb-3 text-start">
+              <p class="mb-3 review-text">"Aun Digital exceeded our expectations and delivered our website
+                in less than 30 days..."</p>
+              <div class="star-rating" aria-label="5 star rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="reviewer-info d-flex align-items-center pt-3 mt-auto">
+              <img src="assets/images/testimonials/avators/saadhi_kewlani.svg" alt="Saahil Kewlani"
+                class="rounded-circle me-3 reviewer-avatar" loading="lazy">
+              <div class="text-start">
+                <h5 class="mb-0 reviewer-name">Saahil Kewlani</h5>
+                <p class="mb-0 small reviewer-title">COO, Goarch</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card card-ripil flex-grow-1">
+            <img src="assets/images/common/aun_digital_u_logo.svg" alt="Aun Digital Logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- FAQ Section -->
+  <section class="faq-section py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-title-tag"><span class="dot"></span>FAQs</div>
+        <h2 class="section_title py-2">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="accordion faq-accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <span>What is Aun Digital, and why is it a popular choice in UAE for website design &
+                development?</span>
+              <span class="faq-icon"></span>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Aun Digital is a leading web design and development company in UAE, known for its innovative
+              solutions, expert team, and commitment to delivering high-quality, user-centric websites.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Items 2–4 (same structure) -->
+        <!-- Repeat and change content accordingly -->
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <span>What services do you offer beyond website design & development?</span>
+              <span class="faq-icon"></span>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We also specialize in e-commerce, SEO, branding, custom apps, social media, and maintenance.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <span>How long does a typical website development project take?</span>
+              <span class="faq-icon"></span>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Typically 4–8 weeks for simple sites, and 12+ weeks for complex platforms.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <span>Do you provide ongoing support and maintenance after the website launch?</span>
+              <span class="faq-icon"></span>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, we offer maintenance, updates, security monitoring, and performance optimization.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="section-footer" class="site-footer py-5 py-md-6 text-white">
+    <div class="container">
+      <div class="row justify-content-between gy-5 mb-5">
+        <div class="col-lg-6 text-start">
+          <h2 class="main-heading text-gradient-purple mb-4 text-md-start">Got a project in mind?</h2>
+          <a href="#" class="btn btn-primary mb-4">
+            Get Free Consultation <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+          <div class="site-footer__legal-links">
+            <a href="#" class="text-white text-decoration-none">Privacy Policy</a> |
+            <a href="#" class="text-white text-decoration-none">Term & Conditions</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-start text-lg-start">
+          <h3 class="text-purple mb-3">UAE (United Arab Emirates)</h3>
+          <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i> Office# H21 Prime Tower, 31st floor, 3101
+            Business Bay Dubai.</p>
+          <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i> +971 56 703 2672</p>
+          <p class="mb-3"><i class="bi bi-telephone-outbound-fill me-2"></i> +971 4 547 3892</p>
+          <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i> info@aundigital.com</p>
+          <p class="mb-3"><i class="bi bi-printer-fill me-2"></i> +971 4 547 1297</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom-bar pt-4 border-top border-white border-opacity-25">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="site-footer__copyright mb-0">©2025 Aun Digital. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <nav class="site-footer__social-nav d-flex justify-content-center justify-content-md-end gap-2"
+              style="color: white;">
+              <a href="#" aria-label="Behance" class="social-icon"><i class="bi bi-behance"></i></a>
+              <a href="#" aria-label="Dribbble" class="social-icon"><i class="bi bi-dribbble"></i></a>
+              <a href="#" aria-label="LinkedIn" class="social-icon"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="YouTube" class="social-icon"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Twitter/X" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // 🔹 Play Video Function
+    function toggleVideo() {
+      const video = document.getElementById("companyVideo");
+      const playButton = document.getElementById("playButton");
+      const videoOverlay = document.querySelector(".video-overlay");
+
+      if (video.paused) {
+        // Play the video
+        video.play();
+        videoOverlay.style.display = "none"; // Hide overlay when playing
+        playButton.style.display = "none";
+      } else {
+        // Pause the video
+        video.pause();
+        videoOverlay.style.display = "flex"; // Show overlay when paused
+        playButton.innerHTML = '<i class="bi bi-play-fill"></i> Play video';
+      }
+    }
+
+    // Attach the toggleVideo function to the play button's click event
+    document
+      .getElementById("playButton")
+      .addEventListener("click", toggleVideo);
+
+    // 🔹 Bootstrap Carousel Initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      new bootstrap.Carousel("#innovationCarousel", {
+        interval: 3000,
+        ride: "carousel",
+      });
+    });
+
+    // 🔹 Swiper for Portfolio
+    const portfolioSwiper = new Swiper(".portfolio-swiper", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: "auto",
+          centeredSlides: true,
+        },
+        320: {
+          slidesPerView: 1,
+          centeredSlides: true,
+        },
+      },
+    });
+
+    // 🔹 Swiper Filter Buttons
+    document.querySelectorAll(".tag-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        document
+          .querySelectorAll(".tag-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+        const slides = document.querySelectorAll(".swiper-slide");
+
+        slides.forEach((slide) => {
+          const category = slide.getAttribute("data-category");
+          slide.style.display =
+            filter === category || filter === "All" ? "block" : "none";
+        });
+
+        portfolioSwiper.update();
+      });
+    });
+
+    // 🔹 Swiper for Innovation Section
+    const innovationSwiper = new Swiper(".innovation-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+        },
+        992: {
+          slidesPerView: 1,
+        },
+      },
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const videoCards = document.querySelectorAll(".card-video-testimonial");
+
+      videoCards.forEach((card) => {
+        const video = card.querySelector("video");
+        const videoOverlay = card.querySelector(".video-overlay");
+
+        if (video && videoOverlay) {
+          card.addEventListener("click", function () {
+            try {
+              if (!card.classList.contains("playing")) {
+                // Pause other videos
+                document
+                  .querySelectorAll(".card-video-testimonial.playing video")
+                  .forEach((otherVideo) => {
+                    otherVideo.pause();
+                    otherVideo
+                      .closest(".card-video-testimonial")
+                      .classList.remove("playing");
+                  });
+                // Play current video
+                video.play();
+                card.classList.add("playing");
+              } else {
+                video.pause();
+                card.classList.remove("playing");
+              }
+            } catch (error) {
+              console.error("Error toggling video playback:", error);
+            }
+          });
+
+          // Handle video end
+          video.addEventListener("ended", function () {
+            card.classList.remove("playing");
+          });
+        }
+      });
+
+      // Lazy loading fallback for older browsers
+      if ("loading" in HTMLImageElement.prototype) {
+        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+          img.src = img.src;
+        });
+      } else {
+        const script = document.createElement("script");
+        script.src =
+          "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    });
+
+    // Error handling for external scripts
+    window.addEventListener(
+      "error",
+      function (event) {
+        if (event.target.tagName === "SCRIPT") {
+          console.warn("Failed to load script:", event.target.src);
+        }
+      },
+      true
+    );
+
+    // Error handling for external scripts
+    $(".display").owlCarousel({
+      loop: true,
+      center: true, // Center mode enable
+      margin: 0, // No gap between images
+      nav: true, // Arrows (optional)
+      autoplay: true, // Auto slide (optional)
+      autoplayTimeout: 3000,
+      responsive: {
+        0: {
+          items: 1, // Mobile: 1 item
+        },
+        600: {
+          items: 3, // Tablet: 2 items
+        },
+        1000: {
+          items: 4.5, // Desktop: 3 items (center image + 2 half visible)
+        },
+      },
+    });
+
+    $(".protfolio").owlCarousel({
+      loop: true,
+      center: true,
+      margin: 80,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1.5, // 1.5 se side item ka half dikhega
+        },
+        1000: {
+          items: 2.5, // 2.5 se side half item dikhega
+        },
+      },
+    });
+
+    new Swiper(".swiper--full", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 150,
+        modifier: 1,
+        slideShadows: true,
+      },
+    });
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    const carousel = document.getElementById("uspCarousel");
+    let isAnimating = false;
+
+    function animateCardFade() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      const firstCard = carousel.children[0];
+
+      // ✅ Apply custom styles before animation
+      firstCard.style.background = "linear-gradient(180deg, #554681 0%, #1B022C 100%)";
+      firstCard.style.borderTopRightRadius = "50px";
+      firstCard.style.color = "white";
+
+      // Animate fade out
+      gsap.to(firstCard, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.8,
+        ease: "power2.inOut",
+        onComplete: () => {
+          // Move to end
+          carousel.appendChild(firstCard);
+
+          // Optional: reset transform immediately
+          gsap.set(firstCard, { opacity: 0, scale: 1.2 });
+
+          // Animate fade-in
+          gsap.to(firstCard, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            ease: "power2.out",
+            onComplete: () => {
+              // ✅ Remove the temporary styles after animation finishes
+              firstCard.style.background = "";
+              firstCard.style.borderTopRightRadius = "";
+              firstCard.style.color = "";
+              isAnimating = false;
+            }
+          });
+        }
+      });
+    }
+
+    // Auto loop
+    setInterval(animateCardFade, 3000);
+  </script>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
+    const slider = document.getElementById("awardsSlider");
+    let issAnimating = false;
 
-    gsap.to("h2", {
+    function slideAward() {
+      if (issAnimating) return;
+      issAnimating = true;
+
+      const firstCard = slider.children[0];
+
+      gsap.to(firstCard, {
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.4,
+        ease: "power2.in",
+        onComplete: () => {
+          slider.appendChild(firstCard); // move to end
+          gsap.set(firstCard, { opacity: 0, scale: 1.1 });
+
+          gsap.to(firstCard, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.4,
+            ease: "power2.out",
+            onComplete: () => { isAnimating = false; }
+          });
+        }
+      });
+    }
+
+    // Start auto scroll
+    setInterval(slideAward, 800); // scroll every 3s
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const plusIcons = gsap.utils.toArray(".plus-icon");
+      const section = document.getElementById("ctaSection");
+
+      // Timeline
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%", // when section enters viewport
+        }
+      });
+
+      tl.to(".plus-icon.bottom-left", { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" })
+        .to(".plus-icon.bottom-right", { opacity: 1, scale: 1, duration: 0.3 }, "<+0.1")
+        .to(".plus-icon.top-left", { opacity: 1, scale: 1, duration: 0.3 }, "<+0.1")
+        .to(".plus-icon.top-right", { opacity: 1, scale: 1, duration: 0.3 }, "<+0.1")
+        .to(section, { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }, "-=0.3");
+    });
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".faq-accordion .accordion-item", {
+      scrollTrigger: {
+        trigger: ".faq-accordion",
+        start: "top 80%",
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+    gsap.to("#heroVideoText", {
       scale: 100,
       scrollTrigger: {
-        trigger: ".video-section .wrapper",
+        trigger: "#heroVideoSection .hero-video-wrapper",
         scrub: 1,
         pin: true,
         start: "top top",
