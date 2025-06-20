@@ -35,9 +35,13 @@
 
       <div class="hero-video-mask" id="heroVideoMask">
         <h2 id="heroVideoText">عون</h2>
+        <div class="scroll-down-indicator">
+          <i class="bi bi-chevron-double-down"></i>
+        </div>
       </div>
     </div>
   </div>
+
   <section class="hero-section  bg-dark text-white ">
     <div class="container ">
       <div class="hero-section__content-area row">
@@ -458,6 +462,35 @@
     </div>
   </section>
 
+  <section class="min-vh-100 d-flex align-items-start justify-content-center  py-5 position-relative">
+    <div class="container" id="painImageWrapper"
+      style="height: 250vh; background-color: #f8f8f8; padding: 100px; text-align: center;">
+      <div class="row align-items-start">
+        <!-- Left Text Content -->
+        <div class="col-lg-5">
+          <div class="section-title-tag"><span class="dot"></span>Pain Points</div>
+          <h2 class="mb-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+            Struggling with These? You’re Not Alone.
+          </h2>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-lg-6 " style="position: absolute; left: 40%; top: 0;">
+          <img src="assets/images/common/pain-lady.svg" alt="thinking-lady" />
+
+          <!-- Pain Cards -->
+          <div class="pain-cards">
+            <div class="pain-card left top">Poor designs that don’t reflect your brand</div>
+            <div class="pain-card left bottom">High bounce rate or irrelevant traffic</div>
+            <div class="pain-card right top">Not mobile-friendly or slow loading</div>
+            <div class="pain-card right middle">No tracking or analytics to measure performance</div>
+            <div class="pain-card right bottom">No clear call-to-action or user journey</div>
+            <div class="pain-card top-center">No leads or low conversion rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -1148,9 +1181,9 @@
     setInterval(animateCardFade, 3000);
   </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
     const slider = document.getElementById("awardsSlider");
     let issAnimating = false;
@@ -1218,6 +1251,10 @@
       stagger: 0.2,
       ease: "power2.out"
     });
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
     gsap.to("#heroVideoText", {
       scale: 100,
       scrollTrigger: {
@@ -1227,6 +1264,47 @@
         start: "top top",
         end: "+=600",
       },
+    });
+
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Pin the image wrapper
+    ScrollTrigger.create({
+      trigger: "#painImageWrapper",
+      start: "top top",
+      end: "bottom bottom", // This will be the end of the pinning
+      pin: true,
+      scrub: true,
+    });
+
+    // Animate pain cards one by one after the pin starts
+    gsap.utils.toArray(".pain-card").forEach((card, i) => {
+      gsap.to(card, {
+        opacity: 1,
+        // The duration here will effectively control how quickly each card appears
+        // as you scroll through the pinned section.
+        // A smaller duration means it appears faster over a shorter scroll distance.
+        duration: 0.5, // You can adjust this value
+
+        scrollTrigger: {
+          trigger: "#painImageWrapper",
+          // Start the animation of each card when the *beginning* of the image wrapper
+          // is at the top of the viewport.
+          start: "top top",
+          // The 'end' of the trigger determines how much scroll distance
+          // is available for all cards to reveal.
+          // We'll use a calculated end to ensure cards appear sequentially within the pinned section.
+          end: () => "+=" + (window.innerHeight * 0.5 * (i + 1)), // Adjust multiplier as needed for spacing
+          scrub: true, // Crucial for a smooth, scroll-driven animation
+          // Add a slight delay based on the index to ensure sequential appearance
+          // This delay is relative to the start of the overall scroll for the cards.
+          // The start of each card's animation will be offset.
+          start: `top+=${i * 100} top`, // Adjust the '100' for more or less scroll space between cards
+          toggleActions: "play none none reverse", // Play on enter, reverse on leave
+        }
+      });
     });
   </script>
 </body>
