@@ -17,16 +17,16 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+
   <div class="hero-video-section" id="heroVideoSection">
     <div class="hero-video-wrapper">
       <video autoplay loop muted id="heroVideo">
@@ -41,6 +41,32 @@
       </div>
     </div>
   </div>
+  <header class="custom-header py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <!-- Left: Logo -->
+      <div class="header-logo">
+        <img src="assets/images/common/aun-digital-logo.svg" alt="AUN Digital" height="40">
+      </div>
+
+      <!-- Center: Navigation -->
+      <nav class="navbar-pill d-none d-lg-flex align-items-center px-4 py-2 shadow-sm rounded-pill">
+        <ul class="nav list-unstyled d-flex align-items-center gap-3 mb-0">
+          <li><a href="#" class="nav-link text-white">Home</a></li>
+          <li><a href="#" class="nav-link text-white">About</a></li>
+          <li><a href="#" class="nav-link text-white">Services</a></li>
+          <li><a href="#" class="nav-link text-white">Portfolio</a></li>
+          <li><a href="#" class="nav-link text-white">Resources</a></li>
+          <li><a href="#" class="nav-link text-white">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: CTA Button -->
+      <div class="d-none d-lg-block">
+        <a href="#" class="btn schedule-btn">Schedule a call →</a>
+      </div>
+    </div>
+  </header>
 
   <section class="hero-section  bg-dark text-white ">
     <div class="container ">
@@ -223,132 +249,253 @@
     </div>
   </section>
 
-  <!-- Custom Designs Section -->
-  <section class="custom-designs">
-    <div class="container">
-      <div class="row">
-        <div class="col-12" data-aos="fade-right" data-aos-duration="1000">
-          <div class="section-title-tag"><span class="dot"></span>Who are we?</div>
-          <div class="text-content">
-            <h2 class="mb-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-              Helping Businesses in UAE with Expert Web Development Solutions
-            </h2>
-            <p class="text-white-50 mb-4" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
-              Aun Digital is a creative-led web development agency driven by innovation and purpose. We
-              specialize in building fast, scalable, and visually striking websites tailored to your
-              brand’s identity and business goals.
-            </p>
-          </div>
-
-          <div class="feature-grid">
-            <!-- Repeat this block for each feature -->
-            <div class="feature-item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700">
-              <span></span><span></span><span></span><span></span>
-              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
-              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
-            </div>
-            <div class="feature-item" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="700">
-              <span></span><span></span><span></span><span></span>
-              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
-              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
-            </div>
-            <div class="feature-item" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="700">
-              <span></span><span></span><span></span><span></span>
-              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
-              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
-            </div>
-            <div class="feature-item" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="700">
-              <span></span><span></span><span></span><span></span>
-              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
-              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
-            </div>
-            <div class="feature-item" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="700">
-              <span></span><span></span><span></span><span></span>
-              <img src="assets/icons/poor_deisgn.svg" alt="Icon">
-              <p class="text-muted">Poor designs that doesn't reflect your brand</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Side Image (Sticky Position) -->
-      <div class="right-image">
-        <img src="assets/images/common/laptop.svg" alt="Laptop Image" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
   <section class="services-section py-5">
-    <div class="container text-center">
-      <div class="mb-4" data-aos="fade-up" data-aos-duration="800">
-        <div class="section-title-tag" style="margin-left: auto; margin-right: auto">
-          <span class="dot"></span>Our Services
+    <div class="container">
+      <div class="services-header row align-items-center mb-5">
+        <div class="col-lg-6">
+          <div class="section-title-tag mb-3" data-aos="fade-right" data-aos-delay="100">
+            <span class="dot"></span>Our Services
+          </div>
+          <h2 class="section-heading" data-aos="fade-right" data-aos-delay="200">
+            Services That Drive Success
+          </h2>
         </div>
-        <h2 class="section_title py-2" data-aos="zoom-in" data-aos-duration="600">
-          Services That Drive Success
-
-        </h2>
       </div>
 
-      <div class="row g-2 text-start">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-          <div class="service-card p-4 h-100 border rounded-3 shadow-sm"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease"
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
-            <h4 class="section_title" style="font-size: 34px; text-align: start" data-aos="fade-right"
-              data-aos-delay="200" data-aos-duration="600">
-              Custom Website Design
-            </h4>
-            <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">
-              Tailored designs
-              that reflect your brand and engage users
-              effectively.
-            </p>
-            <img src="assets/images/services/custom-web.svg" alt="Custom Website Design" class="img-fluid mt-3"
-              data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" />
+      <div class="services-content row g-4">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-block service-block-left  position-relative overflow-hidden">
+            <img src="assets/images/services/service_custom-web.svg" alt="Custom Website Design">
+            <div class="service-block-overlay"></div>
+            <!-- <div class="service-block-text content-align-end">
+              <h3 class="service-title">Custom Website Design</h3>
+              <p class="service-description">Tailored designs that reflect your brand and engage users effectively.</p>
+              <ul class="service-features-list list-unstyled">
+                <li><i class="fas fa-check-circle"></i> Seamless UX/UI</li>
+                <li><i class="fas fa-check-circle"></i> Brand-aligned aesthetics</li>
+                <li><i class="fas fa-check-circle"></i> High conversion focus</li>
+              </ul>
+            </div> -->
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-          <div class="service-card p-4 h-100 border rounded-3 shadow-sm"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease"
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
-            <h4 class="section_title" style="font-size: 34px; text-align: start" data-aos="fade-right"
-              data-aos-delay="200" data-aos-duration="600">
-              eCommerce Development
-            </h4>
-            <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">
-              Robust online
-              stores with seamless user experiences and secure
-              payments.
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-detail-card-top p-4 h-100 rounded-3">
+            <h4 class="service-detail-title">Custom Website Design</h4>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="service-badge">Customized Layout</span>
+              <span class="service-badge-light">Solving Business Problems</span>
+            </div>
+            <p class="service-detail-description mb-4">
+              By improving UI/UX to developing innovative features, we
+              build websites that solve real-life business problems.
             </p>
-            <img src="assets/images/services/ecom_web.svg" alt="E-commerce Development" class="img-fluid mt-3"
-              data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" />
+            <ul class="service-checklist list-unstyled mb-4">
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+            </ul>
+            <img src="assets/images/services/icon-web-design.svg" alt="Web Design Icon" class="service-detail-icon">
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
-          <div class="service-card p-4 h-100 border rounded-3 shadow-sm"
-            style="transition: transform 0.3s ease, box-shadow 0.3s ease"
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
-            <h4 class="section_title" style="font-size: 34px; text-align: start" data-aos="fade-right"
-              data-aos-delay="200" data-aos-duration="600">
-              Wordpress & CMS Solutions
-            </h4>
-            <p class="" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">
-              Flexible and
-              scalable content management for easy updates and
-              growth.
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-detail-card-bottom p-4 h-100 rounded-3">
+            <h4 class="service-detail-title">Wordpress & CMS Solutions</h4>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="service-badge">Customized Layout</span>
+              <span class="service-badge-light">Solving Business Problems</span>
+            </div>
+            <p class="service-detail-description mb-4">
+              Create a powerful online presence with a visually
+              stunning user-friendly website that drives conversions.
             </p>
-            <img src="assets/images/services/cms_web.svg" alt="WordPress & CMS Solutions" class="img-fluid mt-3"
-              data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" />
+            <ul class="service-checklist list-unstyled mb-4">
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+              <li><i class="fas fa-check-circle me-2"></i> Lorem ipsum</li>
+            </ul>
+            <img src="assets/images/services/icon-cms-solution.svg" alt="CMS Icon" class="service-detail-icon">
           </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-block service-block-right  position-relative overflow-hidden">
+            <img src="assets/images/services/services_web.svg" alt="Wordpress CMS Solutions" class="service-block-img ">
+            <div></div>
+            <!-- <div class="service-block-text content-align-start">
+              <h3 class="service-title">Wordpress & CMS Solutions</h3>
+              <p class="service-description">Flexible and scalable content management for easy updates and growth.</p>
+              <ul class="service-features-list list-unstyled">
+                <li><i class="fas fa-check-circle"></i> Easy content management</li>
+                <li><i class="fas fa-check-circle"></i> Scalable for growth</li>
+                <li><i class="fas fa-check-circle"></i> Secure & reliable</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="usp-section py-5">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-10 " data-aos="fade-up">
+          <div class="section-title-tag"><span class="dot"></span>USP</div>
+          <h2 class="section_title py-2 text-start">Powering Dubai's Most Recognized Brands</h2>
+          <p class="hero-description col-lg-8 mx-auto mx-lg-0" data-aos="fade-up" data-aos-delay="200">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+        </div>
+      </div>
+
+      <div class="row usp-features-row align-items-center">
+        <!-- Left: Cards -->
+        <div class="col-lg-8">
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+              <div class="usp-card bg-white shadow-sm rounded p-4 h-100">
+                <h5 class="usp-card-title">Custom Appearance</h5>
+                <p class="usp-card-description">We prefer to create a custom website from scratch with a unique look so
+                  you can stand out in the market.</p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="400">
+              <div class="usp-card bg-white shadow-sm rounded p-4 h-100">
+                <h5 class="usp-card-title">SEO Friendly</h5>
+                <p class="usp-card-description">We prefer to create a custom website from scratch with a unique look so
+                  you can stand out in the market.</p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="500">
+              <div class="usp-card bg-white shadow-sm rounded p-4 h-100">
+                <h5 class="usp-card-title">Aesthetic UX/UI</h5>
+                <p class="usp-card-description">We prefer to create a custom website from scratch with a unique look so
+                  you can stand out in the market.</p>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="600">
+              <div class="usp-card bg-white shadow-sm rounded p-4 h-100">
+                <h5 class="usp-card-title">Higher Conversion</h5>
+                <p class="usp-card-description">We prefer to create a custom website from scratch with a unique look so
+                  you can stand out in the market.</p>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="700">
+              <div class="usp-card bg-white shadow-sm rounded p-4 h-100">
+                <h5 class="usp-card-title">Mobile Responsive</h5>
+                <p class="usp-card-description">We prefer to create a custom website from scratch with a unique look so
+                  you can stand out in the market.</p>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="800">
+              <div class="usp-card bg-white shadow-sm rounded p-4 h-100">
+                <h5 class="usp-card-title">12 Months Free Support</h5>
+                <p class="usp-card-description">We prefer to create a custom website from scratch with a unique look so
+                  you can stand out in the market.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="col-lg-4 d-flex justify-content-center align-items-center" data-aos="zoom-in" data-aos-delay="900">
+          <img src="assets/images/common/usp.svg" alt="Creative Illustration" style="max-width: 300%; padding: 5%;">
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- Portfolio Section -->
+  <section class="websites-drive-results-section position-relative">
+    <div class="container">
+      <!-- Intro Section -->
+      <div class="row align-items-end">
+        <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-up">
+          <div class="section-title-tag mb-3">
+            <span class="dot"></span>Case Studies
+          </div>
+          <h1 class="display-4 text-white">
+            Building Websites That Drive Results
+          </h1>
+          <p class="lead text-white">
+            <strong>Looking for a website that turns visitors into loyal
+              customers?</strong><br />
+            Explore our portfolio to see how we transform ideas into impactful
+            digital experiences. From sleek e-commerce platforms to engaging
+            corporate websites, our custom designs are tailored.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="btn btn-primary px-5 py-3 rounded-pill">View Case Studies</a>
+        </div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="d-flex flex-wrap gap-2 my-4 filter-buttons justify-content-start" data-aos="fade-up"
+        data-aos-delay="200">
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn active" data-filter="Real Estate">
+          Real Estate
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Technology">
+          Technology
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Education">
+          Education
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Healthcare">
+          Healthcare
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Restaurants">
+          Restaurants
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Manufacturing">
+          Manufacturing
+        </button>
+        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Logistics">
+          Logistics
+        </button>
+      </div>
+    </div>
+    <!-- Owl -->
+    <div class="protfolio owl-carousel owl-theme">
+      <div class="item">
+        <div class="case-study-item-image">
+          <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="case-study-item-image">
+          <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="case-study-item-image">
+          <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="case-study-item-image">
+          <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
 
   <!-- Innovation Display Section -->
   <section class="innovation-display">
@@ -423,49 +570,13 @@
 
   </section>
 
-  <!-- USP Item -->
-  <section class="usp-section">
-    <div class="container text-center">
-      <div class="section-title-tag"><span class="dot"></span>USPs</div>
-      <h2 class="sub-heading">Powering Dubai’s Most Recognized Brands</h2>
-      <p class="usp-section__description">Here’s how we help businesses thrive</p>
 
-      <!-- Grid Carousel Wrapper -->
-      <div class="usp-carousel-wrapper">
-        <div class="usp-carousel" id="uspCarousel">
-          <div class="usp-card">
-            <h3>Custom<br>Appearance</h3>
-            <p>Unique look to stand out.</p>
-          </div>
-          <div class="usp-card">
-            <h3>SEO<br>Friendly</h3>
-            <p>Optimized for search engines.</p>
-          </div>
-          <div class="usp-card">
-            <h3>Aesthetic<br>UX/UI</h3>
-            <p>Designed for great UX.</p>
-          </div>
-          <div class="usp-card">
-            <h3>Reliable<br>Support</h3>
-            <p>Here when you need us.</p>
-          </div>
-          <div class="usp-card">
-            <h3>Scalable<br>Systems</h3>
-            <p>Built to grow with your business.</p>
-          </div>
-          <div class="usp-card">
-            <h3>Secure<br>Architecture</h3>
-            <p>Security-first approach.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="min-vh-100 d-flex align-items-start justify-content-center  py-5 position-relative">
+  <section class="min-vh-100 d-flex align-items-start justify-content-center py-5 position-relative">
     <div class="container" id="painImageWrapper"
       style="height: 250vh; background-color: #f8f8f8; padding: 100px; text-align: center;">
       <div class="row align-items-start">
+
         <!-- Left Text Content -->
         <div class="col-lg-5">
           <div class="section-title-tag"><span class="dot"></span>Pain Points</div>
@@ -474,11 +585,10 @@
           </h2>
         </div>
 
-        <!-- Right Image -->
-        <div class="col-lg-6 " style="position: absolute; left: 40%; top: 0;">
+        <!-- Right Side (Image + Cards) -->
+        <div class="col-lg-6 position-absolute d-none d-lg-block" style="left: 40%; top: 0;">
           <img src="assets/images/common/pain-lady.svg" alt="thinking-lady" />
 
-          <!-- Pain Cards -->
           <div class="pain-cards">
             <div class="pain-card left top">Poor designs that don’t reflect your brand</div>
             <div class="pain-card left bottom">High bounce rate or irrelevant traffic</div>
@@ -488,117 +598,25 @@
             <div class="pain-card top-center">No leads or low conversion rate</div>
           </div>
         </div>
+
+        <!-- Mobile View (Stacked Image + Cards) -->
+        <!-- <div class="col-12 d-block d-lg-none mt-4 text-center">
+          <img src="assets/images/common/pain-lady.svg" alt="thinking-lady" class="img-fluid mb-3" />
+          <div class="pain-cards-mobile d-flex flex-column gap-3">
+            <div class="pain-card">Poor designs that don’t reflect your brand</div>
+            <div class="pain-card">High bounce rate or irrelevant traffic</div>
+            <div class="pain-card">Not mobile-friendly or slow loading</div>
+            <div class="pain-card">No tracking or analytics to measure performance</div>
+            <div class="pain-card">No clear call-to-action or user journey</div>
+            <div class="pain-card">No leads or low conversion rate</div>
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
 
 
 
-  <!-- Portfolio Section -->
-  <!-- Portfolio Section -->
-  <section class="websites-drive-results-section position-relative">
-    <div class="container">
-      <!-- Intro Section -->
-      <div class="row align-items-end">
-        <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-up">
-          <div class="section-title-tag mb-3">
-            <span class="dot"></span>Case Studies
-          </div>
-          <h1 class="display-4 text-white">
-            Building Websites That Drive Results
-          </h1>
-          <p class="lead text-white">
-            <strong>Looking for a website that turns visitors into loyal
-              customers?</strong><br />
-            Explore our portfolio to see how we transform ideas into impactful
-            digital experiences. From sleek e-commerce platforms to engaging
-            corporate websites, our custom designs are tailored.
-          </p>
-        </div>
-        <div class="col-lg-4 text-lg-end" data-aos="fade-up" data-aos-delay="100">
-          <a href="#" class="btn btn-primary px-5 py-3 rounded-pill">View Case Studies</a>
-        </div>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="d-flex flex-wrap gap-2 my-4 filter-buttons justify-content-start" data-aos="fade-up"
-        data-aos-delay="200">
-        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn active" data-filter="Real Estate">
-          Real Estate
-        </button>
-        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Technology">
-          Technology
-        </button>
-        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Education">
-          Education
-        </button>
-        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Healthcare">
-          Healthcare
-        </button>
-        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Restaurants">
-          Restaurants
-        </button>
-        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Manufacturing">
-          Manufacturing
-        </button>
-        <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Logistics">
-          Logistics
-        </button>
-      </div>
-    </div>
-    <!-- Owl -->
-    <div class="protfolio owl-carousel owl-theme">
-      <div class="item">
-        <div class="case-study-item case-study-item--detailed">
-          <div class="case-study-item__content">
-            <div>
-              <span class="case-study-item__category">Real Estate</span>
-              <h3 class="case-study-item__title">Free Room</h3>
-            </div>
-            <a href="#" class="case-study-item__arrow">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-          <div class="case-study-item-image">
-            <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="case-study-item case-study-item--detailed">
-          <div class="case-study-item__content">
-            <div>
-              <span class="case-study-item__category">Real Estate</span>
-              <h3 class="case-study-item__title">Free Room</h3>
-            </div>
-            <a href="#" class="case-study-item__arrow">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-          <div class="case-study-item-image">
-            <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="case-study-item case-study-item--detailed">
-          <div class="case-study-item__content">
-            <div>
-              <span class="case-study-item__category">Real Estate</span>
-              <h3 class="case-study-item__title">Free Room</h3>
-            </div>
-            <a href="#" class="case-study-item__arrow">
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-          <div class="case-study-item-image">
-            <img src="assets/images/projects/gulstatic.svg" alt="Gul Properties" class="case-study-image" />
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
   <!-- Start Project Section -->
   <section class="start-project-section py-5 position-relative">
     <div class="container">
@@ -901,15 +919,74 @@
 
   <!-- Scripts -->
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    // Error handling for external scripts
+    $(".display").owlCarousel({
+      loop: true,
+      center: true, // Center mode enable
+      margin: 0, // No gap between images
+      nav: true, // Arrows (optional)
+      autoplay: true, // Auto slide (optional)
+      autoplayTimeout: 3000,
+      responsive: {
+        0: {
+          items: 1, // Mobile: 1 item
+        },
+        600: {
+          items: 3, // Tablet: 2 items
+        },
+        1000: {
+          items: 4.5, // Desktop: 3 items (center image + 2 half visible)
+        },
+      },
+    });
+
+    $(".protfolio").owlCarousel({
+      loop: true,
+      center: true,
+      margin: 80,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1.5, // 1.5 se side item ka half dikhega
+        },
+        1000: {
+          items: 2.5, // 2.5 se side half item dikhega
+        },
+      },
+    });
+
+    new Swiper(".swiper--full", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 150,
+        modifier: 1,
+        slideShadows: true,
+      },
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
     AOS.init();
 
@@ -1069,68 +1146,10 @@
       true
     );
 
-    // Error handling for external scripts
-    $(".display").owlCarousel({
-      loop: true,
-      center: true, // Center mode enable
-      margin: 0, // No gap between images
-      nav: true, // Arrows (optional)
-      autoplay: true, // Auto slide (optional)
-      autoplayTimeout: 3000,
-      responsive: {
-        0: {
-          items: 1, // Mobile: 1 item
-        },
-        600: {
-          items: 3, // Tablet: 2 items
-        },
-        1000: {
-          items: 4.5, // Desktop: 3 items (center image + 2 half visible)
-        },
-      },
-    });
 
-    $(".protfolio").owlCarousel({
-      loop: true,
-      center: true,
-      margin: 80,
-      nav: true,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 1.5, // 1.5 se side item ka half dikhega
-        },
-        1000: {
-          items: 2.5, // 2.5 se side half item dikhega
-        },
-      },
-    });
-
-    new Swiper(".swiper--full", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 150,
-        modifier: 1,
-        slideShadows: true,
-      },
-    });
 
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
   <script>
     const carousel = document.getElementById("uspCarousel");
     let isAnimating = false;
@@ -1181,9 +1200,8 @@
     setInterval(animateCardFade, 3000);
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
   <script>
     const slider = document.getElementById("awardsSlider");
     let issAnimating = false;
@@ -1281,6 +1299,7 @@
 
     // Animate pain cards one by one after the pin starts
     gsap.utils.toArray(".pain-card").forEach((card, i) => {
+      console.log(i, "i car", card)
       gsap.to(card, {
         opacity: 1,
         // The duration here will effectively control how quickly each card appears
@@ -1290,19 +1309,11 @@
 
         scrollTrigger: {
           trigger: "#painImageWrapper",
-          // Start the animation of each card when the *beginning* of the image wrapper
-          // is at the top of the viewport.
           start: "top top",
-          // The 'end' of the trigger determines how much scroll distance
-          // is available for all cards to reveal.
-          // We'll use a calculated end to ensure cards appear sequentially within the pinned section.
           end: () => "+=" + (window.innerHeight * 0.5 * (i + 1)), // Adjust multiplier as needed for spacing
           scrub: true, // Crucial for a smooth, scroll-driven animation
-          // Add a slight delay based on the index to ensure sequential appearance
-          // This delay is relative to the start of the overall scroll for the cards.
-          // The start of each card's animation will be offset.
           start: `top+=${i * 100} top`, // Adjust the '100' for more or less scroll space between cards
-          toggleActions: "play none none reverse", // Play on enter, reverse on leave
+          // toggleActions: "play none none reverse", // Play on enter, reverse on leave
         }
       });
     });

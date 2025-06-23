@@ -1,9 +1,91 @@
+:root {
+  --text-purple: #a379c5;
+  --light-purple: #a379c5;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --bg-purple: #554681;
+  --light-purple-bg: #f3effc;
+  --bage: background: #E5C3FF;
+
+  /* The very light purple background of the card */
+  --purple-badge: #9d6dcc;
+  /* Color for the "Your dream projects" badge */
+  --dark-heading: #333;
+  /* Dark color for the heading */
+  --text-color: #666;
+  /* General text color */
+  --button-purple: #7b4397;
+  /* Button background color */
+  --button-hover-purple: #6a3a82;
+  /* Button hover background color */
+  --avatar-border: #f3effc;
+  --purple-bg-dark: #3e2666;
+  /* Dark purple for some backgrounds */
+  --purple-bg-light: #f3effc;
+  /* Very light purple for general background */
+  --purple-text-main: #7b4397;
+  /* Main purple for titles/accents */
+  --purple-text-light: #baa6d8;
+  /* Lighter purple text */
+  --gray-text: #6c757d;
+  /* Standard gray text */
+  --blue-card-bg: #2196f3;
+  /* For the specific blue testimonial card */
+  --teal-card-bg: #21a1f3;
+  /* For the specific teal testimonial card */
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  /* Subtle shadow for cards */
+  --card-border-radius: 1.5rem;
+  /* Consistent border-radius for car
+    /* Border color for avatars, same as card bg */
+}
+
 /* General Styles */
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   background: #ffffff;
+}
+
+.custom-header {
+  background: transparent;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  right: 0;
+  left: 0;
+}
+
+.navbar-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-pill .nav-link {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-pill .nav-link:hover {
+  color: white;
+}
+
+.schedule-btn {
+  background: linear-gradient(135deg, #b07cff, #a855f7);
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+
+.schedule-btn:hover {
+  background: linear-gradient(135deg, #a855f7, #9333ea);
 }
 
 .hero-video-section {
@@ -660,8 +742,8 @@ body {
 /* Trusted Partners */
 .trusted-partners {
   background: #fff;
-  padding: 8rem 0;
-  height: auto;
+  padding: 10rem 0;
+  height: 50vh;
 }
 
 .partner-logos img {
@@ -1070,126 +1152,400 @@ body {
   opacity: 1;
 }
 
-/* Services Section */
+/* Services Section Specific Styles */
 .services-section {
-  background: #f8f9fa;
-  padding: 5rem 0;
-}
-
-.service-card {
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-number {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  color: rgba(0, 0, 0, 0.05);
-  z-index: 1;
-}
-
-.usp-section {
-  padding: 80px 0;
-  background-color: #ffffff;
-}
-
-.usp-carousel-wrapper {
-  width: 100%;
+  background: linear-gradient(137.22deg, #64558D 7.33%, #1B022C 62.93%);
+  padding: 6rem 0;
+  /* Adjust padding as needed */
+  color: white;
+  /* Default text color for the section */
   overflow: hidden;
-  position: relative;
-  margin: 40px 0;
+  /* To handle elements potentially extending outside */
 }
 
-.usp-carousel {
-  display: flex;
-  gap: 30px;
+.services-header {
+  margin-bottom: 4rem;
+  /* Space between header and content blocks */
 }
 
-.usp-card {
-  flex: 0 0 calc(33.333% - 20px);
+/* Custom Service Blocks (Left & Right images) */
+.service-block {
+  background-color: var(--card-bg-dark);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /* Ensure image and overlay stay within bounds */
   display: flex;
   flex-direction: column;
-  background-color: #e5c3ff;
-  align-items: start;
-  justify-content: center;
-  padding: 30px;
-  height: 35vh;
-  border-radius: 12px;
-  color: #000000;
-  text-align: left;
-
+  justify-content: flex-end;
+  /* Align content to bottom */
+  position: relative;
+  /* For absolute positioning of image/overlay */
+  min-height: 450px;
+  /* Adjust as needed for visual consistency */
 }
 
-.usp-card:hover {
-  background: linear-gradient(180deg, #554681 0%, #1B022C 100%);
-  border-top-right-radius: 50px;
-  color: white !important;
-
+.service-block-img {
+  bottom: 0;
+  width: 100%;
+  /* Cover full width of block */
+  height: auto;
+  object-fit: cover;
+  /* Ensure laptop fits without cropping */
+  z-index: 1;
+  /* Below text, above overlay */
+  /* Center the image */
+  /* To leave space for text at the top */
 }
 
-.usp-card h3 {
-  font-size: 40px;
-  /* style_185 */
+.service-block-left .service-block-img {
+  left: auto;
+  right: -10%;
+  /* Position image to the right on the left card */
+  transform: none;
+  /* Override translateX */
+  max-width: 120%;
+  /* Extend beyond bounds for effect */
+  max-height: 100%;
+}
+
+.service-block-right .service-block-img {
+  left: -10%;
+  /* Position image to the left on the right card */
+  transform: none;
+  /* Override translateX */
+  max-width: 120%;
+  max-height: 100%;
+}
+
+
+.service-block-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50%);
+  /* Gradient to make text readable over laptop */
+  z-index: 2;
+  /* Above image */
+}
+
+.service-block-text {
+  position: relative;
+  z-index: 3;
+  /* Above overlay */
+  padding: 2rem;
+  /* Inner padding for text content */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Default for left text */
+  text-align: start;
+  /* Default for left text */
+}
+
+.service-block-text.content-align-end {
+  /* For the left block text, align to end */
+  align-items: flex-end;
+  text-align: end;
+}
+
+.service-title {
+  font-size: 1.8rem;
   font-weight: 700;
-  /* style_185 */
-  line-height: 1.025;
-  /* 41px / 40px */
-  /* style_183 */
-  margin-top: 0;
-  margin-bottom: 15px;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
 }
 
-.usp-card p {
-  font-size: 16px;
-  /* style_183 */
-  line-height: 24px;
-  /* style_183 */
-  /* style_183 */
+.service-description {
+  font-size: 1rem;
+  color: var(--text-light-purple);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.service-features-list {
+  margin: 0;
+  padding: 0;
+}
+
+.service-features-list li {
+  color: var(--text-white);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.service-features-list li i {
+  color: var(--green-check);
+  /* Or white as per image */
+  margin-right: 0.5rem;
+  font-size: 0.85em;
+  /* Smaller icon */
+}
+
+
+/* Detailed Service Cards (Top Right & Bottom Right) */
+.service-detail-card-top,
+.service-detail-card-bottom {
+  background: linear-gradient(90.25deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 36.13%, rgba(255, 255, 255, 0.2) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  /* For icon positioning */
+  min-height: 300px;
+  /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Content from top */
+}
+
+.service-detail-card-top {
+  /* Specific styling for top right card if needed */
+}
+
+.service-detail-card-bottom {
+  /* Specific styling for bottom right card if needed */
+}
+
+.service-detail-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+}
+
+.service-badge {
+  background-color: #E5C3FF;
+  ;
+  color: black;
+  padding: 0.35rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.service-badge-light {
+  color: #E5C3FF;
+  padding: 0.35rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #E5C3FF
+}
+
+.service-detail-description {
+  font-size: 1rem;
+  color: var(--text-light-purple);
+  line-height: 1.6;
+}
+
+.service-checklist {
+  padding: 0;
+  margin: 0;
+}
+
+.service-checklist li {
+  color: var(--text-white);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.service-checklist li:last-child {
   margin-bottom: 0;
 }
 
-:root {
-  --text-purple: #a379c5;
-  --light-purple: #a379c5;
-  --card-shadow: rgba(0, 0, 0, 0.1);
-  --bg-purple: #554681;
-  --light-purple-bg: #f3effc;
-  /* The very light purple background of the card */
-  --purple-badge: #9d6dcc;
-  /* Color for the "Your dream projects" badge */
-  --dark-heading: #333;
-  /* Dark color for the heading */
-  --text-color: #666;
-  /* General text color */
-  --button-purple: #7b4397;
-  /* Button background color */
-  --button-hover-purple: #6a3a82;
-  /* Button hover background color */
-  --avatar-border: #f3effc;
-  --purple-bg-dark: #3e2666;
-  /* Dark purple for some backgrounds */
-  --purple-bg-light: #f3effc;
-  /* Very light purple for general background */
-  --purple-text-main: #7b4397;
-  /* Main purple for titles/accents */
-  --purple-text-light: #baa6d8;
-  /* Lighter purple text */
-  --gray-text: #6c757d;
-  /* Standard gray text */
-  --blue-card-bg: #2196f3;
-  /* For the specific blue testimonial card */
-  --teal-card-bg: #21a1f3;
-  /* For the specific teal testimonial card */
-  --card-shadow: rgba(0, 0, 0, 0.08);
-  /* Subtle shadow for cards */
-  --card-border-radius: 1.5rem;
-  /* Consistent border-radius for car
-    /* Border color for avatars, same as card bg */
+.service-checklist li i {
+  color: var(--green-check);
+  /* The image shows white, adjust as preferred */
+  font-size: 1em;
 }
+
+.service-detail-icon {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 60px;
+  /* Adjust size as needed */
+  height: auto;
+  opacity: 0.7;
+  /* Slightly faded as in the image */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .services-header {
+    text-align: center;
+  }
+
+  .section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .section-title-tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-block-text {
+    padding: 1.5rem;
+  }
+
+  .service-block-text.content-align-end {
+    /* Reset for mobile */
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .service-block-img {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    /* Reset override */
+    max-height: 60%;
+    top: 0;
+    /* Adjust positioning for smaller screens */
+  }
+
+  .service-block-left .service-block-img,
+  .service-block-right .service-block-img {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    max-width: 100%;
+    max-height: 60%;
+  }
+
+  .service-block {
+    min-height: 350px;
+    /* Adjust minimum height for mobile */
+  }
+
+  .service-detail-card-top,
+  .service-detail-card-bottom {
+    min-height: 280px;
+  }
+
+  .service-block-text {
+    margin-top: 150px;
+    /* Push text below the image on mobile */
+  }
+
+  .services-content>div:nth-child(even) {
+    /* Swap order on small screens */
+    order: -1;
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 575.98px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .service-detail-title {
+    font-size: 1.5rem;
+  }
+
+  .service-block-img {
+    max-height: 50%;
+  }
+
+  .service-block-text {
+    margin-top: 100px;
+  }
+}
+
+.usp-features-row {
+  /* No specific styles here, primarily for layout using Bootstrap grid */
+}
+
+.usp-card {
+  border: none;
+  padding: 1.5rem;
+  /* Padding inside the card */
+  min-width: 200px;
+  height: 100%;
+  /* Ensure cards are same height in a row */
+}
+
+.usp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.usp-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  /* Make titles bolder */
+  margin-bottom: 0.75rem;
+  color: var(--body-text-color);
+}
+
+.usp-card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 0;
+  /* Remove default paragraph margin */
+}
+
+/* Unique classes for the main illustration */
+.main-illustration-container {
+  width: 100%;
+  max-width: 600px;
+  /* Adjust as needed */
+  height: auto;
+  aspect-ratio: 16/9;
+  /* Example aspect ratio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-illustration-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991.98px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .main-illustration-container {
+    margin-top: 3rem;
+  }
+}
+
+/* Further refinements for typography to match the image more closely */
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 3rem;
+    /* Larger on larger screens */
+  }
+}
+
 
 .websites-drive-results-section {
   background: linear-gradient(180deg, #554681 0%, #1b022c 100%);
@@ -1280,18 +1636,21 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding: 25% 5% 5%;
   box-sizing: border-box;
 }
 
 .case-study-item-image {
-  height: 80vh;
+  height: 50vh;
+  border-radius: 25%;
+
 }
 
 .case-study-item-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 5%;
+
 }
 
 /* RESPONSIVE BREAKPOINTS */
@@ -1475,16 +1834,15 @@ body {
 
 .start-project-section {
   padding: 10rem 0;
-  background-color: #ffffff;
+  background: linear-gradient(180deg, #554681 0%, #1B022C 100%);
   position: relative;
   overflow: hidden;
   color: #000000;
 }
 
 .cta-banner-section__container {
-  background: linear-gradient(180deg,
-      #e5c3ff 0%,
-      rgba(255, 255, 255, 0.12) 100%);
+  background: linear-gradient(180deg, #E5C3FF 0%, rgba(255, 255, 255, 0.12) 100%);
+
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
@@ -2160,56 +2518,70 @@ body {
   background-color: #f3e8ff;
   color: #6a1b9a;
 }
+
 .pain-image {
-      width: 100%;
-      max-width: 360px;
-      display: block;
-      margin: 0 auto;
-      z-index: 1;
-      position: relative;
-    }
-    .pain-cards {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-    .pain-card {
-      background: linear-gradient(145deg, #e0bbf5, #c084f7);
-      color: #fff;
-      padding: 0.75rem 1rem;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      width: 100%;
-      max-width: 300px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-      position: absolute;
-      opacity: 0;
-    }
-    .left.top {
-      top: -100px;
-      left: -0%;
-    }
-    .left.bottom {
-      bottom: -60px;
-      left: -160px;
-    }
-    .right.top {
-      top: -100px;
-      right: 0px;
-    }
-    .right.middle {
-      top: 0;
-      right: -160px;
-    }
-    .right.bottom {
-      bottom: -60px;
-      right: -120px;
-    }
-    .top-center {
-      top: -150px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.pain-cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.pain-card {
+  background: linear-gradient(145deg, #e0bbf5, #c084f7);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  opacity: 0;
+}
+
+.pain-card.desktop-card {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.left.top {
+  top: -100px;
+  left: -0%;
+}
+
+.left.bottom {
+  bottom: -60px;
+  left: -160px;
+}
+
+.right.top {
+  top: -100px;
+  right: 0px;
+}
+
+.right.middle {
+  top: 0;
+  right: -160px;
+}
+
+.right.bottom {
+  bottom: -60px;
+  right: -120px;
+}
+
+.top-center {
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
