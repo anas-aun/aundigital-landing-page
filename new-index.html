@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GSAP Pink Box Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fff;
+      padding: 100px 0;
+    }
+
+    .wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 700px;
+    }
+
+    .circle-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 360px;
+      height: 360px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #5e3ca4, #6e51a8);
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .issue-box {
+      position: absolute;
+      background: rgba(235, 218, 255, 0.7);
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 16px;
+      max-width: 230px;
+      opacity: 0;
+    }
+
+    /* Positioning based on image */
+    .box-1 { top: 10px; left: 38%; }
+    .box-2 { top: 60px; right: 10%; }
+    .box-3 { top: 45%; right: 0%; }
+    .box-4 { bottom: 15%; right: 8%; }
+    .box-5 { bottom: 15%; left: 8%; }
+    .box-6 { top: 45%; left: 0%; }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        height: auto;
+        padding-bottom: 100px;
+      }
+
+      .circle-image {
+        position: static;
+        margin: 0 auto;
+        transform: none;
+      }
+
+      .issue-box {
+        position: static;
+        margin: 20px auto;
+        text-align: center;
+        display: block;
+        opacity: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="issue-box box-1">No leads or low conversion rate</div>
+  <div class="issue-box box-2">Not mobile-friendly or slow loading</div>
+  <div class="issue-box box-3">No tracking or analytics to measure performance</div>
+  <div class="issue-box box-4">No clear call-to-action or user journey</div>
+  <div class="issue-box box-5">High bounce rate or irrelevant traffic</div>
+  <div class="issue-box box-6">Poor designs that doesn’t reflect your brand</div>
+
+  <div class="circle-image">
+    <img src="https://via.placeholder.com/360x360" alt="woman with laptop" />
+    <!-- Replace with your actual image -->
+  </div>
+</div>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.issue-box').forEach((box, i) => {
+    gsap.fromTo(box, 
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: i * 0.2,
+        scrollTrigger: {
+          trigger: box,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        }
+      }
+    );
+  });
+</script>
+
+</body>
+</html>
