@@ -39,9 +39,12 @@
     /* Border color for avatars, same as card bg */
 }
 
-html,
-body {
-  scroll-snap-type: y mandatory;
+@media (min-width: 768px) {
+
+  html,
+  body {
+    scroll-snap-type: y mandatory;
+  }
 }
 
 /* General Styles */
