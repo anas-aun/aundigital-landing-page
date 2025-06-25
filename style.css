@@ -146,6 +146,11 @@ body {
   color: #000;
 }
 
+@media (max-width: 767px) {
+  .panel2 {
+    display: none !important;
+  }
+}
 
 .schedule-btn {
   background: linear-gradient(135deg, #b07cff, #a855f7);
