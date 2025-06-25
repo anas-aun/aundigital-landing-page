@@ -64,12 +64,12 @@
 
       <!-- Right: CTA Button -->
       <div class="d-none d-lg-block">
-        <a href="/https://aundigital.ae/contact-us" class="btn schedule-btn">Schedule a call →</a>
+        <a href="/https://aundigital.ae/contact-us" class="btn btn-primary px-4 py-2 rounded-pill">Schedule a call</a>
       </div>
     </div>
   </header>
 
-  <section class="hero-section bg-dark text-white">
+  <section class="elementor-section-custom hero-section bg-dark text-white panel1">
     <div class="container">
       <div class="row align-items-start">
         <!-- Left Column: Text and Awards -->
@@ -188,6 +188,13 @@
           </div>
         </div>
       </div>
+      <!-- ✅ Section 2: Scroll-triggered video -->
+      <div class="elementor-section-custom panel2" id="panel2">
+        <video class="w-100" muted autoplay loop playsinline>
+          <source src="assets/videos/about.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </section>
   <!-- Video Section -->
@@ -215,51 +222,57 @@
   </section> -->
 
   <!-- Trusted Partners Section -->
-  <section class="trusted-partners py-5">
+  <section class="elementor-section-custom trusted-partners py-5">
     <div class="container text-center">
+      <!-- Section Heading -->
       <div class="mb-4" data-aos="fade-up">
         <div class="section-title-tag"><span class="dot"></span>Clientele</div>
         <h2 class="section_title py-2">Our Trusted Partners</h2>
       </div>
-      <div class="partner-logos-wrapper">
 
-        <div class="logo-wrapper">
-          <div class="logo-track logo-track-rtl">
-            <!-- Right to Left logos -->
-            <img src="assets/images/brands/brand_1.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_2.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_3.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_4.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_5.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_6.svg" alt="Brand" />
-            <!-- Duplicate for seamless scroll -->
-            <img src="assets/images/brands/brand_1.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_2.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_3.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_4.svg" alt="Brand" />
+      <!-- Partner Logos -->
+      <div class="row justify-content-center g-4">
+        <!-- Logo Row 1 -->
+        <div class="col-12">
+          <div class="logo-wrapper overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+            <div class="logo-track d-flex gap-4 justify-content-center align-items-center">
+              <img src="assets/images/brands/brand_1.svg" alt="Brand" />
+              <img src="assets/images/brands/brand_2.svg" alt="Brand" />
+              <img src="assets/images/brands/brand_5.svg" alt="Brand" />
+              <img src="assets/images/brands/brand_3.svg" alt="Brand" />
+            </div>
           </div>
         </div>
 
-        <div class="logo-wrapper">
-          <div class="logo-track logo-track-ltr">
-            <!-- Left to Right logos -->
-            <img src="assets/images/brands/brand_7.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_8.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_9.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_10.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_11.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_7.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_8.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_9.svg" alt="Brand" />.
-            <img src="assets/images/brands/brand_7.svg" alt="Brand" />
-            <img src="assets/images/brands/brand_8.svg" alt="Brand" />
+        <!-- Logo Row 2 -->
+        <div class="col-12">
+          <div class="logo-wrapper overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+            <div class="logo-track d-flex gap-4 justify-content-center align-items-center">
+              <img src="assets/images/brands/brand_6.svg" alt="Brand" />
+              <img src="assets/images/brands/brand_7.svg" alt="Brand" />
+              <img src="assets/images/brands/brand_8.svg" alt="Brand" />
+              <img src="assets/images/brands/brand_9.svg" alt="Brand" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo Row 3 -->
+        <div class="col-12">
+          <div class="logo-wrapper overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+            <div class="logo-track d-flex gap-4 justify-content-center align-items-center">
+              <img src="assets/images/brands/brand_9.svg" alt="Brand" />
+              <img src="assets/images/brands/brand_10.svg" alt="Brand" />
+            </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
-  <section class="services-section py-5">
+
+  <section class="elementor-section-custom services-section py-5">
     <div class="container">
+      <!-- Header -->
       <div class="row">
         <div class="col-md-12">
           <div class="services-header">
@@ -272,24 +285,18 @@
           </div>
         </div>
       </div>
+
+      <!-- First Service Block -->
       <div class="row mb-4">
         <div class="col-md-6">
-          <div class="service-block service-block-left  position-relative overflow-hidden">
+          <div class="service-block service-block-left position-relative overflow-hidden" data-aos="zoom-in-right"
+            data-aos-delay="100">
             <img src="assets/images/services/service_custom-web.svg" alt="Custom Website Design">
             <div class="service-block-overlay"></div>
-            <!-- <div class="service-block-text content-align-end">
-                    <h3 class="service-title">Custom Website Design</h3>
-                    <p class="service-description">Tailored designs that reflect your brand and engage users effectively.</p>
-                    <ul class="service-features-list list-unstyled">
-                        <li><i class="fas fa-check-circle"></i> Seamless UX/UI</li>
-                        <li><i class="fas fa-check-circle"></i> Brand-aligned aesthetics</li>
-                        <li><i class="fas fa-check-circle"></i> High conversion focus</li>
-                    </ul>
-                    </div> -->
           </div>
         </div>
         <div class="col-md-6">
-          <div class="service-detail-card-top p-4 h-100 rounded-3">
+          <div class="service-detail-card-top p-4 h-100 rounded-3" data-aos="fade-left" data-aos-delay="200">
             <h4 class="service-detail-title">Custom Website Design</h4>
             <div class="d-flex flex-wrap gap-2 mb-3">
               <span class="service-badge">Customized Layout</span>
@@ -315,9 +322,11 @@
           </div>
         </div>
       </div>
+
+      <!-- Second Service Block -->
       <div class="row">
         <div class="col-md-5">
-          <div class="service-detail-card-bottom p-4 h-100 rounded-3">
+          <div class="service-detail-card-bottom p-4 h-100 rounded-3" data-aos="fade-right" data-aos-delay="100">
             <h4 class="service-detail-title">Wordpress & CMS Solutions</h4>
             <div class="d-flex flex-wrap gap-2 mb-3">
               <span class="service-badge">Customized Layout</span>
@@ -337,28 +346,22 @@
           </div>
         </div>
         <div class="col-md-7">
-          <div class="service-block service-block-right  position-relative overflow-hidden">
-            <img src="assets/images/services/services_web.svg" alt="Wordpress CMS Solutions" class="service-block-img ">
-            <div></div>
-            <!-- <div class="service-block-text content-align-start">
-                    <h3 class="service-title">Wordpress & CMS Solutions</h3>
-                    <p class="service-description">Flexible and scalable content management for easy updates and growth.</p>
-                    <ul class="service-features-list list-unstyled">
-                        <li><i class="fas fa-check-circle"></i> Easy content management</li>
-                        <li><i class="fas fa-check-circle"></i> Scalable for growth</li>
-                        <li><i class="fas fa-check-circle"></i> Secure & reliable</li>
-                    </ul>
-                    </div> -->
+          <div class="service-block service-block-right position-relative overflow-hidden" data-aos="zoom-in-left"
+            data-aos-delay="200">
+            <img src="assets/images/services/services_web.svg" alt="Custom Website Design">
+            <div class="service-block-overlay"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="usp-section py-5">
+
+  <section class="elementor-section-custom usp-section py-5">
     <div class="container">
+      <!-- Section Heading -->
       <div class="row align-items-start">
-        <div class="col-lg-12 " data-aos="fade-up">
+        <div class="col-lg-12" data-aos="fade-up">
           <div class="section-title-tag"><span class="dot"></span>USP</div>
           <h2 class="section_title py-2 text-start">A Conversion-Focused Web Development Company</h2>
           <p class="hero-description col-lg-8 mx-auto mx-lg-0" data-aos="fade-up" data-aos-delay="200">
@@ -368,21 +371,22 @@
         </div>
       </div>
 
+      <!-- USP Features -->
       <div class="row usp-features-row align-items-center">
-        <!-- Left: Cards -->
+        <!-- Left Cards -->
         <div class="col-lg-7 z-3">
           <div class="row g-4">
-            <!-- Example Card -->
-            <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
               <div class="usp-card" data-image="assets/images/common/custom-appreacne.png"
                 onmouseover="changeImage(this)">
                 <h5 class="usp-card-title">24/7 Support Services</h5>
-                <p class="usp-card-description">We provide tech-enabled, 24/7 support, keeping your site up-to-date and
+                <p class="usp-card-description">We provide tech-enabled, 24/7 support, keeping your site up-to-date
+                  and
                   delivering high performance.</p>
               </div>
             </div>
 
-            <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
               <div class="usp-card" data-image="assets/images/common/Seo-Friendly.png" onmouseover="changeImage(this)">
                 <h5 class="usp-card-title">6 Months of Free Web Maintenance</h5>
                 <p class="usp-card-description">Our web development company offers free web maintenance for 6 months.
@@ -394,22 +398,21 @@
               <div class="usp-card" data-image="assets/images/common/Ux-ui.png" onmouseover="changeImage(this)">
                 <h5 class="usp-card-title">Content For Main Service Pages</h5>
                 <p class="usp-card-description">Our writers create content for your service pages through research and
-                  data-driven insights. </p>
+                  data-driven insights.</p>
               </div>
             </div>
 
-
-            <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
               <div class="usp-card" data-image="assets/images/common/High-Conversion.png"
                 onmouseover="changeImage(this)">
                 <h5 class="usp-card-title">Responsive Designs</h5>
-                <p class="usp-card-description">With our responsive web design, your website will adjust effortlessly to
+                <p class="usp-card-description">With our responsive web design, your website will adjust effortlessly
+                  to
                   any screen size and device.</p>
               </div>
             </div>
 
-
-            <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="500">
               <div class="usp-card" data-image="assets/images/common/Mobile-Responsive.png"
                 onmouseover="changeImage(this)">
                 <h5 class="usp-card-title">Ongoing Support and Monitoring</h5>
@@ -418,32 +421,30 @@
               </div>
             </div>
 
-            <div class="col-md-6" data-aos="fade-right" data-aos-delay="400">
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="600">
               <div class="usp-card" data-image="assets/images/common/12-months.png" onmouseover="changeImage(this)">
                 <h5 class="usp-card-title">Scalability and Security</h5>
                 <p class="usp-card-description">We offer built-in scalability and industry-standard security from the
                   start of the project.</p>
               </div>
             </div>
-
-            <!-- Add more cards with their respective data-image -->
-            <!-- ... -->
           </div>
         </div>
 
-        <!-- Right: Image -->
-        <div class="col-lg-5">
+        <!-- Right Image -->
+        <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="300">
           <div class="usp-features-change-image">
             <img id="uspMainImage" src="assets/images/common/usp.png" alt="Creative Illustration">
           </div>
         </div>
       </div>
     </div>
+    <div style="height: 20vh;"></div>
   </section>
 
 
   <!-- Portfolio Section -->
-  <section class="websites-drive-results-section position-relative">
+  <section class="elementor-section-custom websites-drive-results-section position-relative">
     <div class="container">
       <!-- Intro Section -->
       <div class="row align-items-end">
@@ -455,8 +456,9 @@
             We Don’t Just Code, We Create Digital Experiences
           </h1>
           <p class="lead text-white">
-            <strong>Our web design and development company in Dubai transforms your website into the solution they have
-              been scrolling for.
+            <strong>Our web design and development company in Dubai transforms your website into the solution they
+              have
+              been scrolling for.</strong>
           </p>
         </div>
         <div class="col-lg-4 text-lg-start my-4" data-aos="fade-up" data-aos-delay="100">
@@ -469,72 +471,15 @@
       <div class="row">
         <div class="col-12">
           <div class="d-flex flex-wrap gap-2 my-4 filter-buttons justify-content-start" data-aos="fade-up"
-            data-aos-delay="200">
-            <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn active" data-filter="Real Estate">
-              Real Estate
-            </button>
-            <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Technology">
-              Technology
-            </button>
-            <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Education">
-              Education
-            </button>
-            <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Healthcare">
-              Healthcare
-            </button>
-            <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Restaurants">
-              Restaurants
-            </button>
-            <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Manufacturing">
-              Manufacturing
-            </button>
-            <button class="btn btn-outline-light rounded-pill px-3 py-2 tag-btn" data-filter="Logistics">
-              Logistics
-            </button>
+            data-aos-delay="200" id="portfolio-filters">
+            <!-- Buttons will be populated dynamically -->
           </div>
-          <!-- Owl -->
-          <div class="protfolio owl-carousel owl-theme">
-            <div class="item">
-              <div class="case-study-item-image">
-                <div class="case-study-video-background">
-                  <video autoplay muted loop playsinline poster="assets/images/hero_bg.svg">
-                    <source src="assets/videos/Free Romm Portfolio.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="case-study-item-image">
-                <div class="case-study-video-background">
-                  <video autoplay muted loop playsinline poster="assets/images/hero_bg.svg">
-                    <source src="assets/videos/Free Romm Portfolio.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="case-study-item-image">
-                <div class="case-study-video-background">
-                  <video autoplay muted loop playsinline poster="assets/images/hero_bg.svg">
-                    <source src="assets/videos/Free Romm Portfolio.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="case-study-item-image">
-                <div class="case-study-video-background">
-                  <video autoplay muted loop playsinline poster="assets/images/hero_bg.svg">
-                    <source src="assets/videos/Free Romm Portfolio.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
+          <!-- Owl Carousel -->
+          <div class="protfolio owl-carousel owl-theme" id="portfolio-carousel">
+            <!-- Items will be populated dynamically -->
           </div>
+
+
         </div>
       </div>
 
@@ -544,8 +489,8 @@
 
 
   <!-- Innovation Display Section -->
-  <section class="innovation-display">
-    <div class="container">
+  <section class="elementor-section-custom innovation-display">
+    <div class="container-flude">
       <div class="row ">
         <div class="col-12 ">
           <div class="id-content-div text-center" data-aos="fade-up">
@@ -556,226 +501,329 @@
           </div>
         </div>
       </div>
+      <!-- owl -->
+      <div class="horizontal-wrapper">
+        <div class="horizontal-inner">
+          <!-- Real Estate -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_1.png" alt="Real Estate" class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Real Estate</h5>
+                <p>Centralized operations for landlords and tenants to boost efficiency and profitability through
+                  accessible
+                  data.</p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>85%</h5>
+                      <p>Efficiency Boost</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>70%</h5>
+                      <p>Data Accuracy</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>60%</h5>
+                      <p>Cost Reduction</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technology -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_2.png" alt="Technology" class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Technology</h5>
+                <p>Trust-building websites designed for seamless user experience across all devices and platforms.</p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>90%</h5>
+                      <p>User Engagement</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>80%</h5>
+                      <p>Device Compatibility</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>75%</h5>
+                      <p>Trust Conversion</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurants -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_3.png" alt="Restaurants" class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Restaurants</h5>
+                <p>Custom solutions for menus, reservations, and online presence tailored to authentic restaurant
+                  branding.
+                </p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>65%</h5>
+                      <p>Reservation Uplift</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>80%</h5>
+                      <p>Online Orders</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>72%</h5>
+                      <p>Social Reach</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Healthcare -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_4.png" alt="Healthcare" class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Healthcare</h5>
+                <p>Fast-loading, accessible platforms that connect patients to medical services and vital information.
+                </p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>88%</h5>
+                      <p>Access Speed</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>78%</h5>
+                      <p>Patient Conversion</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>92%</h5>
+                      <p>Mobile UX</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Manufacturing -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_5.png" alt="Manufacturing"
+                class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Manufacturing</h5>
+                <p>Professional sites that present products, certifications, and convert traffic into actionable
+                  leads.
+                </p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>77%</h5>
+                      <p>Lead Conversion</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>68%</h5>
+                      <p>Search Visibility</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>85%</h5>
+                      <p>Credibility Boost</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Manufacturing -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_5.png" alt="Manufacturing"
+                class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Manufacturing</h5>
+                <p>Professional sites that present products, certifications, and convert traffic into actionable
+                  leads.
+                </p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>77%</h5>
+                      <p>Lead Conversion</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>68%</h5>
+                      <p>Search Visibility</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>85%</h5>
+                      <p>Credibility Boost</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Manufacturing -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_5.png" alt="Manufacturing"
+                class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Manufacturing</h5>
+                <p>Professional sites that present products, certifications, and convert traffic into actionable
+                  leads.
+                </p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>77%</h5>
+                      <p>Lead Conversion</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>68%</h5>
+                      <p>Search Visibility</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>85%</h5>
+                      <p>Credibility Boost</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Manufacturing -->
+          <div class="displayItem">
+            <div class="overlay-wrapper">
+              <img src="assets/images/display/inn_5.png" alt="Manufacturing"
+                class="img-fluid rounded shadow-sm w-100" />
+              <div class="overlay">
+                <h5>Manufacturing</h5>
+                <p>Professional sites that present products, certifications, and convert traffic into actionable
+                  leads.
+                </p>
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>77%</h5>
+                      <p>Lead Conversion</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases midle-border">
+                      <h5>68%</h5>
+                      <p>Search Visibility</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="isthases">
+                      <h5>85%</h5>
+                      <p>Credibility Boost</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-    <!-- owl -->
-    <div class="display owl-carousel owl-theme">
-
-      <!-- Real Estate -->
-      <div class="item">
-        <div class="overlay-wrapper">
-          <img src="assets/images/display/inn_1.png" alt="Real Estate" class="img-fluid rounded shadow-sm w-100" />
-          <div class="overlay">
-            <h5>Real Estate</h5>
-            <p>Centralized operations for landlords and tenants to boost efficiency and profitability through accessible
-              data.</p>
-            <div class="row g-0">
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>85%</h5>
-                  <p>Efficiency Boost</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases midle-border">
-                  <h5>70%</h5>
-                  <p>Data Accuracy</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>60%</h5>
-                  <p>Cost Reduction</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Technology -->
-      <div class="item">
-        <div class="overlay-wrapper">
-          <img src="assets/images/display/inn_2.png" alt="Technology" class="img-fluid rounded shadow-sm w-100" />
-          <div class="overlay">
-            <h5>Technology</h5>
-            <p>Trust-building websites designed for seamless user experience across all devices and platforms.</p>
-            <div class="row g-0">
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>90%</h5>
-                  <p>User Engagement</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases midle-border">
-                  <h5>80%</h5>
-                  <p>Device Compatibility</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>75%</h5>
-                  <p>Trust Conversion</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Restaurants -->
-      <div class="item">
-        <div class="overlay-wrapper">
-          <img src="assets/images/display/inn_3.png" alt="Restaurants" class="img-fluid rounded shadow-sm w-100" />
-          <div class="overlay">
-            <h5>Restaurants</h5>
-            <p>Custom solutions for menus, reservations, and online presence tailored to authentic restaurant branding.
-            </p>
-            <div class="row g-0">
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>65%</h5>
-                  <p>Reservation Uplift</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases midle-border">
-                  <h5>80%</h5>
-                  <p>Online Orders</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>72%</h5>
-                  <p>Social Reach</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Healthcare -->
-      <div class="item">
-        <div class="overlay-wrapper">
-          <img src="assets/images/display/inn_4.png" alt="Healthcare" class="img-fluid rounded shadow-sm w-100" />
-          <div class="overlay">
-            <h5>Healthcare</h5>
-            <p>Fast-loading, accessible platforms that connect patients to medical services and vital information.</p>
-            <div class="row g-0">
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>88%</h5>
-                  <p>Access Speed</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases midle-border">
-                  <h5>78%</h5>
-                  <p>Patient Conversion</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>92%</h5>
-                  <p>Mobile UX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Manufacturing -->
-      <div class="item">
-        <div class="overlay-wrapper">
-          <img src="assets/images/display/inn_5.png" alt="Manufacturing" class="img-fluid rounded shadow-sm w-100" />
-          <div class="overlay">
-            <h5>Manufacturing</h5>
-            <p>Professional sites that present products, certifications, and convert traffic into actionable leads.</p>
-            <div class="row g-0">
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>77%</h5>
-                  <p>Lead Conversion</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases midle-border">
-                  <h5>68%</h5>
-                  <p>Search Visibility</p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="isthases">
-                  <h5>85%</h5>
-                  <p>Credibility Boost</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
 
   </section>
 
 
   <!-- scroll-gsap-section -->
-  <section class="animated-section">
+  <section style="background-image: url('assets/images/common/bg_usp.svg');"
+    class="elementor-section-custom animated-section py-5">
     <div class="container">
-      <div class="row">
-
-
-        <div class="col">
+      <div class="row  g-5">
+        <div class="col-lg-6 align-items-start ">
           <div class="section-title-tag mb-3">
             <span class="dot"></span>Case Studies
           </div>
-          <h2 class="section_title text-start"> We Don’t Just Code, We Create Digital Experiences
-          </h2>
+          <h2 class="section_title text-start">Our Web Development Solutions Fix The Mess So, Users Stick Around</h2>
           <p>Our web design agency in Dubai will transform your vision into a seamless, user-friendly experience that
-            connects, converts, and makes your brand unforgettable
+            connects, converts, and makes your brand unforgettable</p>
+        </div>
+        <div class="col-lg-6 align-items-start ">
+          <div class="wrapper position-relative">
+            <div class="pain-image">
+              <div class="pain-cards">
+                <div class="pain-card  left-top">A cluttered interface</div>
+                <div class="pain-card  left-center">Poor search functionality</div>
+                <div class="pain-card  left-bottom">Lower conversion rate</div>
+                <div class="pain-card  right-top">Higher bounce rate</div>
+                <div class="pain-card  right-middle">Broken links and pages</div>
+                <div class="pain-card  right-bottom">Poor navigation</div>
+              </div>
+              <div class="circle-image mb-3">
+                <img src="assets/images/common/pain-lady.svg" alt="woman with laptop" />
+              </div>
 
-          </p>
-
-          <div class="wrapper">
-            <div class="issue-box box-1">A cluttered interface</div>
-            <div class="issue-box box-2">Poor search functionality</div>
-            <div class="issue-box box-3">Lower conversion rate</div>
-            <div class="issue-box box-4">Higher bounce rate</div>
-            <div class="issue-box box-5">Broken links and pages</div>
-            <div class="issue-box box-6">Poor navigation</div>
-
-            <div class="circle-image">
-              <img src="assets/images/common/pain-lady.svg" alt="woman with laptop" />
-              <!-- Replace with your actual image -->
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </section>
-
 
 
 
 
 
   <!-- Start Project Section -->
-  <section class="start-project-section py-5 position-relative">
-    <div class="container">
+  <!-- Start Project Section -->
+  <section class="elementor-section-custom start-project-section py-5 position-relative">
+    <div class="container-flude">
       <div class="cta-reveal-wrapper position-relative overflow-hidden">
-        <div class="row g-0 shadow cta-banner-section__container" data-aos="fade-up">
+        <div class="row g-0 shadow cta-banner-section__container" data-aos="fade-up" data-aos-duration="800">
           <!-- Text Content -->
           <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center align-items-start"
             data-aos="fade-right" data-aos-delay="100">
-            <span class="badge badge-custom rounded-pill mb-3">
-              Your dream projects
-            </span>
+            <div class="section-title-tag mb-3">
+              <span class="dot"></span>Your dream projects
+            </div>
+
             <h2 class="fw-bold mb-3">It Starts With an Idea, Let’s Build It Together</h2>
             <p>Our web development company lets you design, develop, and dominate.</p>
             <div class="d-flex align-items-center flex-wrap gap-3 mt-3">
@@ -792,16 +840,22 @@
               </div>
             </div>
           </div>
+
           <!-- Image -->
           <div class="col-lg-6 p-5" data-aos="fade-left" data-aos-delay="200">
             <img src="assets/images/common/bussnies.svg" alt="Start Your Project Illustration"
               class="img-fluid w-100 h-100 object-fit-cover rounded-end">
           </div>
-          <!-- Plus Icons -->
-          <img src="assets/icons/plus.svg" class="plus-icon plus-icon--top-left" alt="Decorative plus icon">
-          <img src="assets/icons/plus.svg" class="plus-icon plus-icon--top-right" alt="Decorative plus icon">
-          <img src="assets/icons/plus.svg" class="plus-icon plus-icon--bottom-left" alt="Decorative plus icon">
-          <img src="assets/icons/plus.svg" class="plus-icon plus-icon--bottom-right" alt="Decorative plus icon">
+
+          <!-- Decorative Plus Icons -->
+          <img src="assets/icons/plus.svg" class="plus-icon --top-left" alt="Decorative plus icon" data-aos="zoom-in"
+            data-aos-delay="300">
+          <img src="assets/icons/plus.svg" class="plus-icon --top-right" alt="Decorative plus icon" data-aos="zoom-in"
+            data-aos-delay="400">
+          <img src="assets/icons/plus.svg" class="plus-icon --bottom-left" alt="Decorative plus icon" data-aos="zoom-in"
+            data-aos-delay="500">
+          <img src="assets/icons/plus.svg" class="plus-icon --bottom-right" alt="Decorative plus icon"
+            data-aos="zoom-in" data-aos-delay="600">
         </div>
       </div>
     </div>
@@ -810,7 +864,7 @@
 
 
 
-  <section class="inspire-confidence text-center" aria-labelledby="testimonials-title">
+  <section class="elementor-section-custom inspire-confidence text-center" aria-labelledby="testimonials-title">
     <div class="container">
       <div class="mb-5" data-aos="fade-up" data-aos-duration="1000">
         <div class="section-title-tag"><span class="dot"></span>Testimonials</div>
@@ -852,7 +906,7 @@
             <video preload="metadata" playsinline>
               <source src="assets/videos/reviews2.mp4" type="video/mp4">
             </video>
-            <div class="video-overlay"><i class="fas fa-play-circle play-button"></i></div>
+            <div class="video-overlay"><i class="fas fa-play-circle play-button" style="font-size: 6rem;"></i></div>
             <div class="video-info d-flex align-items-center">
               <div class="flex-grow-1 text-start">
                 <h5 class="mb-0">Eva Walsh</h5>
@@ -890,7 +944,7 @@
             <video preload="metadata" playsinline>
               <source src="assets/videos/reviews1.mp4" type="video/mp4">
             </video>
-            <div class="video-overlay"><i class="fas fa-play-circle play-button"></i></div>
+            <div class="video-overlay"><i class="fas fa-play-circle play-button " style="font-size: 6rem;"></i></div>
             <div class="video-info d-flex align-items-center">
               <div class="flex-grow-1 text-start">
                 <h5 class="mb-0">Kim Chanj</h5>
@@ -935,7 +989,7 @@
 
 
   <!-- FAQ Section -->
-  <section class="faq-section py-5">
+  <section class="elementor-section-custom faq-section py-5">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
         <div class="section-title-tag"><span class="dot"></span>FAQs</div>
@@ -992,7 +1046,8 @@
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
             data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              You will fill out a brief form, and then we will communicate via email. We also schedule calls to discuss
+              You will fill out a brief form, and then we will communicate via email. We also schedule calls to
+              discuss
               the ideas further.
             </div>
           </div>
@@ -1027,7 +1082,8 @@
           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
             data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Through our web development services, we ensure that the website adjusts to all screen sizes and devices.
+              Through our web development services, we ensure that the website adjusts to all screen sizes and
+              devices.
             </div>
           </div>
         </div>
@@ -1043,7 +1099,7 @@
 
 
 
-  <footer id="section-footer" class="site-footer py-5 py-md-6 text-white">
+  <footer id="section-footer" class="elementor-section-custom site-footer py-5 py-md-6 text-white">
     <div class="container">
       <div class="row justify-content-between gy-5 mb-5">
         <div class="col-lg-6 text-start">
@@ -1052,19 +1108,44 @@
             Get Free Consultation <i class="bi bi-arrow-right ms-2"></i>
           </a>
           <div class="site-footer__legal-links">
-            <a href="#" class="text-white text-decoration-none">Privacy Policy</a> |
-            <a href="#" class="text-white text-decoration-none">Term & Conditions</a>
+            <a href="https://aundigital.ae/privacy-policy" class="text-white text-decoration-none">Privacy Policy</a> |
+            <a href="https://aundigital.ae/terms-and-condition" class="text-white text-decoration-none">Term &
+              Conditions</a>
           </div>
         </div>
         <div class="col-lg-5 text-start text-lg-start">
           <h3 class="text-purple mb-3">UAE (United Arab Emirates)</h3>
-          <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i> Office# H21 Prime Tower, 31st floor, 3101
-            Business Bay Dubai.</p>
-          <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i> +971 56 703 2672</p>
-          <p class="mb-3"><i class="bi bi-telephone-outbound-fill me-2"></i> +971 4 547 3892</p>
-          <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i> info@aundigital.com</p>
-          <p class="mb-3"><i class="bi bi-printer-fill me-2"></i> +971 4 547 1297</p>
+
+          <p class="mb-3">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            <a href="https://maps.google.com/?q=Office%23%20H21%20Prime%20Tower,%2031st%20floor,%203101%20Business%20Bay%20Dubai"
+              target="_blank" class="text-decoration-none text-white">
+              Office# H21 Prime Tower, 31st floor, 3101 Business Bay Dubai.
+            </a>
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-telephone-fill me-2"></i>
+            <a href="tel:+971567032672" class="text-decoration-none text-white">+971 56 703 2672</a>
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-telephone-outbound-fill me-2"></i>
+            <a href="tel:+97145473892" class="text-decoration-none text-white">+971 4 547 3892</a>
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-envelope-fill me-2"></i>
+            <a href="mailto:info@aundigital.com" class="text-decoration-none text-white">info@aundigital.com</a>
+          </p>
+
+          <p class="mb-3">
+            <i class="bi bi-printer-fill me-2"></i>
+            <a href="tel:+97145471297" class="text-decoration-none text-white">+971 4 547 1297</a>
+          </p>
         </div>
+
+
       </div>
       <div class="site-footer__bottom-bar pt-4 ">
         <div class="row align-items-center">
@@ -1074,11 +1155,13 @@
           <div class="col-12 col-md-6 text-center text-md-end">
             <nav class="site-footer__social-nav d-flex justify-content-center justify-content-md-end gap-2"
               style="color: white;">
-              <a href="#" aria-label="Behance" class="social-icon"><i class="bi bi-behance"></i></a>
-              <a href="#" aria-label="Dribbble" class="social-icon"><i class="bi bi-dribbble"></i></a>
-              <a href="#" aria-label="LinkedIn" class="social-icon"><i class="bi bi-linkedin"></i></a>
-              <a href="#" aria-label="YouTube" class="social-icon"><i class="bi bi-youtube"></i></a>
-              <a href="#" aria-label="Twitter/X" class="social-icon">
+              <a href="https://www.behance.net/aundigitalagency" aria-label="Behance" class="social-icon"><i
+                  class="bi bi-behance"></i></a>
+              <a href="https://www.linkedin.com/company/aundigitalagency" aria-label="LinkedIn" class="social-icon"><i
+                  class="bi bi-linkedin"></i></a>
+              <a href="https://www.youtube.com/@AunDigitalAgency/about" aria-label="YouTube" class="social-icon"><i
+                  class="bi bi-youtube"></i></a>
+              <a href="https://x.com/AunDigital" aria-label="Twitter/X" class="social-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi"
                   viewBox="0 0 16 16">
                   <path
@@ -1110,53 +1193,53 @@
           items: 1, // Mobile: 1 item
         },
         600: {
-          items: 3, // Tablet: 2 items
+          items: 2, // Tablet: 2 items
         },
         1000: {
-          items: 4.5, // Desktop: 3 items (center image + 2 half visible)
+          items: 4, // Desktop: 3 items (center image + 2 half visible)
         },
       },
     });
 
-    $(".protfolio").owlCarousel({
-      loop: true,
-      margin: 80,
-      nav: false,
-      dots: false,
-      autoplay: false,
-      autoplayTimeout: 4000,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 2, // 1.5 se side item ka half dikhega
-        },
-        1000: {
-          items: 2, // 2.5 se side half item dikhega
-        },
-      },
-    });
+    //   $(".protfolio").owlCarousel({
+    //     loop: true,
+    //     margin: 80,
+    //     nav: false,
+    //     dots: false,
+    //     autoplay: false,
+    //     autoplayTimeout: 4000,
+    //     responsive: {
+    //       0: {
+    //         items: 1,
+    //       },
+    //       600: {
+    //         items: 2, // 1.5 se side item ka half dikhega
+    //       },
+    //       1000: {
+    //         items: 2, // 2.5 se side half item dikhega
+    //       },
+    //     },
+    //   });
 
-    new Swiper(".swiper--full", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 150,
-        modifier: 1,
-        slideShadows: true,
-      },
-    });
-  </script>
+    //   new Swiper(".swiper--full", {
+    //     effect: "coverflow",
+    //     grabCursor: true,
+    //     centeredSlides: true,
+    //     loop: true,
+    //     autoplay: {
+    //       delay: 3000,
+    //       disableOnInteraction: false,
+    //     },
+    //     slidesPerView: "auto",
+    //     coverflowEffect: {
+    //       rotate: 50,
+    //       stretch: 0,
+    //       depth: 150,
+    //       modifier: 1,
+    //       slideShadows: true,
+    //     },
+    //   });
+    // </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1166,28 +1249,28 @@
     AOS.init();
 
     // 🔹 Play Video Function
-    function toggleVideo() {
-      const video = document.getElementById("companyVideo");
-      const playButton = document.getElementById("playButton");
-      const videoOverlay = document.querySelector(".video-overlay");
+    // function toggleVideo() {
+    //   const video = document.getElementById("companyVideo");
+    //   const playButton = document.getElementById("playButton");
+    //   const videoOverlay = document.querySelector(".video-overlay");
 
-      if (video.paused) {
-        // Play the video
-        video.play();
-        videoOverlay.style.display = "none"; // Hide overlay when playing
-        playButton.style.display = "none";
-      } else {
-        // Pause the video
-        video.pause();
-        videoOverlay.style.display = "flex"; // Show overlay when paused
-        playButton.innerHTML = '<i class="bi bi-play-fill"></i> Play video';
-      }
-    }
+    //   if (video.paused) {
+    //     // Play the video
+    //     video.play();
+    //     videoOverlay.style.display = "none"; // Hide overlay when playing
+    //     playButton.style.display = "none";
+    //   } else {
+    //     // Pause the video
+    //     video.pause();
+    //     videoOverlay.style.display = "flex"; // Show overlay when paused
+    //     playButton.innerHTML = '<i class="bi bi-play-fill"></i> Play video';
+    //   }
+    // }
 
-    // Attach the toggleVideo function to the play button's click event
-    document
-      .getElementById("playButton")
-      .addEventListener("click", toggleVideo);
+    // // Attach the toggleVideo function to the play button's click event
+    // document
+    //   .getElementById("playButton")
+    //   .addEventListener("click", toggleVideo);
 
     // 🔹 Bootstrap Carousel Initialization
     document.addEventListener("DOMContentLoaded", function () {
@@ -1257,71 +1340,6 @@
         },
       },
     });
-    document.addEventListener("DOMContentLoaded", function () {
-      const videoCards = document.querySelectorAll(".card-video-testimonial");
-
-      videoCards.forEach((card) => {
-        const video = card.querySelector("video");
-        const videoOverlay = card.querySelector(".video-overlay");
-
-        if (video && videoOverlay) {
-          card.addEventListener("click", function () {
-            try {
-              if (!card.classList.contains("playing")) {
-                // Pause other videos
-                document
-                  .querySelectorAll(".card-video-testimonial.playing video")
-                  .forEach((otherVideo) => {
-                    otherVideo.pause();
-                    otherVideo
-                      .closest(".card-video-testimonial")
-                      .classList.remove("playing");
-                  });
-                // Play current video
-                video.play();
-                card.classList.add("playing");
-              } else {
-                video.pause();
-                card.classList.remove("playing");
-              }
-            } catch (error) {
-              console.error("Error toggling video playback:", error);
-            }
-          });
-
-          // Handle video end
-          video.addEventListener("ended", function () {
-            card.classList.remove("playing");
-          });
-        }
-      });
-
-      // Lazy loading fallback for older browsers
-      if ("loading" in HTMLImageElement.prototype) {
-        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
-          img.src = img.src;
-        });
-      } else {
-        const script = document.createElement("script");
-        script.src =
-          "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
-        script.async = true;
-        document.body.appendChild(script);
-      }
-    });
-
-    // Error handling for external scripts
-    window.addEventListener(
-      "error",
-      function (event) {
-        if (event.target.tagName === "SCRIPT") {
-          console.warn("Failed to load script:", event.target.src);
-        }
-      },
-      true
-    );
-
-
 
   </script>
 
@@ -1375,7 +1393,65 @@
     setInterval(animateCardFade, 3000);
   </script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const videoCards = document.querySelectorAll(".card-video-testimonial");
 
+      videoCards.forEach((card) => {
+        const video = card.querySelector("video");
+        const videoOverlay = card.querySelector(".video-overlay");
+        const videoInfo = card.querySelector(".video-info");
+
+        if (video && videoOverlay) {
+          card.addEventListener("click", function () {
+            try {
+              const currentlyPlaying = card.classList.contains("playing");
+
+              // Pause other videos
+              document.querySelectorAll(".card-video-testimonial.playing video").forEach((otherVideo) => {
+                otherVideo.pause();
+                const otherCard = otherVideo.closest(".card-video-testimonial");
+                otherCard.classList.remove("playing");
+                const otherInfo = otherCard.querySelector(".video-info");
+                if (otherInfo) otherInfo.classList.remove("hidden"); // Show info for other cards
+              });
+
+              if (!currentlyPlaying) {
+                video.play();
+                card.classList.add("playing");
+                if (videoInfo) videoInfo.classList.add("hidden"); // Hide current info
+              } else {
+                video.pause();
+                card.classList.remove("playing");
+                if (videoInfo) videoInfo.classList.remove("hidden"); // Show current info
+              }
+            } catch (error) {
+              console.error("Error toggling video playback:", error);
+            }
+          });
+
+          // Handle video end once
+          video.addEventListener("ended", function () {
+            card.classList.remove("playing");
+            if (videoInfo) videoInfo.classList.remove("hidden");
+          });
+        }
+      });
+
+      // Lazy loading fallback
+      if ("loading" in HTMLImageElement.prototype) {
+        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+          img.src = img.src;
+        });
+      } else {
+        const script = document.createElement("script");
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    });
+
+  </script>
 
   <script>
     const slider = document.getElementById("awardsSlider");
@@ -1460,96 +1536,7 @@
     });
 
   </script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
 
-    // Pin the image wrapper
-    ScrollTrigger.create({
-      trigger: "#painImageWrapper",
-      start: "top top",
-      end: "bottom bottom", // This will be the end of the pinning
-      pin: true,
-      scrub: true,
-    });
-
-    // Animate pain cards one by one after the pin starts
-    gsap.utils.toArray(".pain-card").forEach((card, i) => {
-      console.log(i, "i car", card)
-      gsap.to(card, {
-        opacity: 1,
-        // The duration here will effectively control how quickly each card appears
-        // as you scroll through the pinned section.
-        // A smaller duration means it appears faster over a shorter scroll distance.
-        duration: 0.5, // You can adjust this value
-
-        scrollTrigger: {
-          trigger: "#painImageWrapper",
-          start: "top top",
-          end: () => "+=" + (window.innerHeight * 0.5 * (i + 1)), // Adjust multiplier as needed for spacing
-          scrub: true, // Crucial for a smooth, scroll-driven animation
-          start: `top+=${i * 100} top`, // Adjust the '100' for more or less scroll space between cards
-          // toggleActions: "play none none reverse", // Play on enter, reverse on leave
-        }
-      });
-    });
-
-    function changeImage(element) {
-      const newImage = element.getAttribute('data-image');
-      document.getElementById('uspMainImage').src = newImage;
-    }
-
-
-
-
-    // client logo js
-    function startInfiniteScroll(selector, speed = 0.5, direction = 'rtl') {
-      const track = document.querySelector(selector);
-      let position = 0;
-
-      function animate() {
-        if (direction === 'rtl') {
-          position -= speed;
-          if (Math.abs(position) >= track.scrollWidth / 2) {
-            position = 0;
-          }
-        } else if (direction === 'ltr') {
-          position += speed;
-          if (position >= track.scrollWidth / 2) {
-            position = 0;
-          }
-        }
-
-        track.style.transform = `translateX(${position}px)`;
-        requestAnimationFrame(animate);
-      }
-
-      animate();
-    }
-
-    // Start both scrolls
-    startInfiniteScroll('.logo-track-rtl', 0.5, 'rtl');
-    startInfiniteScroll('.logo-track-ltr', 0.5, 'ltr');
-
-
-    // video button js
-    const openBtn = document.getElementById('openVideoPopup');
-    const closeBtn = document.getElementById('closeVideoPopup');
-    const popup = document.getElementById('videoPopup');
-
-    openBtn.addEventListener('click', () => {
-      popup.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-      // Stop video playback
-      const iframe = popup.querySelector('iframe');
-      iframe.src = iframe.src;
-    });
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
@@ -1594,75 +1581,213 @@
   </script>
   <script>
     const portfolioData = [
-      { id: 1, title: "Luxury Condos", category: "Real Estate", media: { type: "video", src: "assets/videos/about.mp4", poster: "assets/images/real-estate-poster.jpg" } },
-      { id: 2, title: "Tech Startup Site", category: "Technology", media: { type: "video", src: "assets/videos/about.mp4" } },
-      { id: 3, title: "Online Learning Platform", category: "Education", media: { type: "video", src: "assets/videos/about.mp4", poster: "assets/images/education-poster.jpg" } },
-      { id: 4, title: "Healthcare Portal", category: "Healthcare", media: { type: "video", src: "assets/videos/about.mp4" } },
-      { id: 5, title: "Restaurant Booking App", category: "Restaurants", media: { type: "video", src: "assets/videos/about.mp4", poster: "assets/images/restaurant-poster.jpg" } },
-      { id: 6, title: "Factory Automation", category: "Manufacturing", media: { type: "video", src: "assets/videos/about.mp4" } },
-      { id: 7, title: "Logistics Dashboard", category: "Logistics", media: { type: "video", src: "assets/videos/about.mp4" } },
-      { id: 8, title: "Commercial Property", category: "Real Estate", media: { type: "video", src: "assets/videos/about.mp4" } },
+      { id: 1, category: "Real Estate", video: "assets/videos/Free Romm Portfolio.mp4", poster: "assets/images/hero_bg.svg" },
+      { id: 2, category: "Real Estate", video: "assets/videos/Garch Portfolio.mp4", poster: "assets/images/hero_bg.svg" },
+      { id: 3, category: "Real Estate", video: "assets/videos/Gul Portfolio.mp4", poster: "assets/images/hero_bg.svg" },
+      { id: 4, category: "Healthcare", video: "assets/videos/Free Romm Portfolio.mp4", poster: "assets/images/hero_bg.svg" },
+      { id: 5, category: "Restaurants", video: "assets/videos/Free Romm Portfolio.mp4", poster: "assets/images/hero_bg.svg" },
+      { id: 6, category: "Manufacturing", video: "assets/videos/Free Romm Portfolio.mp4", poster: "assets/images/hero_bg.svg" },
+      { id: 7, category: "Logistics", video: "assets/videos/Free Romm Portfolio.mp4", poster: "assets/images/hero_bg.svg" }
     ];
 
-    // Function to render portfolio items
-    function renderPortfolioItems(filter = "Real Estate") {
-      const items = portfolioData.filter(item => item.category === filter);
-      const portfolioItems = document.getElementById('portfolio-items');
-      portfolioItems.innerHTML = items.map(item => `
-          <div class="item">
-            <div class="case-study-item-image">
-              <div class="case-study-video-background">
-                ${item.media.type === 'video' ? `
-                  <video autoplay muted loop playsinline poster="${item.media.poster}">
-                    <source src="${item.media.src}" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                ` : `
-                  <img src="${item.media.src}" alt="${item.title} case study">
-                `}
-              </div>
-            </div>
-          </div>
-      `).join('');
+    const uniqueCategories = [...new Set(portfolioData.map(item => item.category))];
+    const filterContainer = document.getElementById("portfolio-filters");
+    const carouselContainer = document.getElementById("portfolio-carousel");
 
-      // Reinitialize Swiper after updating slides
-      if (window.portfolioSwiper) {
-        window.portfolioSwiper.destroy(true, true);
-      }
-      window.portfolioSwiper = new Swiper('.portfolio-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        navigation: {
-          nextEl: '.swiper-button-next-custom',
-          prevEl: '.swiper-button-prev-custom',
-        },
-        breakpoints: {
-          768: { slidesPerView: 1.5, centeredSlides: true },
-          992: { slidesPerView: 2, centeredSlides: true },
-        },
+    function createFilterButtons() {
+      uniqueCategories.forEach((cat, index) => {
+        const btn = document.createElement("button");
+        btn.className = `btn btn-outline-light rounded-pill px-3 py-2 tag-btn ${index === 0 ? 'active' : ''}`;
+        btn.dataset.filter = cat;
+        btn.innerText = cat;
+        filterContainer.appendChild(btn);
       });
     }
 
-    // Initialize portfolio with default filter
-    renderPortfolioItems();
+    function renderCarouselItems(category) {
+      const filtered = portfolioData.filter(item => item.category === category);
+      carouselContainer.innerHTML = filtered.map(item => `
+  <div class="carousel-slide">
+    <div class="item">
+      <div class="case-study-item-image">
+        <div class="case-study-video-background">
+          <video autoplay muted loop playsinline poster="${item.poster}">
+            <source src="${item.video}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stats" style="display: flex; justify-content: space-between; width: 100%;">
+      ${[1, 2].map(() => `
+        <div>
+          <h5 style=" font-weight:bold;font-size: 2.2rem; border-bottom: 1px solid #fff; width: 40%; margin-top: 10px;">78%</h5>
+          <p>Patient Conversion</p>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+`).join('');
 
-    // Filter button event listeners
-    document.querySelectorAll('.filter-buttons .btn').forEach(button => {
-      button.addEventListener('click', () => {
-        // Update active state
-        document.querySelectorAll('.filter-buttons .btn').forEach(btn => {
-          btn.classList.remove('active');
-          btn.setAttribute('aria-pressed', 'false');
-        });
-        button.classList.add('active');
-        button.setAttribute('aria-pressed', 'true');
+      // Destroy and reinit Owl Carousel
+      $(".protfolio").trigger("destroy.owl.carousel").html(carouselContainer.innerHTML).owlCarousel({
+        loop: true,
+        margin: 80,
+        nav: false,
+        dots: false,
+        autoplay: false,
+        responsive: {
+          0: { items: 1 },
+          600: { items: 1 },
+          1000: { items: 2 }
+        }
+      });
+    }
 
-        // Render filtered items
-        const filter = button.getAttribute('data-filter');
-        renderPortfolioItems(filter);
+    document.addEventListener("DOMContentLoaded", () => {
+      createFilterButtons();
+      renderCarouselItems(uniqueCategories[0]);
+
+      filterContainer.addEventListener("click", (e) => {
+        if (e.target && e.target.matches("button[data-filter]")) {
+          document.querySelectorAll(".tag-btn").forEach(btn => btn.classList.remove("active"));
+          e.target.classList.add("active");
+          renderCarouselItems(e.target.dataset.filter);
+        }
       });
     });
   </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".custom-header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(".panel2",
+      {
+        scale: 0,
+        opacity: 0,
+        x: "7vw",
+        y: "-28%",
+        rotateY: "90deg"
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        x: 0,
+        y: "20%",
+        rotateY: "0deg",
+        scrollTrigger: {
+          trigger: ".panel1",
+          start: "top", // start when .panel1 top hits 200px *below* the top of the viewport
+          end: "bottom top",
+          scrub: 1,
+          pin: true
+        }
+      }
+    );
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    function setupHorizontalScroll() {
+      // Kill previous ScrollTriggers to avoid duplicates on resize
+
+      const inner = document.querySelector(".horizontal-inner");
+      const items = inner.querySelectorAll(".displayItem");
+
+      // Responsive logic
+      const isMobile = window.innerWidth <= 768;
+      const itemsPerView = isMobile ? 1 : 4;
+
+      const totalItems = items.length;
+      const totalSlides = Math.ceil(totalItems / itemsPerView);
+      const moveAmount = isMobile ? 40 : 50 * (totalSlides - 1); // 100% per "screen"
+
+      gsap.set(inner, { xPercent: 0 }); // reset position
+
+      gsap.to(inner, {
+        xPercent: -moveAmount,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".horizontal-wrapper",
+          pin: true,
+          scrub: 1,
+          snap: 1 / (totalSlides - 1),
+          end: () => "+=" + (window.innerWidth)
+        }
+      });
+    }
+
+    // Run on load
+    setupHorizontalScroll();
+
+    // Re-run on resize (with debounce)
+    // let resizeTimeout;
+    // window.addEventListener("resize", () => {
+    //   clearTimeout(resizeTimeout);
+    //   resizeTimeout = setTimeout(() => {
+    //     setupHorizontalScroll();
+    //   }, 300);
+    // });
+  </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Left pain cards
+    gsap.utils.toArray(".pain-card.left-top, .pain-card.left-center, .pain-card.left-bottom").forEach(card => {
+      gsap.from(card, {
+        x: -100,
+        y: 50,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          end: "top 20%",
+          scrub: 1
+        }
+      });
+    });
+
+    // Right pain cards
+    gsap.utils.toArray(".pain-card.right-top, .pain-card.right-middle, .pain-card.right-bottom").forEach(card => {
+      gsap.from(card, {
+        x: 100,
+        y: 50,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          end: "top 20%",
+          scrub: 1
+        }
+      });
+    });
+
+    // ✅ Animate the image softly
+    gsap.from(".circle-image img", {
+      opacity: 0,
+      scale: 0.85,
+      y: 30,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".circle-image",
+        start: "top 25%",
+        toggleActions: "play none none none"
+      }
+    });
+
+  </script>
+
 
 </body>
 
