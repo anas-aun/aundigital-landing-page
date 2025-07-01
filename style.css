@@ -55,7 +55,35 @@ body {
   padding: 0;
   background: #ffffff;
   /* overflow-x: hidden; */
+  color-scheme: light dark;
 
+}
+
+.cursor {
+  display: none;
+  /* Set to display in our JS */
+  pointer-events: none;
+  /* Needed to prevent our cursor from becoming the unintended target of our mouse events */
+  position: fixed;
+  /* Required for setting inset values */
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  background-color:black;
+  transform: translate(-50%, -50%);
+  /* Centers circle to cursor location */
+  transform-origin: top left;
+}
+
+.click {
+  scale: 0.8;
+}
+
+/* Only display a message if the user can't hover (which would indicate they're using an input that doesn't have a cursor) */
+@media (hover: hover) {
+  .no-cursor {
+    display: none;
+  }
 }
 
 .elementor-section-custom1 {
