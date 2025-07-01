@@ -40,13 +40,14 @@
 }
 
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
 
   html,
   body {
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
   }
-} */
+}
 
 /* General Styles */
 body {
@@ -55,35 +56,12 @@ body {
   padding: 0;
   background: #ffffff;
   /* overflow-x: hidden; */
-  color-scheme: light dark;
+  overflow-x: hidden;
 
 }
 
-.cursor {
-  display: none;
-  /* Set to display in our JS */
-  pointer-events: none;
-  /* Needed to prevent our cursor from becoming the unintended target of our mouse events */
-  position: fixed;
-  /* Required for setting inset values */
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  background-color:black;
-  transform: translate(-50%, -50%);
-  /* Centers circle to cursor location */
-  transform-origin: top left;
-}
-
-.click {
-  scale: 0.8;
-}
-
-/* Only display a message if the user can't hover (which would indicate they're using an input that doesn't have a cursor) */
-@media (hover: hover) {
-  .no-cursor {
-    display: none;
-  }
+section {
+  padding: 5px;
 }
 
 .elementor-section-custom1 {
@@ -165,10 +143,33 @@ body {
   }
 }
 
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  /* Let clicks pass through */
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.15s, height 0.15s;
+  z-index: 9999;
+}
+
+/* Grow when hovering over links or buttons */
+.custom-cursor.hover {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 .panel2 {
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
   height: 100vh;
   width: 100%;
@@ -176,7 +177,6 @@ body {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  scale: 0;
   z-index: 100000;
 }
 
@@ -523,8 +523,8 @@ body {
   position: relative;
   padding-top: 150px;
   padding-bottom: 80px;
+  height: auto;
   color: #ffffff;
-  min-height: 1103px;
   background: url("assets/images/bg/bg_image.svg") center/cover no-repeat;
 }
 
@@ -894,7 +894,6 @@ body {
 /* Trusted Partners */
 /* Trusted Partners */
 .trusted-partners {
-  margin-top: 5%;
   background: #fff;
 }
 
@@ -1261,15 +1260,61 @@ body {
 .services-section {
   background: linear-gradient(137.22deg, #64558D 7.33%, #1B022C 62.93%);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* vertically center */
 }
 
+.services-section .container {
+  max-width: 1200px;
+}
+
+.services-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.services-section .h-40 {
+  height: auto !important;
+  /* remove fixed height */
+}
+
+.services-section .w-60 {
+  width: 100% !important;
+  /* make image responsive */
+}
+
+.services-section .bg-white.bg-opacity-10 {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.services-section h4,
+.services-section h5,
+.services-section p,
+.services-section li {
+  font-size: 0.95rem;
+  /* reduce text size */
+}
+
+.services-section .tab-btn {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+}
+
+.services-section .section-heading {
+  font-size: 2rem;
+}
 
 .service-checklist-before:before {
   content: "";
-  width: 20px;
-  height: 20px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
   background-image: url("assets/images/bg/list-icon.png");
-  margin-right: 2%;
+  background-size: cover;
+  margin-right: 6px;
 }
 
 .tab-btn {
